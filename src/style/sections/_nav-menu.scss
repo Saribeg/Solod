@@ -1,0 +1,336 @@
+// Стили для desktop-версии
+.nav-menu{
+	width: 240px;
+	height: calc(100vh - 30px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: 30px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: $color-white;
+
+	&__logo{
+		display: block;
+	}
+
+	&__tel-number{
+		color: $color-yellow;
+	}
+
+	&__link{
+		display: block;
+		text-align: center;
+		width: 240px;
+		padding: 22px 0;
+		font-size: 21px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $color-white;
+		transition: all 0.4s ease;
+		&:hover, &:focus, &_active {
+			color: $color-yellow;
+		}
+	}
+
+	&__switch{
+		background-color: $color-green;
+	}
+
+}
+
+.site-switching{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	z-index: 999;
+	width: 240px;
+	height: 116px;
+
+	&__switcher{
+		margin: 0 auto;
+		width: 53px;
+		height: 19px;
+	}
+}
+
+.tel-number{
+	font-family: Consolas;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.tablet-nav-menu {
+	display: none;
+}
+
+.mobile-nav-menu{
+	display: none;
+}
+
+// Стили для tablet-версии
+@media screen and (max-width: $max-width-tablet), screen and (max-height: 515px){
+
+	.nav-menu{
+		display: none;
+	}
+
+	.mobile-nav-menu{
+		display: none;
+	}
+
+	.tablet-nav-menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 100%;
+		height: 30vh;
+		border-bottom: 2px solid #3b3b3b;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		&__top-line{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			height: 10vh;
+		}
+
+		&__logo{
+			display: block;
+		}
+
+		.logo__image{
+			width: 140px;
+			height: 37px;
+		}
+
+		&__tel-number{
+			color: $color-yellow;
+		}
+
+		&__list{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 10vh;
+		}
+
+		&__link{
+			display: block;
+			text-align: center;
+			width: calc(100vw/5);
+			height: 10vh;
+			line-height: 10vh;
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $color-white;
+			transition: all 0.4s ease;
+			&:hover, &:focus, &_active {
+				color: $color-yellow;
+			}
+		}
+
+		&__switch{
+			background-color: $color-green;
+		}
+	}
+
+	.site-switching{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		z-index: 999;
+		width: 150px;
+		height: 10vh;
+
+		&__logo{
+			width: 120px;
+			height: 28px;
+		}
+	
+		&__switcher{
+			width: 30px;
+			height: 13px;
+			transform: rotate(180deg);
+		}
+	}
+
+	.tel-number{
+		font-family: Consolas;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+
+// Стили для mobile-версии
+@media screen and (max-width: $max-width-mobile){
+
+	.nav-menu{
+		display: none;
+	}
+
+	.tablet-nav-menu {
+		display: none;
+	}
+
+	.mobile-nav-menu{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		position: relative;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		&__top-line{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			height: 20vh;
+			border-bottom: 2px solid #3b3b3b;
+		}
+
+		&__logo{
+			display: block;
+		}
+
+		.logo__image{
+			width: 100px;
+			height: 26px;
+		}
+
+		&__tel-number{
+			color: $color-yellow;
+		}
+
+		&__list{
+			display: none;
+			width: 100%;
+			position: absolute;
+			top: 20vh;
+			// left: -100vw;
+		}
+
+		&__link{
+			display: block;
+			position: relative;
+			width: calc(100% - 30px);
+			height: 75px;
+			line-height: 75px;
+			text-align: left;
+			padding-left: 30px;
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $color-white;
+			border-bottom: 2px solid #3b3b3b;
+			transition: all 0.4s ease;
+			&:hover {
+				color: $color-yellow;
+				transition: all 0.4s ease;
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 20px;
+					width: 4px;
+					height: 35px;
+					background-color: $color-yellow;
+				}
+			}
+		}
+	
+		&__switch{
+			background-color: $color-green;
+		}
+		
+	}
+
+	.burger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 26px;
+		height: 21px;
+		transition: all 0.4s linear;
+		&__line {
+			position: relative;
+			height: 3px;
+			background-color: $color-white;
+			border-radius: 10px;
+			transition: all 0.4s linear;
+			&:hover, &:focus {
+				color: $color-yellow;
+			}
+		}
+	}
+
+	.burger_toggle{
+		.burger__line:first-child{
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		.burger__line:nth-child(2){
+			opacity: 0;
+		}
+		.burger__line:last-child{
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+	}
+
+	.site-switching{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		z-index: 999;
+		width: 100%;
+		height: 90px;
+	
+		&__switcher{
+			width: 53px;
+			height: 19px;
+			transform: none;
+		}
+	}
+
+	.tel-number{
+		font-family: Consolas;
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+
+
+}
+
+// Убрать логотип для очень маленьких разрешений
+@media screen and (max-width: 315px){
+	.mobile-nav-menu{
+		&__logo{
+			display: none;
+		}
+	}
+}
+
+// Уменьшить шрифт пунктов nav-menu при маленьких разрешениях для планшетов
+@media screen and (min-width: 480px) and (max-width: 600px) {
+
+	.tablet-nav-menu{
+
+		&__link{
+			font-size: 15px;
+		}
+	}
+}
+
