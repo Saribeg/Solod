@@ -1,3 +1,35 @@
 <footer class="footer">
-
+    <div class="container">
+        <div class="wrapper">
+            <div class="nav-block"></div>
+            <div class="info-block">
+                <div class="info-block_contacts">
+                    <p class="header">Зв'язок з нами:</p>
+                    <p><a href="tel: +380671557744" class="phone">(067) 155 77 44</a></p>
+                    <a href="#" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" title="tripadvisor"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+                <div class="info-block_schedule">
+                    <p class="header">Режим роботи:</p>
+                    <p class="working-hours">пн-чт: 10:00-23:00</p>
+                    <p class="working-hours">пт-нд: 10:00-02:00</p>
+                </div>
+                <div class="info-block_form">
+                    <form action="" method="">
+                        <p class="header">Є побажання? Напиши нам</p>
+                        <input class="input" type="text" placeholder="Ім'я*" required>
+                        <input class="input input-tel" type="tel" placeholder="Телефон*" required>
+                        <textarea class="input input-msg" name="" id="" rows="1" placeholder="Повідомлення"></textarea>
+                        <input class="submit" type="submit" value="Надіслати">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--API KEY =  AIzaSyARUKSiBuZlatApx1xvUDAtBWQybizQwxk -->
+        <div id="map" class="map">
+        </div>
+        <script src="js/main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARUKSiBuZlatApx1xvUDAtBWQybizQwxk&callback=initMap"
+            async defer></script>
 </footer>
