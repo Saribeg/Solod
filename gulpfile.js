@@ -6,13 +6,13 @@ var gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     cleancss = require('gulp-clean-css'),
-    clean = require ('gulp-clean'),
+    clean = require('gulp-clean'),
     sass = require('gulp-sass'),
-    concat = require ('gulp-concat'),
+    concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-		browserSync = require("browser-sync"),
-		ejs = require("gulp-ejs"),
+    browserSync = require("browser-sync"),
+    ejs = require("gulp-ejs"),
     reload = browserSync.reload;
 
 var path = {
@@ -21,7 +21,7 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
-				fonts: 'build/fonts/'
+        fonts: 'build/fonts/'
     },
     src: {
         ejs: 'src/templates/*.html.ejs',
@@ -46,11 +46,11 @@ var config = {
     },
 };
 
-gulp.task('ejs:build', function(){
-	return gulp.src(path.src.ejs)
-	.pipe(ejs({}, {}, { ext: '' }))
-	.pipe(gulp.dest(path.build.html))
-	.pipe(reload({stream: true}));
+gulp.task('ejs:build', function () {
+    return gulp.src(path.src.ejs)
+        .pipe(ejs({}, {}, {ext: ''}))
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
 })
 
 
@@ -61,7 +61,7 @@ gulp.task('ejs:build', function(){
         .pipe(reload({stream: true}));
 });*/
 
-gulp.task('js:build', function(){
+gulp.task('js:build', function () {
     return gulp.src(path.src.js)
         .pipe(concat('main.js'))
         .pipe(babel({
@@ -94,7 +94,7 @@ gulp.task('image:build', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('fonts:build', function() {
+gulp.task('fonts:build', function () {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
 });
@@ -105,24 +105,24 @@ gulp.task('build', [
     'style:build',
     'fonts:build',
     'image:build'
-], function(){
+], function () {
     console.log('===ALL COMPRESSED===');
 });
 
-gulp.task('watch', function(){
-    watch([path.watch.ejs], function(event, cb) {
+gulp.task('watch', function () {
+    watch([path.watch.ejs], function (event, cb) {
         gulp.start('ejs:build');
     });
-    watch([path.watch.style], function(event, cb) {
+    watch([path.watch.style], function (event, cb) {
         gulp.start('style:build');
     });
-    watch([path.watch.js], function(event, cb) {
+    watch([path.watch.js], function (event, cb) {
         gulp.start('js:build');
     });
-    watch([path.watch.img], function(event, cb) {
+    watch([path.watch.img], function (event, cb) {
         gulp.start('image:build');
     });
-    watch([path.watch.fonts], function(event, cb) {
+    watch([path.watch.fonts], function (event, cb) {
         gulp.start('fonts:build');
     });
 });
@@ -135,6 +135,6 @@ gulp.task('clean', function (cb) {
     clean(path.clean, cb);
 });
 
-gulp.task('default', ['clean', 'build', 'webserver', 'watch'], function(){
+gulp.task('default', ['clean', 'build', 'webserver', 'watch'], function () {
     console.log('===ALL DONE===')
 });

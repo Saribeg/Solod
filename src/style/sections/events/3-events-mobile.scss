@@ -1,0 +1,71 @@
+@media screen and (max-width: $max-width-mobile) {
+
+  .events-table {
+
+
+    .event {
+
+
+
+      .event-img {
+
+      }
+
+      .event-info {
+        height: 95px;
+
+
+        &__group {
+          font-size: 14px;
+          padding: 6px 0 3px 6px;
+          width: 55%;
+
+        }
+
+        &__style {
+          font-size: 12px;
+          padding-left: 6px;
+
+        }
+
+        &__description {
+          font-size: 10px;
+          padding: 3px 0 6px 6px;
+          width: 61%;
+
+        }
+
+        &__date {
+          font-size: 12px;
+          top: 4px;
+          right: 4px;
+        }
+
+        &__button {
+          width: 70px;
+          height: 30px;
+          bottom: 10px;
+
+
+          div {
+            font-size: 14px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .event-button-load-more {
+    width: 180px;
+    height: 30px;
+
+    div {
+      font-size: 16px;
+      line-height: 30px;
+
+    }
+  }
+
+
+}
