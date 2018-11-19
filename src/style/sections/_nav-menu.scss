@@ -188,6 +188,7 @@
 		align-items: center;
 		position: relative;
 		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 100000;
 
 		&__top-line{
 			display: flex;
@@ -216,7 +217,7 @@
 			width: 100%;
 			position: absolute;
 			top: 20vh;
-			// left: -100vw;
+			background-color: rgba(0, 0, 0, 0.9);
 		}
 
 		&__link{
