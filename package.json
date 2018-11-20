@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/feroxes/step_project_forkio#readme",
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "browser-sync": "^2.26.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",

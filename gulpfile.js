@@ -81,7 +81,7 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     return gulp.src(path.src.style)
         .pipe(concat('main.scss'))
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass())
         .pipe(prefixer())
         .pipe(cleancss())
         .pipe(gulp.dest(path.build.css))
