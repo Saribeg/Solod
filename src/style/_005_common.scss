@@ -3,7 +3,6 @@ body {
 	font-family: "Helvetica", sans-serif;
 	background-color: $color-bg-gray;
 }
-
 .container{
 	max-width: 1440px;
 	margin: 0 auto;
@@ -20,10 +19,7 @@ body {
 	margin-bottom: 30px;
 	//margin-left: 20%;
 	transition: all .4s ease;
-	&:hover{
-		color: $color-yellow;
-	}
-}
-
-
-
+	  &:hover{
+		  color: $color-yellow;
+	  }
+  }
