@@ -2,11 +2,14 @@
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+    
 }
 
 .footer {
     width: 100%;
     background-color: $color-bg-black;
+    overflow: hidden;
+    
 }
 
 .wrapper {
@@ -153,9 +156,10 @@ screen and (max-height: 515px) {
 
         .header {
             font-size: 18px;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
 
         }
+
         .phone {
             font-size: 18px;
             margin-bottom: 5px;
@@ -164,7 +168,9 @@ screen and (max-height: 515px) {
 
         &_contacts {
             width: 35%;
+            margin-bottom: 30px;
             transition: all 0.4s ease;
+
             .fab {
                 margin-right: 5px;
             }
@@ -172,6 +178,7 @@ screen and (max-height: 515px) {
 
         &_schedule {
             width: 35%;
+            margin-bottom: 30px;
             transition: all 0.4s ease;
         }
 
@@ -185,6 +192,10 @@ screen and (max-height: 515px) {
                 padding: 20px 50px;
             }
         }
+    }
+
+    #map {
+        height: 400px;
     }
 }
 
@@ -200,7 +211,9 @@ screen and (max-height: 515px) {
 
         .header {
             font-size: 16px;
+            margin-bottom: 20px;
         }
+
         .phone {
             font-size: 16px;
 
@@ -208,12 +221,14 @@ screen and (max-height: 515px) {
 
         .working-hours {
             margin-bottom: 3px;
-            font-size: 16px;;
+            font-size: 16px;
+            ;
         }
 
         &_contacts {
             width: 80%;
             margin-bottom: 30px;
+
             .fab {
                 display: inline-block;
             }
@@ -225,8 +240,17 @@ screen and (max-height: 515px) {
         }
 
         &_form {
-            width: 80%;
+            width: 90%;
             margin-bottom: 0;
+            .input {
+                width: 90%;
+                margin-left: 0;
+            }
         }
     }
+
+    #map {
+        height: 300px;
+    }
+
 }
