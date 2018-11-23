@@ -3,3 +3,23 @@ body {
 	font-family: "Helvetica", sans-serif;
 	background-color: $color-bg-gray;
 }
+.container{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.common-link-heading{
+	display: block;
+	//text-align: left;
+	font-size: 30px;
+	font-weight: 700;
+	color: $color-white;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	//margin-left: 20%;
+	transition: all .4s ease;
+	  &:hover{
+		  color: $color-yellow;
+	  }
+  }
