@@ -11,8 +11,8 @@ var gulp = require('gulp'),
     concat = require ('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-		browserSync = require("browser-sync"),
-		ejs = require("gulp-ejs"),
+    browserSync = require("browser-sync"),
+    ejs = require("gulp-ejs"),
     reload = browserSync.reload;
 
 var path = {
@@ -21,7 +21,7 @@ var path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
-				fonts: 'build/fonts/'
+        fonts: 'build/fonts/'
     },
     src: {
         ejs: 'src/templates/*.html.ejs',
@@ -47,10 +47,10 @@ var config = {
 };
 
 gulp.task('ejs:build', function(){
-	return gulp.src(path.src.ejs)
-	.pipe(ejs({}, {}, { ext: '' }))
-	.pipe(gulp.dest(path.build.html))
-	.pipe(reload({stream: true}));
+    return gulp.src(path.src.ejs)
+        .pipe(ejs({}, {}, { ext: '' }))
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
 })
 
 

@@ -1,0 +1,76 @@
+@media screen and (max-width: $max-width-tablet) {
+
+  .events-table {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+    align-content: space-between;
+
+    .event {
+      flex-basis: auto;
+      text-align: center;
+
+
+      .event-img {
+        width: 75%;
+
+      }
+
+      .event-info {
+        width: 75%;
+        margin: 0 auto;
+        height: 110px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        &__group {
+          font-size: 20px;
+          text-align: left;
+          width: 62%;
+        }
+
+        &__style {
+          font-size: 14px;
+          text-align: left;
+        }
+
+        &__description {
+          font-size: 12px;
+          text-align: left;
+        }
+
+        &__date {
+          font-size: 14px;
+          top: 8px;
+          right: 8px;
+        }
+
+        &__button {
+          width: 100px;
+          height: 30px;
+          bottom: 15px;
+
+
+          div {
+            font-size: 16px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .event-button-load-more {
+    width: 210px;
+    height: 40px;
+    margin: 40px auto 0;
+
+    div {
+      font-size: 20px;
+      line-height: 40px;
+
+    }
+  }
+
+}
