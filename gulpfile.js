@@ -37,7 +37,7 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: '/build/**/*'
+    clean: 'build/'
 };
 
 var config = {
