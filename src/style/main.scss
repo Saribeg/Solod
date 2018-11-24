@@ -1,6 +1,7 @@
 @media screen {
   .container {
     max-width: 1440px;
+    min-width: 320px;
     margin: 0 auto;
     .header {
       width: 100%;
@@ -12,23 +13,17 @@
         font-size: 100px;
         font-weight: 800;
         text-transform: uppercase;
-        margin-left: 18%;
+        margin-left: 25%;
         align-self: center;
       }
     }
-    //.indent{
-    //  width: 13%;
-    //  height: 890px;
-    //
-    //  border: 1px solid red;
-    //}
     .smoke {
       width: 87%;
-      height: 890px;
+      height: 895px;
       background: url("../img/index/main_smoke_bg.png") no-repeat center;
       background-size: cover;
       margin-left: 13%;
-      //float: right;
+      margin-bottom: 20px;
 
       h2 {
         color: $color-white;
@@ -98,7 +93,7 @@
             content: "";
             width: 44px;
             height: 54px;
-            background: url("../img/index/main_smoke_arrow_right.png");
+            background: url("../img/index/main_smoke_arrow_right.png") no-repeat;
             position: absolute;
             right: -50px;
             top: 40px;
@@ -107,7 +102,7 @@
             content: "";
             width: 44px;
             height: 54px;
-            background: url("../img/index/main_smoke_arrow_left.png");
+            background: url("../img/index/main_smoke_arrow_left.png") no-repeat;
             position: absolute;
             left: -50px;
             top: 40px;
@@ -116,7 +111,7 @@
             content: "";
             width: 131px;
             height: 131px;
-            background: url("../img/index/main_smoke_border_topRight.png");
+            background: url("../img/index/main_smoke_border_topRight.png") no-repeat;
             position: absolute;
 
           }
@@ -124,7 +119,7 @@
             content: "";
             width: 131px;
             height: 131px;
-            background: url("../img/index/main_smoke_border_bottomRight.png");
+            background: url("../img/index/main_smoke_border_bottomRight.png") no-repeat;
             position: absolute;
 
           }
@@ -132,7 +127,7 @@
             content: "";
             width: 131px;
             height: 131px;
-            background: url("../img/index/main_smoke_border_bottomLeft.png");
+            background: url("../img/index/main_smoke_border_bottomLeft.png") no-repeat;
             position: absolute;
 
           }
@@ -140,7 +135,7 @@
             content: "";
             width: 131px;
             height: 131px;
-            background: url("../img/index/main_smoke_border_topLeft.png");
+            background: url("../img/index/main_smoke_border_topLeft.png") no-repeat;
             position: absolute;
 
           }
@@ -156,6 +151,7 @@
 @media screen and (max-width: 980px) {
   .container {
     .header {
+      height: 80vh;
       h1 {
         margin-left: 10%;
       }
@@ -164,6 +160,80 @@
       margin-left: 0px;
       width: 100%;
       background: url("../img/index/main_smoke_bg.png") center;
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .container{
+    .header{
+      h1{
+        font-size: 80px;
+      }
+    }
+    .smoke{
+      .smokeList{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container{
+    .header{
+      height: 60vh;
+    }
+    .smoke{
+      .smokeList{
+        .steps{
+          &__circle{
+            .circle {
+              width: 44px;
+              height: 44px;
+              p{
+                margin-top: 8px;
+              }
+            }
+          }
+          &__circle-arrow-right:before {
+            display: none;
+          }
+          &__circle-arrow-left:before {
+            display: none;
+          }
+          &__circle-border-topRight:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+          &__circle-border-bottomRight:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+          &__circle-border-bottomleft:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+          &__circle-border-topleft:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container{
+    .header{
+      h1{
+        font-size: 60px;
+      }
     }
   }
 }
