@@ -46,13 +46,11 @@ var config = {
     },
 };
 
-
 gulp.task('ejs:build', function(){
     return gulp.src(path.src.ejs)
         .pipe(ejs({}, {}, { ext: '' }))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
-
 })
 
 
