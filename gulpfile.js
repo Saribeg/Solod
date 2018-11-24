@@ -37,24 +37,22 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: 'build/**/*'
+    clean: '/build/**/*'
 };
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "build"
     },
 };
 
-gulp.task('ejs:build', function () {
+
+gulp.task('ejs:build', function(){
     return gulp.src(path.src.ejs)
-        .pipe(ejs({}, {}, {
-            ext: ''
-        }))
+        .pipe(ejs({}, {}, { ext: '' }))
         .pipe(gulp.dest(path.build.html))
-        .pipe(reload({
-            stream: true
-        }));
+        .pipe(reload({stream: true}));
+
 })
 
 
@@ -143,8 +141,9 @@ gulp.task('webserver', function () {
     browserSync(config);
 });
 
-gulp.task('clean', function (cb) {
-    clean(path.clean, cb);
+gulp.task('clean', function () {
+    return gulp.src(path.clean, {read: false})
+        .pipe(clean());
 });
 
 gulp.task('default', ['clean', 'build', 'webserver', 'watch'], function () {
