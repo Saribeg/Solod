@@ -37,12 +37,12 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: 'build/**/*'
+    clean: '/build/**/*'
 };
 
 var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "build"
     },
 };
 
@@ -131,8 +131,9 @@ gulp.task('webserver', function () {
     browserSync(config);
 });
 
-gulp.task('clean', function (cb) {
-    clean(path.clean, cb);
+gulp.task('clean', function () {
+    return gulp.src(path.clean, {read: false})
+        .pipe(clean());
 });
 
 gulp.task('default', ['clean', 'build', 'webserver', 'watch'], function(){
