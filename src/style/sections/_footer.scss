@@ -107,7 +107,7 @@
         }
     }
 
-    .header {
+    .footer-header {
         font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
@@ -154,7 +154,7 @@ screen and (max-height: 515px) {
         align-items: center;
         transition: all 0.4s ease;
 
-        .header {
+        .footer-header {
             font-size: 18px;
             margin-bottom: 25px;
 
@@ -209,7 +209,7 @@ screen and (max-height: 515px) {
         align-items: center;
         text-align: center;
 
-        .header {
+        .footer-header {
             font-size: 16px;
             margin-bottom: 20px;
         }
