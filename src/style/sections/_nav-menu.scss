@@ -1,7 +1,7 @@
 // Стили для desktop-версии
 .nav-menu{
 	width: 240px;
-	height: calc(100vh - 30px);
+	height: 900px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -9,12 +9,13 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	padding-top: 30px;
+	//padding-top: 30px;
 	background-color: rgba(0, 0, 0, 0.4);
 	color: $color-white;
 
 	&__logo{
 		display: block;
+		margin-top: 30px;
 	}
 
 	&__tel-number{
