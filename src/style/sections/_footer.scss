@@ -1,115 +1,36 @@
-.container {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-    
-}
-
 .footer {
     width: 100%;
     background-color: $color-bg-black;
     overflow: hidden;
-    
+    min-width: 320px;
 }
 
-.wrapper {
+.footer-wrapper {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     color: $color-white;
 }
 
-.nav-block {
+.footer-nav-block {
     width: 240px;
 }
 
-.info-block {
+
+.footer-info {
     width: calc(100vw - 240px);
     padding-top: 84px;
     display: flex;
     flex-wrap: nowrap;
     line-height: 1.5;
     transition: all 0.4s ease;
+}
 
-    &_contacts {
-        width: 27%;
-        padding: 0 38px;
+.footer-info-contacts {
+    width: 27%;
+    padding: 0 38px;
 
-        .fab {
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: $color-bg-black;
-            background-color: $color-yellow;
-            border-radius: 50%;
-            width: 38px;
-            height: 38px;
-            line-height: 38px;
-            margin-right: 10px;
-            margin-top: 20px;
-
-            &:hover {
-                background-color: #ffffff;
-            }
-        }
-    }
-
-    &_schedule {
-        width: 27%;
-        padding: 0 19px;
-        transition: all 0.4s ease;
-
-    }
-
-    &_form {
-        width: 46%;
-        padding: 0 19px;
-        overflow: hidden;
-        transition: all 0.4s ease;
-
-        .input {
-            border: 2px solid #dddddd;
-            background-color: transparent;
-            padding-top: 14px;
-            padding-left: 9px;
-            padding-bottom: 26px;
-            width: 47%;
-            transition: all 0.4s ease;
-            color: #fff;
-            margin-bottom: 24px; // float: right;
-            font-size: 17px;
-            box-sizing: border-box;
-
-
-        }
-
-        .input-tel {
-            margin-left: 2%;
-        }
-
-        .input-msg {
-            padding-bottom: 70px;
-            width: 97%;
-            font-family: Helvetica, sans-serif;
-            overflow: hidden;
-            resize: none;
-        }
-
-        .submit {
-            background-color: $color-yellow;
-            text-transform: uppercase;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 20px 60px;
-            border: none;
-            margin-bottom: 68px;
-            cursor: pointer;
-        }
-    }
-
-
-    .footer-header {
-
+    &__header {
         font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
@@ -117,23 +38,147 @@
         letter-spacing: 0px;
     }
 
-    .phone {
+    &__phone {
         font-size: 22.25px;
         font-weight: bold;
         margin-bottom: 15px;
         color: #ffffff;
     }
 
-    .working-hours {
-        font-size: 18px;
-        margin-bottom: 10px;
+    .fab {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: $color-bg-black;
+        background-color: $color-yellow;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        margin-right: 5px;
+        margin-top: 20px;
+
+        &:hover {
+            background-color: #ffffff;
+        }
     }
 }
 
 
+.footer-info-schedule {
+    width: 27%;
+    padding: 0 19px;
+    transition: all 0.4s ease;
+
+    &__header {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 22px;
+        letter-spacing: 0px;
+    }
+
+    &__working-hours {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.footer-info-form {
+    width: 46%;
+    padding: 0 19px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    &__header {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 22px;
+        letter-spacing: 0px;
+    }
+
+    &__input {
+        outline: none;
+        border: 2px solid #dddddd;
+        background-color: transparent;
+        padding-top: 14px;
+        padding-left: 9px;
+        padding-bottom: 26px;
+        width: 47%;
+        transition: all 0.4s ease;
+        color: #fff;
+        margin-bottom: 24px; // float: right;
+        font-size: 17px;
+        box-sizing: border-box;
+
+        &-tel {
+            margin-left: 2%;
+        }
+
+        &-msg {
+            padding-bottom: 70px;
+            width: 97%;
+            font-family: Helvetica, sans-serif;
+            overflow: hidden;
+            resize: none;
+        }
+    }
+
+    &__submit {
+        @include orange_button;
+        margin-bottom: 68px;
+
+    }
+}
+
+//  styles for placeholders
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #dbdcdc;
+    opacity: 0.7;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #dbdcdc;
+
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #dbdcdc;
+
+}
+// remove red border for input elements with "require" attribute in mozilla
+:invalid {
+    box-shadow: none;
+}
+
+:-moz-submit-invalid {
+    box-shadow: none;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus::placeholder {
+    color: transparent;
+}
 
 #map {
-    width: 100%;
+    width: calc(100vw - 240px);
     height: 440px;
     margin-top: 50px;
 }
@@ -143,58 +188,62 @@
 // Стили для tablet-версии
 @media screen and (max-width: $max-width-tablet),
 screen and (max-height: 515px) {
-    .nav-block {
+    .footer-nav-block {
         display: none;
     }
 
-    .info-block {
+    .footer-wrapper {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+
+    }
+
+    .footer-info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        transition: all 0.4s ease;
+    }
+
+
+    .footer-info-contacts {
+        width: 35%;
+        margin-bottom: 30px;
         transition: all 0.4s ease;
 
-
-        .footer-header {
-
+        &__header {
             font-size: 18px;
             margin-bottom: 25px;
-
         }
 
-        .phone {
+        &__phone {
             font-size: 18px;
             margin-bottom: 5px;
         }
 
-
-        &_contacts {
-            width: 35%;
-            margin-bottom: 30px;
-            transition: all 0.4s ease;
-
-            .fab {
-                margin-right: 5px;
-            }
+        .fab {
+            margin-right: 10px;
         }
+    }
 
-        &_schedule {
-            width: 35%;
-            margin-bottom: 30px;
-            transition: all 0.4s ease;
-        }
 
-        &_form {
-            width: 90%;
-            transition: all 0.4s ease;
-            margin-top: 30px;
 
-            .submit {
-                font-size: 18px;
-                padding: 20px 50px;
-            }
+    .footer-info-schedule {
+        width: 35%;
+        margin-bottom: 30px;
+        transition: all 0.4s ease;
+    }
+
+    .footer-info-form {
+        width: 80%;
+        transition: all 0.4s ease;
+        margin-top: 30px;
+
+        &__submit {
+            font-size: 18px;
+            padding: 20px 50px;
         }
     }
 
@@ -203,61 +252,61 @@ screen and (max-height: 515px) {
     }
 }
 
+
 // Стили для mobile-версии
 @media screen and (max-width: $max-width-mobile) {
-    .info-block {
+    .footer-info {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
 
 
-        .footer-header {
+    .footer-info-contacts {
+        width: 80%;
+        margin-bottom: 30px;
 
+        &__header {
             font-size: 16px;
             margin-bottom: 20px;
         }
 
-        .phone {
+        &__phone {
             font-size: 16px;
-
         }
 
-        .working-hours {
+        .fab {
+            display: inline-block;
+
+        }
+    }
+
+
+    .footer-info-schedule {
+        width: 80%;
+        margin-bottom: 30px;
+
+        &__working-hours {
             margin-bottom: 3px;
             font-size: 16px;
-            ;
         }
+    }
 
-        &_contacts {
-            width: 80%;
-            margin-bottom: 30px;
 
-            .fab {
-                display: inline-block;
+    .footer-info-form {
+        width: 90%;
+        margin-bottom: 0;
 
-            }
-        }
-
-        &_schedule {
-            width: 80%;
-            margin-bottom: 30px;
-        }
-
-        &_form {
+        &__input {
             width: 90%;
-            margin-bottom: 0;
-            .input {
-                width: 90%;
-                margin-left: 0;
-            }
+            margin-left: 0;
         }
     }
 
     #map {
         height: 300px;
     }
-
 }
