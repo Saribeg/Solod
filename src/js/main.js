@@ -1,30 +1,56 @@
 $(document).ready(function(){
 
 	// Бургер-меню для мобильных устройств
-	$(".burger").click(function(){
-		$(".burger").toggleClass("burger_toggle");
+	$(".mobile-nav-menu__burger").click(function(){
+		$(".mobile-nav-menu__burger").toggleClass("burger_toggle");
 		$(".mobile-nav-menu__list").slideToggle("slow");
 	});
+
+	// Бургер-меню для tablet устройств
+	$(".tablet-nav-menu__burger").click(function(){
+		$(".tablet-nav-menu__burger").toggleClass("burger_toggle");
+		$(".tablet-nav-menu__list").toggleClass("tablet-nav-menu__list_show");
+	});
+
+	//Контроль активного пункта меню
+	$(".nav-list li a").click(function(){
+		$(".nav-list li a").each(function(){
+			$(".nav-list li a").toggleClass("active");
+		})
+	})
+
+	//При больших разрешениях (>1440px) смещаем меню так, чтобы был в котейнере не смотря на position: fixed
+
+	function windowSize(){
+    if ($(window).width() >= '1440'){
+			$(".nav-menu").css("margin-left", "calc(100vw - 1440px - (100vw - 1440px)/2)");
+    } else {
+			$(".nav-menu").css("margin-left", "0");
+		}
+	}
+
+	$(window).on('load resize', windowSize);
+
 
 	// Слайдер "Галерея" на главной странице
 
 	function slideHomeGallery(){
 
-		var $item = $('.home-gallery__img');
-		var $prev = $('.home-gallery__prev');
-		var $next = $('.home-gallery__next');
+		let $item = $('.home-gallery__img');
+		let $prev = $('.home-gallery__prev');
+		let $next = $('.home-gallery__next');
 		
 		$item.first().addClass('current');
 
-		var index = $item.filter('.current').index();
-		var $prevImg = $item.eq(index - 1).css('background-image');
+		let index = $item.filter('.current').index();
+		let $prevImg = $item.eq(index - 1).css('background-image');
 		$prev.css('background-image', $prevImg);
-		var $nextImg = $item.eq(index + 1).css('background-image');
+		let $nextImg = $item.eq(index + 1).css('background-image');
 		$next.css('background-image', $nextImg);
 	
 		$prev.click(function(){
 
-			var index = $item.filter('.current').index();
+			let index = $item.filter('.current').index();
 	
 			if(index == 0){
 				index = $item.length;
@@ -32,17 +58,17 @@ $(document).ready(function(){
 	
 			$item.eq(index - 1).addClass('current').siblings().removeClass('current');
 
-			var index = $item.filter('.current').index();
-			var $prevImg = $item.eq(index - 1).css('background-image');
+			let index = $item.filter('.current').index();
+			let $prevImg = $item.eq(index - 1).css('background-image');
 			$prev.css('background-image', $prevImg);
-			var $nextImg = $item.eq(index + 1).css('background-image');
+			let $nextImg = $item.eq(index + 1).css('background-image');
 			$next.css('background-image', $nextImg);
 
 		});
 
 		$next.click(function(){
 
-			var index = $item.filter('.current').index();
+			let index = $item.filter('.current').index();
 	
 			if(index == $item.length - 1){
 				index = -1;
@@ -50,10 +76,10 @@ $(document).ready(function(){
 	
 			$item.eq(index + 1).addClass('current').siblings().removeClass('current');
 
-			var index = $item.filter('.current').index();
-			var $prevImg = $item.eq(index - 1).css('background-image');
+			let index = $item.filter('.current').index();
+			let $prevImg = $item.eq(index - 1).css('background-image');
 			$prev.css('background-image', $prevImg);
-			var $nextImg = $item.eq(index + 1).css('background-image');
+			let $nextImg = $item.eq(index + 1).css('background-image');
 			$next.css('background-image', $nextImg);
 			
 		});
