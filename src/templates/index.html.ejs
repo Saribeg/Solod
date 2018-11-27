@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 <div class="container">
@@ -55,28 +56,17 @@
             </div>
         </div>
     </div>
-    <div class="menu">
-        <div class="menuList">
-            <div class="menuList__item"></div>
-            <div class="menuList__item"></div>
-            <div class="menuList__item"></div>
-            <div class="menuList__item"></div>
-        </div>
-        <div class="button"></div>
-    </div>
-
+    <%- include('_mainpage-menu.ejs'); %>
     <%- include('_main-event'); %>
     <%- include('_s-home-gallery'); %>
-
 </div>
     <%- include('_footer'); %>
-
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+
 
 </body>
 </html>
