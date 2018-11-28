@@ -117,7 +117,7 @@ gulp.task('build', [
     console.log('===ALL COMPRESSED===');
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['webserver'], function () {
     watch([path.watch.ejs], function (event, cb) {
         gulp.start('ejs:build');
     });
@@ -144,6 +144,6 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('default', ['clean', 'build', 'webserver', 'watch'], function () {
+gulp.task('default', ['build', 'watch'], function () {
     console.log('===ALL DONE===')
 });
