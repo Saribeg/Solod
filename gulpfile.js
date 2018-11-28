@@ -37,7 +37,7 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: '/build/**/*'
+    clean: 'build/'
 };
 
 var config = {
@@ -64,10 +64,10 @@ gulp.task('ejs:build', function(){
 gulp.task('js:build', function () {
     return gulp.src(path.src.js)
         .pipe(concat('main.js'))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(uglify())
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
+        // .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
             stream: true
@@ -117,7 +117,7 @@ gulp.task('build', [
     console.log('===ALL COMPRESSED===');
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['webserver'], function () {
     watch([path.watch.ejs], function (event, cb) {
         gulp.start('ejs:build');
     });
@@ -144,6 +144,6 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('default', ['clean', 'build', 'webserver', 'watch'], function () {
+gulp.task('default', ['build', 'watch'], function () {
     console.log('===ALL DONE===')
 });
