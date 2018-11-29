@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<%- include('_nav-menu'); %>
+<%- include('_reserve-btn')%>
 <div class="gallery_all">
-
-    <%- include('_nav-menu'); %>
-
     <div class="container">
-        <section class="photoReport">
+        <div class="photoReport">
             <a class="photoReport-block" href="one-event.html">
                 <div class="all-photo">
                     <div class="Start__photo"><img src="img/gallery/all_events/startPhoto1.png"></div>
@@ -72,7 +71,7 @@
                 </div>
                 <div class="overground">OVERGROUND 11/18</div>
             </a>
-            <a class="photoReport-block" href="#">
+            <a class="photoReport-block" href="one-event.html">
                 <div class="all-photo">
                     <div class="Start__photo"><img src="img/gallery/all_events/startPhoto5.png"></div>
                     <div class="block-small">
@@ -100,20 +99,12 @@
                 </div>
                 <div class="overground">OVERGROUND 11/18</div>
             </a>
-            <div class="button-section"> <a class="gallery__button" href ="#">ЩЕ ФОТОЗВІТИ</a></div>
-        </section>
-
+            <div class="button-section"> <a class="gallery__button" href ="gallery-all.html">ЩЕ ФОТОЗВІТИ</a></div>
+        </div>
     </div>
 </div>
-
+<%- include('_reserve-main')%>
+<%- include('_reserve-action')%>
 <%- include('_footer'); %>
-
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-
-
 </body>
 </html>

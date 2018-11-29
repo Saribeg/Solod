@@ -1,6 +1,12 @@
+
 .photo-report {
   width: 100%;
   background-color: #292a2e;
+  .container {
+    @include flexColon-style;
+    align-items: center;
+    margin-left: 245px;
+
     .photoReport {
       width: 92%;
       margin-top: 70px;
@@ -9,7 +15,7 @@
       .headline-section {
         width: 100%;
         .gallery__headline {
-          font-family: HelveticaNeueCyr, sans-serif;
+          ffont-family: Helvetica, sans-serif;
           color:  #ffffff;
           font-size: 30px;
           font-weight: 500;
@@ -60,7 +66,7 @@
         }
       }
       .overground {
-        font-family: HelveticaNeue, sans-serif;
+        font-family: Helvetica, sans-serif;
         color: #ffffff;
         font-size: 21px;
         font-weight: 400;
@@ -70,12 +76,14 @@
     .button-section {
       width: 100%;
       .gallery__button {
+        display: inline-block;
+        text-align: center;
         width: 249px;
         height: 57px;
-        font-family: HelveticaNeue, sans-serif;
+        font-family: Helvetica, sans-serif;
         color: #292a2e;
         font-size: 21.91px;
-        font-weight: 700;
+        font-weight: 900;
         line-height: 57px;
         background-color: #ebb91f;
         margin: 20px 0;
@@ -84,11 +92,16 @@
       }
     }
   }
+}
 
-@media screen and (max-width: 1200px) {
+//@media screen and (max-width: 1200px) {
   .photo-report {
     width: 100%;
     background-color: #292a2e;
+    .container {
+      @include flexColon-style;
+      align-items: center;
+      margin-left: 245px;
       .photoReport {
         width: 92%;
         margin-top: 70px;
@@ -128,9 +141,13 @@
 
       }
     }
+  }
+//}
 
 @media screen and (max-width: $max-width-tablet) {
   .photo-report {
+    .container {
+      margin-left: 0;
       .photoReport {
         &-block {
           .all-photo {
@@ -159,15 +176,17 @@
       }
     }
   }
+}
 
 @media screen and (max-width: $max-width-mobile) {
   .photo-report {
+    .container {
       .photoReport {
         justify-content: center;
         .headline-section {
           width: 100%;
           .gallery__headline {
-            font-family: HelveticaNeueCyr,sans-serif;
+            font-family: Helvetica, sans-serif;
             color: #ffffff;
             font-size: 21px;
             font-weight: 500;
