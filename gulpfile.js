@@ -144,10 +144,14 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src(path.clean, {read: false})
+    return gulp.src('./build', {read: false})
         .pipe(clean());
 });
 
-gulp.task('default', runSequence('clean', ['build', 'watch']), function () {
+
+
+gulp.task('default', function(){
+    runSequence('clean', ['build', 'watch']), function () {
     console.log('===ALL DONE===')
+    }
 });
