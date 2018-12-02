@@ -10,22 +10,28 @@
   right: 42px;
   top: 54px;
 
-  @media screen and (max-width: 980px) {
-    top: 200px;
-    right: 25px;
-  }
-  @media screen and (max-width: 480px) {
-    top: calc(100vh - 150px);
-    padding: 10px 15px;
-  }
-
   &__text {
     color: #000000;
     font-size: 13px;
     font-weight: 700;
+    text-transform: uppercase;
   }
 }
 
-.display-none{
+.display-none {
   display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .reserve-btn {
+    top: 200px;
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reserve-btn{
+    top: calc(100vh - 150px);
+    padding: 10px 15px;
+  }
 }
