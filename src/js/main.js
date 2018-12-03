@@ -58,7 +58,7 @@ $(document).ready(function(){
 	
 			$item.eq(index - 1).addClass('current').siblings().removeClass('current');
 
-			let index = $item.filter('.current').index();
+			index = $item.filter('.current').index();
 			let $prevImg = $item.eq(index - 1).css('background-image');
 			$prev.css('background-image', $prevImg);
 			let $nextImg = $item.eq(index + 1).css('background-image');
@@ -76,7 +76,7 @@ $(document).ready(function(){
 	
 			$item.eq(index + 1).addClass('current').siblings().removeClass('current');
 
-			let index = $item.filter('.current').index();
+			index = $item.filter('.current').index();
 			let $prevImg = $item.eq(index - 1).css('background-image');
 			$prev.css('background-image', $prevImg);
 			let $nextImg = $item.eq(index + 1).css('background-image');

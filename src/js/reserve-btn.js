@@ -1,3 +1,4 @@
+//reserve-btn
 let formmain = document.getElementById('reserve-main-click');
 let form = document.getElementById('reserve-click');
 
