@@ -1,10 +1,8 @@
 .main-menu {
-
   &__block {
     margin: 0 40px 0 285px;
     text-align: center;
   }
-
 
   &__title {
     font-family: Helvetica, sans-serif;
@@ -62,7 +60,6 @@
     font-size: 18px;
   }
 
-
   &__link {
     display: inline-block;
     background-color: $color-yellow;
@@ -107,9 +104,6 @@
       margin-bottom: 0;
     }
   }
-
-
-
 }
 
 @media (max-width: 480px) {
