@@ -91,7 +91,6 @@
 		justify-content: space-around;
 		width: 100%;
 		background-color: rgba(0, 0, 0, 0.4);
-		overflow: hidden;
 
 		&__top-line{
 			display: flex;
@@ -212,7 +211,7 @@
 	}
 
 	.tel-number{
-		font-family: Consolas;
+		font-family: Helvetica, sans-serif;
 		font-size: 20px;
 		font-weight: 700;
 	}
@@ -372,14 +371,5 @@
 	}
 }
 
-// Уменьшить шрифт пунктов nav-menu при маленьких разрешениях для планшетов
-/*@media screen and (min-width: 480px) and (max-width: 600px) {
 
-	.tablet-nav-menu{
-
-		&__link{
-			font-size: 15px;
-		}
-	}
-}*/
 

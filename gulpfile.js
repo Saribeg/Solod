@@ -1,6 +1,6 @@
 'use strict'
 
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     babel = require('gulp-babel'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
@@ -17,7 +17,7 @@ var gulp = require('gulp'),
     minifyejs = require('gulp-minify-ejs'),
     reload = browserSync.reload;
 
-var path = {
+let path = {
     build: {
         html: 'build',
         js: 'build/js/',
@@ -39,12 +39,12 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: 'build/'
+    clean: 'build/**/*'
 };
 
-var config = {
+let config = {
     server: {
-        baseDir: "build"
+        baseDir: "./build"
     },
 };
 
@@ -54,8 +54,7 @@ gulp.task('ejs:build', function(){
         .pipe(minifyejs())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
-})
-
+});
 
 
 /*gulp.task('html:build', function(){
@@ -144,14 +143,12 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src('./build', {read: false})
+    return gulp.src(path.clean, {read: false})
         .pipe(clean());
 });
 
-
-
 gulp.task('default', function(){
-    runSequence('clean', 'build', 'watch'), function () {
+    runSequence('clean', 'build', 'watch', function () {
     console.log('===ALL DONE===')
-    }
+    })
 });
