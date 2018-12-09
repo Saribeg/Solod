@@ -17,13 +17,13 @@ $(document).ready(function(){
 		$(".nav-list li a").each(function(){
 			$(".nav-list li a").toggleClass("active");
 		})
-	})
+	});
 
 	//При больших разрешениях (>1440px) смещаем меню так, чтобы был в котейнере не смотря на position: fixed
 
 	function windowSize(){
     if ($(window).width() >= '1440'){
-			$(".nav-menu").css("margin-left", "calc(100vw - 1440px - (100vw - 1440px)/2)");
+			$(".nav-menu").css("margin-left", "calc((100% - 1440px)/2)");
     } else {
 			$(".nav-menu").css("margin-left", "0");
 		}
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 			let index = $item.filter('.current').index();
 	
-			if(index == 0){
+			if(index === 0){
 				index = $item.length;
 			}
 	
@@ -70,7 +70,7 @@ $(document).ready(function(){
 
 			let index = $item.filter('.current').index();
 	
-			if(index == $item.length - 1){
+			if(index === $item.length - 1){
 				index = -1;
 			}
 	
@@ -84,7 +84,7 @@ $(document).ready(function(){
 			
 		});
 
-	};
+	}
 
 	slideHomeGallery();
 

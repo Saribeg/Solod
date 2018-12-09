@@ -1,6 +1,6 @@
 'use strict'
 
-let gulp = require('gulp'),
+var gulp = require('gulp'),
     babel = require('gulp-babel'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
@@ -17,7 +17,7 @@ let gulp = require('gulp'),
     minifyejs = require('gulp-minify-ejs'),
     reload = browserSync.reload;
 
-let path = {
+var path = {
     build: {
         html: 'build',
         js: 'build/js/',
@@ -39,12 +39,12 @@ let path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: 'build/**/*'
+    clean: 'build/'
 };
 
-let config = {
+var config = {
     server: {
-        baseDir: "./build"
+        baseDir: "build"
     },
 };
 
@@ -54,7 +54,8 @@ gulp.task('ejs:build', function(){
         .pipe(minifyejs())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
-});
+})
+
 
 
 /*gulp.task('html:build', function(){
@@ -143,12 +144,14 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src(path.clean, {read: false})
+    return gulp.src('./build', {read: false})
         .pipe(clean());
 });
 
+
+
 gulp.task('default', function(){
-    runSequence('clean', 'build', 'watch', function () {
-    console.log('===ALL DONE===')
-    })
+    runSequence('clean', 'build', 'watch'), function () {
+        console.log('===ALL DONE===')
+    }
 });
