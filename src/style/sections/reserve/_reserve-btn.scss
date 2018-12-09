@@ -1,14 +1,21 @@
 .reserve-btn {
-  display: block;
+  position: fixed;
+  display: inline-block;
   border-radius: 50%;
   background-color: $color-yellow;
   border: 10px solid #a0a0a0;
-  position: fixed;
   z-index: 999;
   padding: 20px 25px;
   text-align: center;
-  right: 42px;
-  top: 54px;
+  top: 20px;
+  right: 30px;
+
+  &__text {
+    //display: inline-block;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 700;
+  }
 
   @media screen and (max-width: 980px) {
     top: 200px;
@@ -19,11 +26,6 @@
     padding: 10px 15px;
   }
 
-  &__text {
-    color: #000000;
-    font-size: 13px;
-    font-weight: 700;
-  }
 }
 
 .display-none{

@@ -7,7 +7,7 @@
 
 
   &__title {
-    //font-family: 'Helvetica', sans-serif;
+    font-family: Helvetica, sans-serif;
     text-transform: uppercase;
     color: #fff;
     font-size: 30px;
@@ -48,7 +48,7 @@
     bottom: 0;
     z-index: 1;
     background-color: #71845e;
-    //font-family: 'Helvetica', sans-serif;
+    font-family: Helvetica, sans-serif;
     color: #FFF;
     padding: 10px 20px 10px 30px;
   }
@@ -67,25 +67,16 @@
     display: inline-block;
     background-color: $color-yellow;
     text-decoration: none;
-    font-family: 'Helvetica', sans-serif;
+    font-family: Helvetica, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     color: #000;
     font-size: 22px;
     padding: 22px;
   }
-
-
-
 }
 
-
-
-
-
-
 @media (min-width: 981px) {
-
   .main-menu {
     &__items {
       flex-direction: row;
@@ -97,15 +88,10 @@
       margin-bottom: 0px;
     }
   }
-
-
-
-
 }
 
 @media (max-width: 980px) {
   .main-menu {
-
     &__block {
       margin: 0 40px 0 40px;
       text-align: center;
@@ -118,7 +104,7 @@
 
     &__item {
       width: 30%;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -127,7 +113,6 @@
 }
 
 @media (max-width: 480px) {
-
   .main-menu {
     &__title {
       text-align: center;
