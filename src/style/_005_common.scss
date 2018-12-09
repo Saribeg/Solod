@@ -2,25 +2,23 @@ body {
   font-size: 14px;
   font-family: "Helvetica", sans-serif;
   background-color: $color-bg-gray;
+  scroll-behavior: revert;
 }
 
 .container {
-  position: relative;
   max-width: 1440px;
   min-width: 320px;
   margin: 0 auto;
+  overflow-y: hidden;
 }
 
-.common-link-heading{
-  display: block;
-  font-size: 30px;
-  font-weight: 700;
-  color: $color-white;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-  transition: all .4s ease;
-  &:hover{
-      color: $color-yellow;
+.section-head {
+  font-family: Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+@media screen and (min-width: $max-width-tablet){
+  section, footer {
+    padding: 50px 0;
   }
-  }
+}

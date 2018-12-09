@@ -16,7 +16,13 @@ $color-black: #000000;
 
 // Common vars
 
-//Разрешения
+//Screens
 $max-width-mobile: 480px;
 $max-width-tablet: 980px;
 $min-width-desktop: 981px;
+
+//Margins
+$header-title-margin: 280px;
+$side-menu-margin: calc((100vw - 1440px)/2);
+$section-margin: 240px;
+$section-head-margin: 40px;
