@@ -2,6 +2,8 @@
 let formmain = document.getElementById('reserve-main-click');
 let form = document.getElementById('reserve-click');
 
+$('#reserve-date')[0].valueAsDate = new Date();
+
 function hideReserveBtn (event) {
     if (event.target.tagName === 'INPUT'){
         document.getElementById('res-btn').classList.add('display-none');
