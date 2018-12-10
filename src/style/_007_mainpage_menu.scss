@@ -1,18 +1,13 @@
 .main-menu {
-  &__block {
-    margin: 0 40px 0 285px;
-    text-align: center;
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 40px 0 285px;
+
+  .section-head {
+    margin-left: 0;
+    text-align: left;
   }
 
-  &__title {
-    font-family: Helvetica, sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 25px;
-  }
 
   &__items {
     display: flex;
@@ -47,8 +42,9 @@
     z-index: 1;
     background-color: #71845e;
     font-family: Helvetica, sans-serif;
+    font-weight: 900;
     color: #FFF;
-    padding: 10px 20px 10px 30px;
+    padding: 10px 20px;
   }
 
   &__price_number {
@@ -64,9 +60,8 @@
     display: inline-block;
     background-color: $color-yellow;
     text-decoration: none;
-    font-family: Helvetica, sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     color: #000;
     font-size: 22px;
     padding: 22px;
