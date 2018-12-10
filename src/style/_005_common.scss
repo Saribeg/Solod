@@ -2,7 +2,6 @@ body {
   font-size: 14px;
   font-family: "Helvetica", sans-serif;
   background-color: $color-bg-gray;
-  scroll-behavior: revert;
 }
 
 .container {
@@ -13,8 +12,13 @@ body {
 }
 
 .section-head {
+  text-transform: uppercase;
+  font-size: 30px;
   font-family: Helvetica, sans-serif;
   font-weight: 900;
+  color: #fff;
+  margin-left: $section-head-margin;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: $max-width-tablet){

@@ -5,17 +5,8 @@
   background-size: cover;
   display: flex;
   margin-left: 0;
-  h1 {
-    color: $color-white;
-    font-size: 100px;
-    font-weight: 900;
-    margin-left: $header-title-margin;
-    text-transform: uppercase;
-    align-self: center;
-  }
 }
 .smoke {
-  width: 87%;
   height: 895px;
   background: url("../img/index/main_smoke_bg.png") no-repeat center;
   background-size: cover;

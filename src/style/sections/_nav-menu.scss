@@ -16,10 +16,9 @@
       flex-direction: column;
       text-align: center;
       justify-content: space-around;
+      margin-top: 30px;
+
       .nav-menu {
-        &__logo {
-          margin-top: 30px;
-        }
 
         &__tel-number {
           color: $color-yellow;
@@ -79,7 +78,6 @@
 
 // Стили для tablet-версии
 @media screen and (max-width: $max-width-tablet), screen and (max-height: 515px){
-
 	.nav-menu{
 		display: none;
 	}

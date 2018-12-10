@@ -34,58 +34,35 @@ $(document).ready(function(){
 
 	// Слайдер "Галерея" на главной странице
 
-	function slideHomeGallery(){
+    $(function() {
+        $('.slick-carousel').slick({
+            variableHeight: true,
+            arrows: true,
+            dots: true,
+            centerMode: true,
+            centerPadding: '250px',
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [{
+                breakpoint: 980,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0',
+                    slidesToShow: 1
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0',
+                    slidesToShow: 1
+                }
+            }]
+        });
 
-		let $item = $('.home-gallery__img');
-		let $prev = $('.home-gallery__prev');
-		let $next = $('.home-gallery__next');
-		
-		$item.first().addClass('current');
-
-		let index = $item.filter('.current').index();
-		let $prevImg = $item.eq(index - 1).css('background-image');
-		$prev.css('background-image', $prevImg);
-		let $nextImg = $item.eq(index + 1).css('background-image');
-		$next.css('background-image', $nextImg);
-	
-		$prev.click(function(){
-
-			let index = $item.filter('.current').index();
-	
-			if(index === 0){
-				index = $item.length;
-			}
-	
-			$item.eq(index - 1).addClass('current').siblings().removeClass('current');
-
-			index = $item.filter('.current').index();
-			let $prevImg = $item.eq(index - 1).css('background-image');
-			$prev.css('background-image', $prevImg);
-			let $nextImg = $item.eq(index + 1).css('background-image');
-			$next.css('background-image', $nextImg);
-
-		});
-
-		$next.click(function(){
-
-			let index = $item.filter('.current').index();
-	
-			if(index === $item.length - 1){
-				index = -1;
-			}
-	
-			$item.eq(index + 1).addClass('current').siblings().removeClass('current');
-
-			index = $item.filter('.current').index();
-			let $prevImg = $item.eq(index - 1).css('background-image');
-			$prev.css('background-image', $prevImg);
-			let $nextImg = $item.eq(index + 1).css('background-image');
-			$next.css('background-image', $nextImg);
-			
-		});
-
-	}
-
-	slideHomeGallery();
+    });
 
 });
