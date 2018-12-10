@@ -1,7 +1,7 @@
 .main-menu {
   text-align: center;
   padding-top: 100px;
-  margin-left: $header-title-margin;
+  margin: 0 $section-head-margin 0 $header-title-margin;
 
   .section-head {
     margin-left: 0;
@@ -75,6 +75,7 @@
 @media screen and (max-width: 980px) {
   .main-menu {
     margin: 0 $section-head-margin;
+    padding-top: 50px;
     &__block {
       margin: 0 40px 0 40px;
       text-align: center;
@@ -94,6 +95,8 @@
 
 @media screen and (max-width: 480px) {
   .main-menu {
+    margin: 0 $section-head-margin;
+    padding-top: 0;
     &__title {
       text-align: center;
     }

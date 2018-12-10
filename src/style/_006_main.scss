@@ -5,6 +5,15 @@
   background-size: cover;
   display: flex;
   margin-left: 0;
+
+  h1 {
+    color: $color-white;
+    font-size: 100px;
+    font-weight: 900;
+    margin-left: $header-title-margin;
+    text-transform: uppercase;
+    align-self: center;
+  }
 }
 .smoke {
   height: 895px;
@@ -12,13 +21,6 @@
   background-size: cover;
   margin-left: $section-margin;
 
-  h2 {
-    color: $color-white;
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin-left: $section-head-margin;
-  }
   .smokeList {
     height: 700px;
     width: 670px;
@@ -133,7 +135,7 @@
   }
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: $max-width-tablet) {
   .container {
     .header {
       height: 80vh;
@@ -142,7 +144,7 @@
       }
     }
     .smoke {
-      margin-left: 0px;
+      margin-left: $section-head-margin;
       width: 100%;
       background: url("../img/index/main_smoke_bg.png") center;
     }

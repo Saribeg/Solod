@@ -21,8 +21,6 @@ body {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: $max-width-tablet){
-  section, footer {
-    padding: 50px 0;
-  }
+section, footer {
+  padding: 50px 0;
 }
