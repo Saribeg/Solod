@@ -1,10 +1,17 @@
+input::-webkit-clear-button {
+  display: none;
+}
+
 .section-reserve-action {
   width: calc(100% - 250px);
   background-color: $color-yellow;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-left: $header-title-margin;
 
   @media screen and (max-width: 980px){
+    margin-left: 0;
     width: 100%;
   }
 
@@ -16,8 +23,7 @@
 .reserve-action {
   position: relative;
   bottom: 100px;
-  max-width: 650px;
-  width: 55%;
+  width: 60%;
 
   @media screen and (max-width: 680px) {
     display: flex;
@@ -41,8 +47,8 @@
 
   &__info {
     color: #101112;
-    font-size: 33px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 900;
     line-height: 38px;
     text-transform: uppercase;
     padding: 15px 20px;
@@ -72,12 +78,11 @@
 }
 
 .reserve-block {
-  width: 100%;
-  max-width: 415px;
-  padding: 69px 40px;
+  max-width: 40%;
+  margin: 0 $section-head-margin;
 
-  @media screen and (max-width: 1300px){
-    max-width: 300px;
+  @media screen and (max-width: $max-width-tablet){
+    max-width: 40%;
   }
 
   @media screen and (max-width: 680px){
@@ -87,10 +92,9 @@
   }
 
   &__title {
-    font-family: Helvetica, sans-serif;
     color: $color-bg-gray;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 32px;
     text-transform: uppercase;
   }
