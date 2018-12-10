@@ -2,8 +2,8 @@
 let formmain = $('#reserve-main-click');
 let form = $('#reserve-click');
 let time = {
-    hours: new Date().getHours() < 10 ? `0${new Date().getHours() + 2}` : `${new Date().getHours() + 2}`,
-    minutes: new Date().getMinutes() < 10 ? `0${new Date().getMinutes()}` : new Date().getMinutes(),
+    hours: new Date().getHours() > 9 ? `${new Date().getHours() + 2}` : `0${new Date().getHours() + 2}`,
+    minutes: new Date().getMinutes() <= 9 ? `0${new Date().getMinutes()}` : new Date().getMinutes(),
 };
 
 $('#reserve-time')[0].defaultValue = `${time.hours}:${time.minutes}`;

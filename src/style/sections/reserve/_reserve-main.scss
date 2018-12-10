@@ -81,23 +81,35 @@ input::-webkit-clear-button {
 
     &[type='time']::-webkit-inner-spin-button {
       background-color: $color-yellow;
-      margin-top: 10%;
+      margin-top: 7%;
+      margin-right: 10%;
     }
 
     &::-webkit-calendar-picker-indicator {
-      padding-right: 20px;
       background-color: $color-yellow;
+      padding-right: 20px;
     }
 
   }
 
   .btn {
-    width: 45%;
+    width: 49%;
     background-color: $color-bg-gray;
     color: $color-yellow;
     padding: 20px 0;
     font-size: 22px;
     font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .reserve-form {
+    &__date-time {
+      width: 42%;
+    }
+    .btn {
+      width: 47%;
+    }
   }
 }
 
@@ -127,6 +139,15 @@ input::-webkit-clear-button {
     }
   }
 }
+
+@media screen and (max-width: 650px){
+  .reserve-form {
+    &__date-time {
+      width: 40%;
+    }
+  }
+}
+
 @media screen and (max-width: $max-width-mobile){
   .section-reserve {
     width: 100%;
