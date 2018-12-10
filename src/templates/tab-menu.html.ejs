@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<div class="container">
+    <%- include('_nav-menu'); %>
+    <%- include('_reserve-btn'); %>
+
+
+    <div class="tab-menu__content">
+        <div class="tab-menu__content-block">
+            <div class="tab-menu__tabs">
+
+                <div class="tab-menu__arrow_left_draw" id="tab-menu__btn_left_draw">
+                    <img class="tab-menu__arrow_left_img" src="img/menu/btn_left.png" alt="">
+                    <img class="tab-menu__arrow_left_img_r" src="img/menu/btn_right.png" alt="">
+                </div>
+
+                <!--<i class="tab-menu__arrow tab-menu__arrow_left fas fa-angle-left" id="tab-menu__btn_left"></i>-->
+
+                <div class="tab-menu__list_wrapper">
+
+                    <ul class="tab-menu__list">
+                        <li class="tab-menu__item tab-menu__item_active tab-menu__item_active0"><a href="#" class="tab-menu__link">Сніданок</a></li>
+                        <li class="tab-menu__item tab-menu__item_active1"><a href="#" class="tab-menu__link">Основне меню</a></li>
+                        <li class="tab-menu__item tab-menu__item_active2"><a href="#" class="tab-menu__link">Барна карта</a></li>
+                        <li class="tab-menu__item tab-menu__item_active3"><a href="#" class="tab-menu__link">Барна карта</a></li>
+                        <li class="tab-menu__item tab-menu__item_active4"><a href="#" class="tab-menu__link">Суші</a></li>
+                    </ul>
+                </div>
+
+
+                <!--<i class="tab-menu__arrow tab-menu__arrow_right fas fa-angle-right" id="tab-menu__btn_right"></i>-->
+
+                <div class="tab-menu__arrow_right_draw" id="tab-menu__btn_right_draw">
+                    <img class="tab-menu__arrow_right_img" src="img/menu/btn_right.png" alt="">
+                </div>
+
+
+            </div>
+            <div class="tab-menu__table">
+                <img src="img/menu/avokado.png" alt="" class="tab-menu__bg_avokado">
+                <img src="img/menu/spices.png" alt="" class="tab-menu__bg_spices">
+                <img src="img/menu/pepper.png" alt="" class="tab-menu__bg_pepper">
+                <img src="img/menu/leaves.png" alt="" class="tab-menu__bg_leaves">
+                <img src="img/menu/menu_0.png" alt="" class="tab-menu__menu tab-menu__menu_active">
+                <img src="img/menu/menu_1.png" alt="" class="tab-menu__menu">
+                <img src="img/menu/menu_2.png" alt="" class="tab-menu__menu">
+                <img src="img/menu/menu_3.png" alt="" class="tab-menu__menu">
+                <img src="img/menu/menu_4.png" alt="" class="tab-menu__menu">
+            </div>
+        </div>
+    </div>
+
+    <%- include('_reserve-action'); %>
+    <%- include('_footer'); %>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
