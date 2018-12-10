@@ -1,10 +1,13 @@
+input::-webkit-clear-button {
+  display: none;
+}
+
 .section-reserve {
   width: calc(100% - 250px);
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
   margin-left: $reserve-margin;
 }
 
@@ -65,11 +68,27 @@
   }
 
   &__date-time {
+    font-size: 17px;
     border: 2px solid $color-bg-gray;
     width: 45%;
     height: 50px;
     padding-left: 13px;
     margin-bottom: 22px;
+
+    &[type='date']::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &[type='time']::-webkit-inner-spin-button {
+      background-color: $color-yellow;
+      margin-top: 10%;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      padding-right: 20px;
+      background-color: $color-yellow;
+    }
+
   }
 
   .btn {
@@ -87,6 +106,19 @@
     width: 100%;
     margin-left: 0;
   }
+  .reserve-form {
+    &__date-time {
+      font-size: 15px;
+      max-width: 42%;
+
+      &::-webkit-calendar-picker-indicator {
+        padding-right: 10px;
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
   .reserve-main {
     padding: 40px 20px;
 
@@ -95,14 +127,13 @@
     }
   }
 }
-
 @media screen and (max-width: $max-width-mobile){
   .section-reserve {
     width: 100%;
     margin-left: 0;
   }
   .reserve-block-img {
-    opacity: 0.7;
+    display: none;
   }
   .reserve-main {
     width: 90%;
@@ -114,6 +145,17 @@
 
     &__date-time {
       width: 100%;
+    }
+  }
+
+  .reserve-form {
+    &__date-time {
+      font-size: 14px;
+      max-width: 40%;
+
+      &::-webkit-calendar-picker-indicator {
+        padding-right: 10px;
+      }
     }
   }
 }

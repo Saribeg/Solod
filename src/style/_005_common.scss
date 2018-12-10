@@ -6,9 +6,9 @@ body {
 
 .container {
   max-width: 1440px;
-  min-width: 320px;
+  //min-width: 320px;
   margin: 0 auto;
-  overflow-y: hidden;
+  //overflow-y: hidden;
 }
 
 .section-head {
@@ -21,6 +21,18 @@ body {
   margin-bottom: 30px;
 }
 
+.form-head {
+  font-size: 29px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
 section, footer {
   padding: 50px 0;
+}
+
+@media screen and (max-width: $max-width-mobile){
+  .container {
+    overflow-y: hidden;
+  }
 }

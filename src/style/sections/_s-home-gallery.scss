@@ -21,7 +21,7 @@
 
 		&-item {
 			color: white;
-			min-height: 150px;
+			//min-height: 150px;
 			position: relative;
 			margin: 0 15px;
 			transition: 0.2s opacity ease-in-out;
@@ -73,10 +73,12 @@
 			transform: rotate(45deg) scale(1.1);
 		}
 
-		/*customizing unactive dots*/
 		&-dots li button:before {
 			color: #fff;
 		}
+	}
+	.section-head {
+		margin-left: 0;
 	}
 }
 .img-responsive {
@@ -84,9 +86,6 @@
 	height: 100%;
 }
 
-.section-head {
-	margin-left: 0;
-}
 
 @media screen and (max-width: 1024px){
 	.slider-section {
