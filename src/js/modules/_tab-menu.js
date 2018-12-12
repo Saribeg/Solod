@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+function tabMenu() {
     let widthDoc = $('body').outerWidth();
     let countMenu = $('.tab-menu__item').length;
     let lenghtMenu = countMenu * 189;
@@ -93,7 +92,7 @@ $(document).ready(function () {
             $(".tab-menu__list li:eq(" + i + ") a").click(function () {
                 $(".tab-menu__list li").removeClass("tab-menu__item_active");
                 $(".tab-menu__table .tab-menu__menu").removeClass("tab-menu__menu_active");
-                console.log(i);
+                // console.log(i);
                 $(".tab-menu__list li:eq(" + i + ")").addClass("tab-menu__item_active");
                 $(".tab-menu__table .tab-menu__menu:eq(" + i + ")").addClass("tab-menu__menu_active");
 
@@ -173,4 +172,4 @@ $(document).ready(function () {
         }
     });
 
-});
+}

@@ -64,7 +64,6 @@ input::-webkit-clear-button {
       font-size: 17px;
       font-weight: 300;
     }
-
   }
 
   &__date-time {
@@ -75,19 +74,9 @@ input::-webkit-clear-button {
     padding-left: 13px;
     margin-bottom: 22px;
 
-    &[type='date']::-webkit-inner-spin-button {
-      display: none;
-    }
-
-    &[type='time']::-webkit-inner-spin-button {
-      background-color: $color-yellow;
-      margin-top: 7%;
-      margin-right: 10%;
-    }
-
-    &::-webkit-calendar-picker-indicator {
-      background-color: $color-yellow;
-      padding-right: 20px;
+    &::placeholder {
+      font-size: 17px;
+      color: $color-black;
     }
 
   }
@@ -138,6 +127,12 @@ input::-webkit-clear-button {
       font-size: 1.5rem;
     }
   }
+  .reserve-block-img {
+    right: 50%;
+  }
+  .reserve-main {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 650px){
@@ -145,6 +140,9 @@ input::-webkit-clear-button {
     &__date-time {
       width: 40%;
     }
+  }
+  .date-active {
+    width: 50%;
   }
 }
 

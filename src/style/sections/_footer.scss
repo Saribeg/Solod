@@ -12,14 +12,9 @@
     color: $color-white;
 }
 
-.footer-nav-block {
-    width: 240px;
-}
-
-
 .footer-info {
-    width: calc(100vw - 240px);
-    padding-top: 84px;
+    margin-left: $header-title-margin;
+    padding-top: 80px;
     display: flex;
     flex-wrap: nowrap;
     line-height: 1.5;
@@ -28,7 +23,6 @@
 
 .footer-info-contacts {
     width: 27%;
-    padding: 0 38px;
 
     &__header {
         font-size: 20px;
@@ -67,7 +61,6 @@
 
 .footer-info-schedule {
     width: 27%;
-    padding: 0 19px;
     transition: all 0.4s ease;
 
     &__header {
@@ -88,7 +81,6 @@
 
 .footer-info-form {
     width: 46%;
-    padding: 0 19px;
     overflow: hidden;
     transition: all 0.5s ease;
 
@@ -177,10 +169,10 @@
     color: transparent;
 }
 
-#map {
-    width: calc(100vw - 240px);
+.map {
     height: 440px;
     margin-top: 50px;
+    padding-left: $header-title-margin;
 }
 
 
