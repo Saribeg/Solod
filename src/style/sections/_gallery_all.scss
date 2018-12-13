@@ -1,14 +1,14 @@
 
 .gallery_all {
   width: 100%;
-  background-color: #292a2e;
+  background-color: $color-bg-gray;
   .container {
+    padding-top: 150px;
     @include flexColon-style;
     align-items: center;
     margin-left: 245px;
     .photoReport {
       width: 92%;
-      margin-top: 70px;
       @include flexRow-style;
       justify-content: space-between;
       &-block {
@@ -55,8 +55,8 @@
         }
       }
       .overground {
-        font-family: HelveticaNeue;
-        color: #ffffff;
+        font-family: Helvetica, sans-serif;
+        color: $color-white;
         font-size: 21px;
         font-weight: 400;
         line-height: 30px;
@@ -65,14 +65,15 @@
     .button-section {
       width: 100%;
       .gallery__button {
+        display: inline-block;
+        text-align: center;
         width: 249px;
         height: 57px;
-        font-family: HelveticaNeue;
-        color: #292a2e;
+        color: $color-bg-gray;
         font-size: 21.91px;
-        font-weight: 700;
+        font-weight: 900;
         line-height: 57px;
-        background-color: #ebb91f;
+        background-color: $color-yellow;
         margin: 20px 0 50px;
         border: none;
         cursor: pointer;
@@ -83,15 +84,12 @@
 
 @media (max-width: 1200px) {
   .gallery_all {
-    width: 100%;
-    background-color: #292a2e;
     .container {
       @include flexColon-style;
       align-items: center;
       margin-left: 245px;
       .photoReport {
         width: 92%;
-        margin-top: 70px;
         @include flexRow-style;
         justify-content: space-between;
         &-block {
@@ -204,11 +202,6 @@
       }
       .button-section {
         .gallery__button {
-          width: 150px;
-          height: 40px;
-          color: #292a2e;
-          font-size: 14px;
-          line-height: 40px;
         }
       }
     }

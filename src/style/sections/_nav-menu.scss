@@ -1,43 +1,42 @@
 // Стили для desktop-версии
 .nav-menu{
 	width: 240px;
-	height: 900px;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
 	position: fixed;
 	left: 0;
-	top: 0;
 	background-color: rgba(0, 0, 0, 0.4);
-	color: $color-white;
 	z-index: 999;
 
-	&__logo{
-		display: block;
-		margin-top: 30px;
-	}
+	&-info {
+      flex-basis: 70%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    &__tel-number {
+      color: $color-yellow;
+    }
 
-	&__tel-number{
-		color: $color-yellow;
-	}
-
-	&__link{
-		display: block;
-		text-align: center;
-		width: 240px;
-		padding: 22px 0;
-		font-size: 21px;
-		font-weight: 700;
-		text-transform: uppercase;
-		text-decoration: none;
-		color: $color-white;
-		transition: all 0.4s ease;
-		&:hover, &:focus, &_active {
-			color: $color-yellow;
-		}
-	}
-
+    &__link {
+      display: block;
+      text-align: center;
+      width: 240px;
+      padding: 22px 0;
+      font-size: 21px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white;
+      transition: all 0.4s ease;
+      &:hover, &:focus, &_active {
+        color: $color-yellow;
+      }
+    }
 	&__switch{
 		background-color: $color-green;
 	}
@@ -60,9 +59,9 @@
 }
 
 .tel-number{
-	font-family: Consolas;
+	font-family: Helvetica, sans-serif;
 	font-size: 24px;
-	font-weight: 700;
+	font-weight: 900;
 }
 
 .tablet-nav-menu {
@@ -73,9 +72,7 @@
 	display: none;
 }
 
-// Стили для tablet-версии
 @media screen and (max-width: $max-width-tablet), screen and (max-height: 515px){
-
 	.nav-menu{
 		display: none;
 	}
@@ -91,7 +88,6 @@
 		justify-content: space-around;
 		width: 100%;
 		background-color: rgba(0, 0, 0, 0.4);
-		overflow: hidden;
 
 		&__top-line{
 			display: flex;
@@ -203,7 +199,7 @@
 			width: 120px;
 			height: 28px;
 		}
-	
+
 		&__switcher{
 			width: 30px;
 			height: 13px;
@@ -212,15 +208,13 @@
 	}
 
 	.tel-number{
-		font-family: Consolas;
-		font-size: 20px;
+		font-family: Helvetica, sans-serif;
+		font-size: 24px;
 		font-weight: 700;
 	}
 }
 
-// Стили для mobile-версии
 @media screen and (max-width: $max-width-mobile){
-
 	.nav-menu{
 		display: none;
 	}
@@ -297,11 +291,11 @@
 				}
 			}
 		}
-	
+
 		&__switch{
 			background-color: $color-green;
 		}
-		
+
 	}
 
 	.burger {
@@ -345,7 +339,7 @@
 		z-index: 999;
 		width: 100%;
 		height: 70px;
-	
+
 		&__switcher{
 			width: 53px;
 			height: 19px;
@@ -354,16 +348,15 @@
 	}
 
 	.tel-number{
-		font-family: Consolas;
-		font-size: 16px;
-		font-weight: 700;
+		font-family: Helvetica, sans-serif;
+		font-size: 20px;
+		font-weight: 900;
 	}
 
 
 
 }
 
-// Убрать логотип для очень маленьких разрешений
 @media screen and (max-width: 315px){
 	.mobile-nav-menu{
 		&__logo{
@@ -372,14 +365,5 @@
 	}
 }
 
-// Уменьшить шрифт пунктов nav-menu при маленьких разрешениях для планшетов
-/*@media screen and (min-width: 480px) and (max-width: 600px) {
 
-	.tablet-nav-menu{
-
-		&__link{
-			font-size: 15px;
-		}
-	}
-}*/
 

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function mainPageMenu() {
 
     // Block Main page -> Small menu list
 
@@ -70,8 +70,4 @@ $(document).ready(function () {
 
 
     });
-
-
-
-
-});
+}

@@ -1,28 +1,25 @@
 .main-menu {
+  text-align: center;
+  padding-top: 100px;
+  margin: 0 $section-head-margin 0 $header-title-margin;
 
-  &__block {
-    margin: 0 40px 0 285px;
-    text-align: center;
-  }
-
-
-  &__title {
-    //font-family: 'Helvetica', sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 700;
+  .section-head {
+    margin-left: 0;
     text-align: left;
-    margin-bottom: 25px;
   }
+
 
   &__items {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 45px;
   }
 
   &__item {
+    width: 22%;
     position: relative;
+    margin-bottom: 0;
     display: none;
   }
 
@@ -48,9 +45,10 @@
     bottom: 0;
     z-index: 1;
     background-color: #71845e;
-    //font-family: 'Helvetica', sans-serif;
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
     color: #FFF;
-    padding: 10px 20px 10px 30px;
+    padding: 10px 20px;
   }
 
   &__price_number {
@@ -62,50 +60,22 @@
     font-size: 18px;
   }
 
-
   &__link {
     display: inline-block;
     background-color: $color-yellow;
     text-decoration: none;
-    font-family: 'Helvetica', sans-serif;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     color: #000;
     font-size: 22px;
     padding: 22px;
   }
-
-
-
 }
 
-
-
-
-
-
-@media (min-width: 981px) {
-
+@media screen and (max-width: 980px) {
   .main-menu {
-    &__items {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    &__item {
-      width: 22%;
-      position: relative;
-      margin-bottom: 0px;
-    }
-  }
-
-
-
-
-}
-
-@media (max-width: 980px) {
-  .main-menu {
-
+    margin: 0 $section-head-margin;
+    padding-top: 50px;
     &__block {
       margin: 0 40px 0 40px;
       text-align: center;
@@ -118,17 +88,15 @@
 
     &__item {
       width: 30%;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
-
-
-
 }
 
-@media (max-width: 480px) {
-
+@media screen and (max-width: 480px) {
   .main-menu {
+    margin: 0 $section-head-margin;
+    padding-top: 0;
     &__title {
       text-align: center;
     }

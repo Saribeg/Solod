@@ -1,10 +1,11 @@
-'use strict'
+'use strict';
 
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     babel = require('gulp-babel'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    fileInclude = require('gulp-file-include'),
     cleancss = require('gulp-clean-css'),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
@@ -17,7 +18,7 @@ var gulp = require('gulp'),
     minifyejs = require('gulp-minify-ejs'),
     reload = browserSync.reload;
 
-var path = {
+let path = {
     build: {
         html: 'build',
         js: 'build/js/',
@@ -42,7 +43,7 @@ var path = {
     clean: 'build/'
 };
 
-var config = {
+let config = {
     server: {
         baseDir: "build"
     },
@@ -51,10 +52,10 @@ var config = {
 gulp.task('ejs:build', function(){
     return gulp.src(path.src.ejs)
         .pipe(ejs({}, {}, { ext: '' }))
-        .pipe(minifyejs())
+        // .pipe(minifyejs())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
-})
+});
 
 
 
@@ -67,7 +68,9 @@ gulp.task('ejs:build', function(){
 
 gulp.task('js:build', function () {
     return gulp.src(path.src.js)
-        .pipe(concat('main.js'))
+        .pipe(fileInclude({
+            prefix: '@@'
+        }))
         .pipe(babel({
             presets: ['@babel/env']
         }))
@@ -151,7 +154,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('default', function(){
-    runSequence('clean', ['build', 'watch']), function () {
-    console.log('===ALL DONE===')
+    runSequence('clean', 'build', 'watch'), function () {
+        console.log('===ALL DONE===')
     }
 });

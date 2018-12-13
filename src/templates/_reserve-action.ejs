@@ -4,15 +4,13 @@
         <p class="reserve-action__info">БРОНЮЙ СТІЛ - ОТРИМУЙ НАСТОЯНКУ У ПОДАРУНОК</p>
     </div>
     <div class="reserve-block" id="reserve-click">
-        <div class="reserve-block__form">
-            <h2 class="reserve-block__title">РЕЗЕРВ СТОЛУ</h2>
-            <form action="#" method="" class="reserve-form">
-                <input class="clean-property reserve-form__name-phone " type="text" placeholder="Ім'я*">
-                <input class="clean-property reserve-form__name-phone " type="tel" placeholder="Телефон*">
-                <input class="clean-property reserve-form__date-time " type="date">
-                <input class="clean-property reserve-form__date-time " type="time">
-                <input class="clean-property btn" type="submit" value="РЕЗЕРВ">
-            </form>
-        </div>
+        <h2 class="reserve-block__title">РЕЗЕРВ СТОЛУ</h2>
+        <form action="#" method="" class="reserve-form">
+            <input class="clean-property reserve-form__name-phone" required type="text" placeholder="Ім'я*">
+            <input class="clean-property reserve-form__name-phone" required type="tel" placeholder="Телефон*">
+            <input class="clean-property reserve-form__date-time date-active" required type="text" id="reserve-date-action">
+            <input class="clean-property reserve-form__date-time date-active" required type="text" id="reserve-time-action">
+            <input class="clean-property btn" type="submit" value="РЕЗЕРВ">
+        </form>
     </div>
 </section>

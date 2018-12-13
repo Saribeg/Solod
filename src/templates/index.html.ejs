@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https:///cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css">
     <link rel="stylesheet" href="css/main.css">
-
 </head>
 <body>
 <div class="container">
-    <%- include('_nav-menu'); %>
+    <%- include('_nav-menu-main'); %>
     <%- include('_reserve-btn'); %>
-    <div class="header">
-        <h1>Smoked </br>food</h1> <br>
-    </div>
-    <div class="smoke">
-        <h2>Коптильня</h2>
+    <header class="header">
+        <h1>Smoked </br>food</h1>
+    </header>
+    <a name="smoke"></a>
+    <section class="smoke">
+        <h2 class="section-head">Коптильня</h2>
         <div class="smokeList">
             <div class="steps">
                 <div class="steps__discription">
@@ -56,24 +59,23 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <%- include('_mainpage-menu'); %>
     <%- include('_reserve-main'); %>
-    <%- include('_reserve-action'); %>
+    <!--<%- include('_reserve-action'); %>-->
+    <a name="gallery-all"></a>
     <%- include('_s-home-gallery'); %>
     <%- include('_photo-report'); %>
     <%- include('_main-event'); %>
 </div>
-    <%- include('_footer'); %>
-
+<%- include('_footer'); %>
 
 	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
-
-
-	
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="module" src="js/main-page.js"></script>
 </body>
 </html>
