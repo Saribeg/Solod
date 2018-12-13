@@ -1,13 +1,8 @@
-let datetimepicker = require('jquery-datetimepicker')
-// jQuery.datetimepicker.setLocale('ru');
 function reserveBtn(isAction) {
-    $('#reserve-date').datetimepicker({
-        timepicker:false,
-        format:'d.m.Y'
-    });
-    $('#reserve-time').datetimepicker({
-        datepicker:false
-    });
+    $('#reserve-date').datepicker();
+    // $('#reserve-time').customSelect({
+    //     modifier: 'custom-select--dark'
+    // });
     // let formmain = $('#reserve-main-click');
     // let form = $('#reserve-click');
     // let time = {

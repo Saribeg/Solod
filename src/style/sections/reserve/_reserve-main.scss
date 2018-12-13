@@ -58,6 +58,7 @@ input::-webkit-clear-button {
     font-size: 17px;
     height: 50px;
     padding: 0 13px 0;
+    box-sizing: border-box;
 
     &::placeholder {
       color: #000000;
@@ -69,33 +70,33 @@ input::-webkit-clear-button {
   &__date-time {
     font-size: 17px;
     border: 2px solid $color-bg-gray;
-    width: 45%;
+    width: 49%;
     height: 50px;
     padding-left: 13px;
     margin-bottom: 22px;
+    box-sizing: border-box;
 
     &::placeholder {
       font-size: 17px;
       color: $color-black;
     }
-
   }
 
   .btn {
     width: 49%;
     background-color: $color-bg-gray;
     color: $color-yellow;
-    padding: 20px 0;
+    padding: 15px 0;
     font-size: 22px;
     font-weight: 700;
   }
 }
 
+
+
+
 @media screen and (max-width: 1150px){
   .reserve-form {
-    &__date-time {
-      width: 42%;
-    }
     .btn {
       width: 47%;
     }
@@ -110,7 +111,6 @@ input::-webkit-clear-button {
   .reserve-form {
     &__date-time {
       font-size: 15px;
-      max-width: 42%;
 
       &::-webkit-calendar-picker-indicator {
         padding-right: 10px;
@@ -136,11 +136,6 @@ input::-webkit-clear-button {
 }
 
 @media screen and (max-width: 650px){
-  .reserve-form {
-    &__date-time {
-      width: 40%;
-    }
-  }
   .date-active {
     width: 50%;
   }
@@ -162,15 +157,11 @@ input::-webkit-clear-button {
       z-index: 1;
     }
 
-    &__date-time {
-      width: 100%;
-    }
   }
 
   .reserve-form {
     &__date-time {
       font-size: 14px;
-      max-width: 40%;
 
       &::-webkit-calendar-picker-indicator {
         padding-right: 10px;

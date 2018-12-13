@@ -14,15 +14,14 @@
 .footer-info {
     display: flex;
     justify-content: space-between;
-    margin-left: 240px;
-    padding: 50px 40px;
+    margin-left: $section-margin;
+    padding: 50px $section-head-margin;
     line-height: 1.5;
     transition: all 0.4s ease;
 }
 
 .footer-info-contacts {
-    width: 28%;
-    padding-right: 20px;
+    flex-basis: 28%;
 
     &__header {
         font-size: 21px;
@@ -60,8 +59,7 @@
 
 
 .footer-info-schedule {
-    width: 25%;
-    padding-right: 20px;
+    flex-basis: 25%;
     transition: all 0.4s ease;
 
 
@@ -81,8 +79,19 @@
 
 
 .footer-info-form {
-    width: 47%;
+    flex-basis: 47%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     transition: all 0.5s ease;
+
+    &> form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
     &__header {
         font-size: 21px;
@@ -92,26 +101,20 @@
     }
 
     &__input {
+        flex-basis: 46%;
         outline: none;
         border: 2px solid #dddddd;
         background-color: transparent;
-        padding-top: 14px;
-        padding-left: 9px;
-        padding-bottom: 26px;
-        width: 47%;
+        padding: 14px 0 26px 9px;
         transition: all 0.4s ease;
         color: #fff;
         margin-bottom: 24px;
         font-size: 17px;
         box-sizing: border-box;
 
-        &-tel {
-            margin-left: 6%;
-        }
-
         &-msg {
             padding-bottom: 70px;
-            width: 100%;
+            flex-basis: 100%;
             font-family: Helvetica, sans-serif;
             overflow: hidden;
             resize: none;
