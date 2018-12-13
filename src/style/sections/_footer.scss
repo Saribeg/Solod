@@ -7,36 +7,36 @@
 
 .footer-wrapper {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
     color: $color-white;
 }
 
 .footer-info {
-    margin-left: $header-title-margin;
-    padding-top: 80px;
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 240px;
+    padding: 50px 40px;
     line-height: 1.5;
     transition: all 0.4s ease;
 }
 
 .footer-info-contacts {
-    width: 27%;
+    width: 28%;
+    padding-right: 20px;
 
     &__header {
-        font-size: 20px;
+        font-size: 21px;
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 22px;
-        letter-spacing: 0px;
     }
 
     &__phone {
-        font-size: 22.25px;
+        font-size: 22px;
         font-weight: bold;
         margin-bottom: 15px;
         color: #ffffff;
+        white-space: nowrap;
     }
 
     .fab {
@@ -49,7 +49,7 @@
         width: 38px;
         height: 38px;
         line-height: 38px;
-        margin-right: 5px;
+        margin-right: 16px;
         margin-top: 20px;
 
         &:hover {
@@ -60,15 +60,16 @@
 
 
 .footer-info-schedule {
-    width: 27%;
+    width: 25%;
+    padding-right: 20px;
     transition: all 0.4s ease;
 
+
     &__header {
-        font-size: 20px;
+        font-size: 21px;
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 22px;
-        letter-spacing: 0px;
     }
 
     &__working-hours {
@@ -80,16 +81,14 @@
 
 
 .footer-info-form {
-    width: 46%;
-    overflow: hidden;
+    width: 47%;
     transition: all 0.5s ease;
 
     &__header {
-        font-size: 20px;
+        font-size: 21px;
         text-transform: uppercase;
         font-weight: bold;
         margin-bottom: 22px;
-        letter-spacing: 0px;
     }
 
     &__input {
@@ -102,17 +101,17 @@
         width: 47%;
         transition: all 0.4s ease;
         color: #fff;
-        margin-bottom: 24px; // float: right;
+        margin-bottom: 24px;
         font-size: 17px;
         box-sizing: border-box;
 
         &-tel {
-            margin-left: 2%;
+            margin-left: 6%;
         }
 
         &-msg {
             padding-bottom: 70px;
-            width: 97%;
+            width: 100%;
             font-family: Helvetica, sans-serif;
             overflow: hidden;
             resize: none;
@@ -121,7 +120,7 @@
 
     &__submit {
         @include orange_button;
-        margin-bottom: 68px;
+        padding: 20px 36px;
 
     }
 }
@@ -145,6 +144,7 @@
     color: #dbdcdc;
 
 }
+
 // remove red border for input elements with "require" attribute in mozilla
 :invalid {
     box-shadow: none;
@@ -157,6 +157,7 @@
 :-moz-ui-invalid {
     box-shadow: none;
 }
+
 :focus::-webkit-input-placeholder {
     color: transparent;
 }
@@ -170,9 +171,8 @@
 }
 
 .map {
-    height: 440px;
-    margin-top: 50px;
-    padding-left: $header-title-margin;
+    padding: 50px 40px 50px 40px;
+    margin-left: 240px;
 }
 
 
@@ -180,10 +180,6 @@
 // Стили для tablet-версии
 @media screen and (max-width: $max-width-tablet),
 screen and (max-height: 515px) {
-    .footer-nav-block {
-        display: none;
-    }
-
     .footer-wrapper {
         width: 100%;
         display: flex;
@@ -194,8 +190,12 @@ screen and (max-height: 515px) {
 
     .footer-info {
         width: 100%;
+        margin: 0px;
         display: flex;
+        justify-content: flex-start;
         flex-wrap: wrap;
+        padding-left: 25px;
+        padding-right: 25px;
         transition: all 0.4s ease;
     }
 
@@ -203,15 +203,14 @@ screen and (max-height: 515px) {
     .footer-info-contacts {
         width: 35%;
         margin-bottom: 30px;
+        margin-right: 30px;
         transition: all 0.4s ease;
 
         &__header {
-            font-size: 18px;
             margin-bottom: 25px;
         }
 
         &__phone {
-            font-size: 18px;
             margin-bottom: 5px;
         }
 
@@ -229,18 +228,17 @@ screen and (max-height: 515px) {
     }
 
     .footer-info-form {
-        width: 80%;
-        transition: all 0.4s ease;
+        width: 100%;
         margin-top: 30px;
+        transition: all 0.4s ease;
 
-        &__submit {
-            font-size: 18px;
-            padding: 20px 50px;
-        }
+
     }
 
-    #map {
-        height: 400px;
+    .map {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-left: 0;
     }
 }
 
@@ -251,54 +249,42 @@ screen and (max-height: 515px) {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+
     }
 
 
     .footer-info-contacts {
-        width: 80%;
-        margin-bottom: 30px;
+        width: 90%;
+        margin-bottom: 60px;
 
         &__header {
-            font-size: 16px;
             margin-bottom: 20px;
-        }
-
-        &__phone {
-            font-size: 16px;
-        }
-
-        .fab {
-            display: inline-block;
-
         }
     }
 
 
     .footer-info-schedule {
-        width: 80%;
+        width: 90%;
         margin-bottom: 30px;
 
         &__working-hours {
             margin-bottom: 3px;
-            font-size: 16px;
         }
     }
 
 
     .footer-info-form {
-        width: 90%;
+        width: 100%;
         margin-bottom: 0;
 
         &__input {
-            width: 90%;
+            width: 100%;
             margin-left: 0;
+        }
+
+        &__submit {
+            width: 100%;
         }
     }
 
-    #map {
-        height: 300px;
-    }
 }
