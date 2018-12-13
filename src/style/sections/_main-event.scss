@@ -1,25 +1,41 @@
-//styles for desktop version
-.main-event {
-  max-width: 1115px;
-  min-width: 320px;
-  padding-left: 300px;
-  padding-right: 25px;
-  padding-top: 40px;
+.position-events-on-main {
   position: relative;
+  margin-bottom: 20px;
 
-  .main-event-img {
-    width: 100%;
-    max-width: 1115px;
+  .events-headline {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-left: 300px;
   }
 
-  .main-event-info {
-    max-width: 1115px;
+  .events-link {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    a {
+      font-size: 22px;
+      font-weight: 700;
+      color: $color-yellow;
+      border-bottom: 1px solid $color-yellow;
+    }
+  }
+}
+.main-event {
+  margin-left: $header-title-margin;
+  margin-right: $section-head-margin;
+  position: relative;
+  &-img {
+    width: 100%;
+  }
+
+  &-info {
     width: 40%;
     height: 150px;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    bottom: 10px;
-    left: 310px;
+    bottom: 55px;
 
     &__group {
       color: #fff;
@@ -40,7 +56,7 @@
       color: #fff;
       font-weight: 400;
       font-size: 14px;
-      width: 55%;
+      width: 60%;
       padding: 6px 0 12px 12px;
     }
 
@@ -76,79 +92,50 @@
 //styles for tablet version
 @media screen and (max-width: $max-width-tablet) {
 
-  .main-event {
-    padding-left: 0;
-    padding-right: 0;
+  .position-events-on-main {
 
-    .main-event-img {
-      width: 100%;
+    .events-headline {
+      margin-left: 10px;
+      font-size: 24px;
     }
 
-    .main-event-info {
-      width: 100%;
-      height: 110px;
-      bottom: 0;
-      left: 0;
-
-      &__group {
-        font-size: 26px;
-      }
-
-      &__style {
-
-      }
-
-      &__description {
-
-      }
-
-      &__date {
-        font-size: 16px;
-        top: 8px;
-        right: 8px;
-      }
-
-      &__button {
-        width: 100px;
-        height: 40px;
-        bottom: 20px;
-        right: 8px;
-
-        div {
-          font-size: 18px;
-          line-height: 40px;
-        }
+    .events-link {
+      right: 40px;
+      bottom: 40px;
+      a {
+        font-size: 18px;
       }
     }
   }
 
-}
-
-//styles for mobile version
-@media screen and (max-width: $max-width-mobile) {
-
   .main-event {
+    margin: 0 $section-head-margin;
 
     .main-event-img {
-
+      width: 100%;
     }
 
     .main-event-info {
-      height: 90px;
+      width: 50%;
+      height: 110px;
+      bottom: 10px;
+      left: 10px;
 
       &__group {
         font-size: 16px;
-        padding: 6px 0 3px 6px;
+        padding: 4px 0 3px 6px;
+        width: 60%;
       }
 
       &__style {
-        padding-left: 6px;
         font-size: 12px;
+        padding-left: 4px;
       }
 
       &__description {
-        font-size: 12px;
-        padding: 3px 0 6px 6px;
+        font-size: 10px;
+        padding: 3px 0 0px 6px;
+        width: 56%;
       }
 
       &__date {
@@ -159,13 +146,78 @@
 
       &__button {
         width: 80px;
-        height: 30px;
-        bottom: 10px;
-        right: 4px;
+        height: 35px;
+        bottom: 20px;
+        right: 6px;
 
         div {
           font-size: 16px;
-          line-height: 30px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+
+}
+
+//styles for mobile version
+@media screen and (max-width: $max-width-mobile) {
+
+  .position-events-on-main {
+
+    .events-headline {
+      font-size: 20px;
+    }
+
+    .events-link {
+      right: 25px;
+      bottom: 25px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .main-event {
+
+    .main-event-img {
+
+    }
+
+    .main-event-info {
+      height: 100px;
+
+      &__group {
+        font-size: 12px;
+        padding: 6px 0 3px 6px;
+      }
+
+      &__style {
+        padding-left: 6px;
+        font-size: 12px;
+      }
+
+      &__description {
+        font-size: 10px;
+        padding: 3px 0 6px 6px;
+      }
+
+      &__date {
+        font-size: 12px;
+        top: 4px;
+        right: 4px;
+        width: 36%;
+      }
+
+      &__button {
+        width: 60px;
+        height: 25px;
+        bottom: 10px;
+        right: 5px;
+
+        div {
+          font-size: 12px;
+          line-height: 25px;
         }
       }
     }
