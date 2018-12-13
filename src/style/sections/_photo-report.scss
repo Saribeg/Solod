@@ -2,6 +2,7 @@
   @include flexColon-style;
   align-items: center;
   margin-left: $header-title-margin;
+  margin-right: $section-head-margin;
 
   .photoReport {
     @include flexRow-style;

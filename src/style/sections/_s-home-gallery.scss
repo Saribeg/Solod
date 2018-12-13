@@ -1,5 +1,6 @@
 .slider-section {
 	margin-left: $header-title-margin;
+	margin-right: $section-head-margin;
 	.slick {
 		&-section {
 			max-width: calc(1440px - 280px);
