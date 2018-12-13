@@ -19,7 +19,9 @@
   background: url("../img/index/main_smoke_bg.png") no-repeat center;
   background-size: cover;
   margin-left: $section-margin;
-
+  h2 {
+    margin-left: $section-head-margin;
+  }
   .smokeList {
     height: 700px;
     width: 670px;
