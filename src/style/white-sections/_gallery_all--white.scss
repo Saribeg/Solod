@@ -1,0 +1,209 @@
+
+.gallery_all {
+  width: 100%;
+  background-color: $color-bg-gray;
+  .container {
+    padding-top: 150px;
+    @include flexColon-style;
+    align-items: center;
+    margin-left: 245px;
+    .photoReport {
+      width: 92%;
+      @include flexRow-style;
+      justify-content: space-between;
+      &-block {
+        margin: 0 10px 30px;
+        @include flexColon-style;
+        align-items: flex-start;
+        .all-photo {
+          @include flexRow-style;
+          justify-content: space-between;
+          .Start__photo {
+            margin-right: 10px;
+          }
+          .Start__photo img {
+            width: 23vw;
+          }
+          .block-small {
+            width: 11vw;
+            @include flexRow-style;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .next__photo {
+              position: relative;
+            }
+            .next__photo img {
+              margin: 0 0.3vw 0.3vw 0;
+              width: 5vw;
+            }
+            .next__button img {
+              width: 5vw;
+            }
+            .next__photo::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 1;
+              width: 5vw;
+            }
+          }
+        }
+      }
+      .overground {
+        font-family: Helvetica, sans-serif;
+        color: $color-white;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+    }
+    .button-section {
+      width: 100%;
+      .gallery__button {
+        display: inline-block;
+        text-align: center;
+        width: 249px;
+        height: 57px;
+        color: $color-bg-gray;
+        font-size: 21.91px;
+        font-weight: 900;
+        line-height: 57px;
+        background-color: $color-yellow;
+        margin: 20px 0 50px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery_all {
+    .container {
+      @include flexColon-style;
+      align-items: center;
+      margin-left: 245px;
+      .photoReport {
+        width: 92%;
+        @include flexRow-style;
+        justify-content: space-between;
+        &-block {
+          margin: 0 10px 30px;
+          @include flexColon-style;
+          align-items: flex-start;
+          .all-photo {
+            @include flexRow-style;
+            justify-content: space-between;
+            .Start__photo {
+              margin-right: 10px;
+            }
+            .Start__photo img {
+              width: 45vw;
+            }
+            .block-small {
+              width: 21vw;
+
+              .next__photo {
+              }
+              .next__photo img {
+                margin: 0 0.3vw 0.3vw 0;
+                width: 10vw;
+              }
+              .next__button img {
+                width: 10vw;
+              }
+              .next__photo::before {
+                width: 10vw;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .gallery_all {
+    .container {
+      margin-left: 0;
+      .photoReport {
+        &-block {
+          .all-photo {
+            .Start__photo {
+            }
+            .Start__photo img {
+              width: 28vw;
+            }
+            .block-small {
+              width: 13vw;
+              .next__photo {
+              }
+              .next__photo img {
+                margin: 0 0.3vw 0.3vw 0;
+                width: 6vw;
+              }
+              .next__button img {
+                width: 6vw;
+              }
+              .next__photo::before {
+                width: 6vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery_all {
+    .container {
+      .photoReport {
+        &-block {
+          margin: 0 0 30px 0;
+          width: auto;
+          .all-photo {
+            @include flexColon-style;
+            align-items: flex-start;
+            .Start__photo {
+              margin-bottom: 1px;
+            }
+            .Start__photo img {
+              width: 90vw;
+            }
+            .block-small {
+              width: 90vw;
+              .next__photo {
+              }
+              .next__photo img {
+                width: 14vw;
+                margin-right: 1.1vw;
+              }
+              .next__photo::before {
+                width: 14vw;
+              }
+              .next__button img {
+                width: 14vw;
+              }
+            }
+          }
+        }
+        .overground {
+          font-size: 17px;
+        }
+      }
+      .button-section {
+        .gallery__button {
+        }
+      }
+    }
+  }
+}
