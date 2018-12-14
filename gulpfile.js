@@ -27,7 +27,7 @@ let path = {
         fonts: 'build/fonts/'
     },
     src: {
-        ejs: 'src/templates/*.html.ejs',
+        ejs: 'src/templates/**/*.html.ejs',
         js: 'src/js/*.js',
         style: 'src/style/**/*.scss',
         img: 'src/img/**/*.*',

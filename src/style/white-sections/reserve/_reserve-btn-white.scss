@@ -1,0 +1,42 @@
+.reserve-btn-wrapper {
+  position: sticky;
+  width: 95%;
+  height: 0;
+  z-index: 999;
+  text-align: right;
+  top: 50px;
+
+  .reserve-btn {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $color-yellow;
+    border: 10px solid #a0a0a0;
+    padding: 20px 25px;
+    text-align: center;
+
+    &__text {
+      color: #000000;
+      font-size: 13px;
+      font-weight: 900;
+    }
+  }
+  .display-none{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .reserve-btn-wrapper {
+    top: 30px;
+    right: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reserve-btn-wrapper {
+    position: fixed;
+    top: calc(100vh - 150px);
+    right: 5px;
+    padding: 10px 15px;
+  }
+}
+
