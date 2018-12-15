@@ -30,6 +30,7 @@ let path = {
         ejs: 'src/templates/**/*.html.ejs',
         js: 'src/js/*.js',
         style: 'src/style/**/*.scss',
+        styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -93,6 +94,18 @@ gulp.task('style:build', function () {
         }));
 });
 
+gulp.task('styleWhite:build', function () {
+    return gulp.src(path.src.styleWhite)
+        .pipe(concat('main-white.css'))
+        .pipe(sass())
+        .pipe(prefixer())
+        .pipe(cleancss())
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({
+            stream: true
+        }));
+});
+
 gulp.task('image:build', function () {
     return gulp.src(path.src.img)
         .pipe(imagemin({
@@ -117,6 +130,7 @@ gulp.task('fonts:build', function () {
 gulp.task('build', [
     'ejs:build',
     'style:build',
+    'styleWhite:build',
     'js:build',
     'fonts:build',
     'image:build'
@@ -130,6 +144,9 @@ gulp.task('watch', ['webserver'], function () {
     });
     watch([path.watch.style], function (event, cb) {
         gulp.start('style:build');
+    });
+    watch([path.watch.style], function (event, cb) {
+        gulp.start('styleWhite:build');
     });
     watch([path.watch.js], function (event, cb) {
         gulp.start('js:build');
