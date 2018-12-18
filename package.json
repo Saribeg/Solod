@@ -32,7 +32,9 @@
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
     "imagemin-pngquant": "^6.0.0",
-    "terser": "^3.10.12"
-  },
-  "dependencies": {}
+    "terser": "^3.10.12",
+    "gulp-file-include": "^2.0.1",
+    "run-sequence": "^2.2.1",
+    "gulp-minify-ejs": "^1.0.3"
+  }
 }
