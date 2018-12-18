@@ -1,5 +1,5 @@
 .section-reserve-action {
-  width: calc(100% - 250px);
+  width: calc(100% - 240px);
   background-color: $color-yellow;
   float: right;
   display: flex;
@@ -47,7 +47,7 @@
 }
 
 .btn-action-reserve{
-  width: 49%;
+  width: 47%;
   max-width: 195px;
 }
 
@@ -68,9 +68,9 @@
   .section-reserve-action{
     width: 100%;
   }
-  .btn-action-reserve{
-    width: 46%;
-  }
+  //.btn-action-reserve{
+  //  width: 46%;
+  //}
 }
 
 @media screen and (max-width: 768px) {
@@ -113,8 +113,8 @@
   }
 
   .btn-action-reserve{
-    width: calc(43% + 3px);
-    max-width: 257px;
+    //width: calc(43% + 3px);
+    max-width: 280px;
   }
 }
 

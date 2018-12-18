@@ -1,5 +1,5 @@
 .section-reserve {
-  width: calc(100% - 250px);
+  width: calc(100% - 240px);
   float: right;
   position: relative;
   display: flex;
@@ -66,38 +66,66 @@
   }
 
   &__date-time {
-    width: 85%;
-    //border: 2px solid $color-bg-gray;
-    //width: 47%;
-    //height: 54px;
-    //margin-bottom: 22px;
-    //padding-left: 13px;
-    //box-sizing: border-box;
-
-    &::placeholder {
-      color: #000000;
-      font-size: 17px;
-      font-weight: 300;
-    }
-  }
-
-  &__dt-block{
-    border: 2px solid #292a2e;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 13px;
+    //width: 85%;
+    border: 2px solid $color-bg-gray;
+    width: 47%;
+    height: 54px;
     margin-bottom: 22px;
-    width: 43%;
+    padding-left: 13px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: $color-yellow;
+    //color: $color-yellow;
+
+    &:before {
+      content: attr(placeholder);
+      //position: absolute;
+    }
+    &:focus{
+      //color: #000;
+    }
+
+    &::-webkit-clear-button {
+      display: none;
+    }
+
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      color: #000000;
+      background-color: $color-yellow;
+    }
+
+    &::-webkit-input-placeholder{
+      color: green;
+    }
+
+    //&::placeholder {
+    //  color: #000000;
+    //  font-size: 17px;
+    //  font-weight: 300;
+    //}
   }
 
-  &__arrow{
-    background-image: url('/img/reserve/arrows.png');
-    //display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-repeat: no-repeat;
-  }
+  //&__dt-block{
+  //  border: 2px solid #292a2e;
+  //  height: 50px;
+  //  display: flex;
+  //  align-items: center;
+  //  padding-left: 13px;
+  //  margin-bottom: 22px;
+  //  width: 43%;
+  //}
+
+  //&__arrow{
+  //  background-image: url('/img/reserve/arrows.png');
+  //  //display: inline-block;
+  //  width: 10px;
+  //  height: 10px;
+  //  background-repeat: no-repeat;
+  //}
 }
 
 .btn {
@@ -136,12 +164,12 @@
     }
   }
   .reserve-form{
-    &__dt-block{
-      width: 40%;
+    &__date-time{
+      //width: 40%;
     }
   }
   .btn-main-reserve{
-    width: calc(40% + 17px);
+    //width: calc(40% + 17px);
   }
 }
 
@@ -162,13 +190,13 @@
 
   .reserve-form{
     justify-content: center;
-    //&__date-time{
-      //width: 100%;
-    //}
-
-    &__dt-block{
+    &__date-time{
       width: 100%;
     }
+
+    //&__dt-block{
+    //  width: 100%;
+    //}
   }
 
   .btn-main-reserve{
@@ -178,3 +206,6 @@
 }
 
 
+//input[type="date"]::-webkit-input-placeholder{
+//  color: green;
+//}
