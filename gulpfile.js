@@ -24,6 +24,7 @@ let path = {
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
+        imgWhite: 'build/white-img/',
         fonts: 'build/fonts/'
     },
     src: {
@@ -32,6 +33,7 @@ let path = {
         style: 'src/style/**/*.scss',
         styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
+        imgWhite: 'src/white-img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
@@ -40,6 +42,7 @@ let path = {
         style: 'src/style/**/*.scss',
         styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
+        imgWhite: 'src/white-img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: 'build/'
@@ -123,6 +126,22 @@ gulp.task('image:build', function () {
         }));
 });
 
+gulp.task('imageWhite:build', function () {
+    return gulp.src(path.src.imgWhite)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [pngquant()],
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.imgWhite))
+        .pipe(reload({
+            stream: true
+        }));
+});
+
 gulp.task('fonts:build', function () {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
@@ -134,7 +153,8 @@ gulp.task('build', [
     'styleWhite:build',
     'js:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'imageWhite:build'
 ], function () {
     console.log('===ALL COMPRESSED===');
 });
@@ -154,6 +174,9 @@ gulp.task('watch', ['webserver'], function () {
     });
     watch([path.watch.img], function (event, cb) {
         gulp.start('image:build');
+    });
+    watch([path.watch.imgWhite], function (event, cb) {
+        gulp.start('imageWhite:build');
     });
     watch([path.watch.fonts], function (event, cb) {
         gulp.start('fonts:build');
