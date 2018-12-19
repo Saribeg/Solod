@@ -6,4 +6,4 @@
 _navMenu();
 reserveBtn(true);
 tabMenu();
-initMap();
+initWhiteMap();

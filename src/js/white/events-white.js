@@ -4,4 +4,4 @@
 
 _navMenu();
 reserveBtn(true);
-initMap();
+initWhiteMap();
