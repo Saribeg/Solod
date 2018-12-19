@@ -29,7 +29,7 @@ let path = {
     },
     src: {
         ejs: 'src/templates/**/*.html.ejs',
-        js: 'src/js/*.js',
+        js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
@@ -37,7 +37,7 @@ let path = {
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
-        ejs: 'src/templates/*.ejs',
+        ejs: 'src/templates/**/*.ejs',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
         styleWhite: 'src/style-white/**/*.scss',
@@ -61,15 +61,6 @@ gulp.task('ejs:build', function(){
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
-
-
-
-/*gulp.task('html:build', function(){
-    return gulp.src(path.src.html)
-        .pipe(concat('index.html'))
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
-});*/
 
 gulp.task('js:build', function () {
     return gulp.src(path.src.js)

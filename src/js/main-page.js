@@ -2,7 +2,7 @@
 @@include('modules/_reserve.js');
 @@include('modules/_mainpage_menu.js');
 @@include('modules/_slick-slider.js');
-@@include('modules/_googlemap.js');
+@@include('modules/_map-dark.js');
 
 _navMenu();
 reserveBtn(false);
