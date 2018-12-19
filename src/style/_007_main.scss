@@ -1,0 +1,227 @@
+.header {
+  height: 900px;
+  background: url("../img/index/main_header_2.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  margin-left: 0;
+
+  h1 {
+    color: $color-white;
+    font-size: 100px;
+    font-weight: 900;
+    margin-left: $header-title-margin;
+    text-transform: uppercase;
+    align-self: center;
+  }
+}
+.smoke {
+  height: 895px;
+  background: url("../img/index/main_smoke_bg.png") no-repeat center;
+  background-size: cover;
+  margin-left: $section-margin;
+  h2 {
+    margin-left: $section-head-margin;
+  }
+  .smokeList {
+    height: 700px;
+    width: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px auto;
+    .steps {
+      height: 170px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &__discription {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: end;
+        h3 {
+          font-size: 24px;
+          text-transform: uppercase;
+          font-weight: 800;
+          color: #bb7e62;
+          padding-bottom: 15px;
+          line-height: 28px;
+        }
+        p {
+          font-size: 14px;
+          color: $color-white;
+        }
+      }
+      &__discription-start {
+        width: 260px;
+        align-items: flex-start;
+        text-align: left;
+      }
+      &__circle {
+        width: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .circle {
+          height: 65px;
+          width: 65px;
+          background-color: $color-yellow;
+          border-radius: 50%;
+          font-size: 24px;
+          font-weight: 800;
+          color: $color-bg-gray;
+          text-align: center;
+          p {
+            margin-top: 15px;
+          }
+        }
+      }
+      &__circle-arrow-right:before {
+        content: "";
+        width: 44px;
+        height: 54px;
+        background: url("../img/index/main_smoke_arrow_right.png") no-repeat;
+        position: absolute;
+        right: -50px;
+        top: 40px;
+      }
+      &__circle-arrow-left:before {
+        content: "";
+        width: 44px;
+        height: 54px;
+        background: url("../img/index/main_smoke_arrow_left.png") no-repeat;
+        position: absolute;
+        left: -50px;
+        top: 40px;
+      }
+      &__circle-border-topRight:after {
+        content: "";
+        width: 131px;
+        height: 131px;
+        background: url("../img/index/main_smoke_border_topRight.png") no-repeat;
+        position: absolute;
+
+      }
+      &__circle-border-bottomRight:after {
+        content: "";
+        width: 131px;
+        height: 131px;
+        background: url("../img/index/main_smoke_border_bottomRight.png") no-repeat;
+        position: absolute;
+
+      }
+      &__circle-border-bottomleft:after {
+        content: "";
+        width: 131px;
+        height: 131px;
+        background: url("../img/index/main_smoke_border_bottomLeft.png") no-repeat;
+        position: absolute;
+
+      }
+      &__circle-border-topleft:after {
+        content: "";
+        width: 131px;
+        height: 131px;
+        background: url("../img/index/main_smoke_border_topLeft.png") no-repeat;
+        position: absolute;
+
+      }
+    }
+    .steps-end {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: $max-width-tablet) {
+  .container {
+    .header {
+      height: 80vh;
+      h1 {
+        margin-left: 10%;
+      }
+    }
+    .smoke {
+      margin-left: 0;
+      width: 100%;
+      background: url("../img/index/main_smoke_bg.png") center;
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .container{
+    .header{
+      h1{
+        font-size: 80px;
+      }
+    }
+    .smoke{
+      .smokeList{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container{
+    .header{
+      height: 60vh;
+    }
+    .smoke{
+      .smokeList{
+        .steps{
+          &__circle{
+            .circle {
+              width: 44px;
+              height: 44px;
+              p{
+                margin-top: 8px;
+              }
+            }
+          }
+          &__circle-arrow-right:before {
+            display: none;
+          }
+          &__circle-arrow-left:before {
+            display: none;
+          }
+          &__circle-border-topRight:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+          &__circle-border-bottomRight:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+          &__circle-border-bottomleft:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+          &__circle-border-topleft:after {
+            width: 87px;
+            height: 87px;
+            background-size: 87px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container{
+    .header{
+      h1{
+        font-size: 60px;
+      }
+    }
+  }
+}

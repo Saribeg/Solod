@@ -1,13 +1,16 @@
+input::-webkit-clear-button {
+  display: none;
+}
+
 .section-reserve {
-  width: calc(100% - 240px);
-  float: right;
+  width: calc(100% - 250px);
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
-  padding: 40px 0px;
+  margin-left: $reserve-margin;
 }
+
 .reserve-block-img {
   position: absolute;
   right: 45%;
@@ -44,7 +47,6 @@
   background-color: transparent;
 }
 .reserve-form {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -55,157 +57,116 @@
     margin-bottom: 30px;
     font-size: 17px;
     height: 50px;
-    padding: 0 13px;
+    padding: 0 13px 0;
+    box-sizing: border-box;
 
     &::placeholder {
       color: #000000;
       font-size: 17px;
       font-weight: 300;
     }
-
   }
 
   &__date-time {
-    //width: 85%;
+    font-size: 17px;
     border: 2px solid $color-bg-gray;
-    width: 47%;
-    height: 54px;
-    margin-bottom: 22px;
+    width: 49%;
+    height: 50px;
     padding-left: 13px;
+    margin-bottom: 22px;
     box-sizing: border-box;
-    position: relative;
     background-color: $color-yellow;
-    //color: $color-yellow;
 
-    &:before {
-      content: attr(placeholder);
-      //position: absolute;
+    &::placeholder {
+      font-size: 17px;
+      color: $color-black;
     }
-    &:focus{
-      //color: #000;
-    }
-
-    &::-webkit-clear-button {
-      display: none;
-    }
-
-    &::-webkit-inner-spin-button {
-      display: none;
-    }
-
-    &::-webkit-calendar-picker-indicator {
-      color: #000000;
-      background-color: $color-yellow;
-    }
-
-    &::-webkit-input-placeholder{
-      color: green;
-    }
-
-    //&::placeholder {
-    //  color: #000000;
-    //  font-size: 17px;
-    //  font-weight: 300;
-    //}
   }
 
-  //&__dt-block{
-  //  border: 2px solid #292a2e;
-  //  height: 50px;
-  //  display: flex;
-  //  align-items: center;
-  //  padding-left: 13px;
-  //  margin-bottom: 22px;
-  //  width: 43%;
-  //}
-
-  //&__arrow{
-  //  background-image: url('/img/reserve/arrows.png');
-  //  //display: inline-block;
-  //  width: 10px;
-  //  height: 10px;
-  //  background-repeat: no-repeat;
-  //}
+  .btn {
+    width: 49%;
+    background-color: $color-bg-gray;
+    color: $color-yellow;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
 }
 
-.btn {
-  background-color: $color-bg-gray;
-  color: $color-yellow;
-  padding: 20px 0px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-transform: uppercase;
+
+
+
+@media screen and (max-width: 1150px){
+  .reserve-form {
+    .btn {
+      width: 47%;
+    }
+  }
 }
 
-.btn-main-reserve{
-  width: 48%;
-  max-width: 195px;
-}
-
-@media screen and (max-width: 980px){
-  .section-reserve{
+@media screen and (max-width: $max-width-tablet){
+  .section-reserve {
     width: 100%;
+    margin-left: 0;
   }
+  .reserve-form {
+    &__date-time {
+      font-size: 15px;
 
-  .reserve-block-img {
-    right: 55%;
-  }
-
-  .reserve-main{
-    padding: 40px 30px 40px 30px;
-
-    &__form {
-      width: 65%;
+      &::-webkit-calendar-picker-indicator {
+        padding-right: 10px;
+      }
     }
+    .btn {
+      width: 100%;
+    }
+  }
+  .reserve-main {
+    padding: 40px 20px;
 
-    &__title{
+    &__title {
       font-size: 1.5rem;
     }
   }
-  .reserve-form{
-    &__date-time{
-      //width: 40%;
-    }
+  .reserve-block-img {
+    right: 50%;
   }
-  .btn-main-reserve{
-    //width: calc(40% + 17px);
+  .reserve-main {
+    width: 80%;
   }
 }
 
-@media screen and (max-width: 480px){
-  .reserve-block-img{
-    //opacity: 0.7;
+@media screen and (max-width: 650px){
+  .date-active {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: $max-width-mobile){
+  .section-reserve {
+    width: 100%;
+    margin-left: 0;
+  }
+  .reserve-block-img {
     display: none;
   }
+  .reserve-main {
+    width: 90%;
 
-  .reserve-main{
-    width: 100%;
-
-    &__form{
+    &__form {
       width: 100%;
       z-index: 1;
     }
+
   }
 
-  .reserve-form{
-    justify-content: center;
-    &__date-time{
-      width: 100%;
+  .reserve-form {
+    &__date-time {
+      font-size: 14px;
+
+      &::-webkit-calendar-picker-indicator {
+        padding-right: 10px;
+      }
     }
-
-    //&__dt-block{
-    //  width: 100%;
-    //}
-  }
-
-  .btn-main-reserve{
-    width: 202px;
-
   }
 }
-
-
-//input[type="date"]::-webkit-input-placeholder{
-//  color: green;
-//}

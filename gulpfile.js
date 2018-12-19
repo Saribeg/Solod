@@ -1,10 +1,11 @@
-'use strict'
+'use strict';
 
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     babel = require('gulp-babel'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    fileInclude = require('gulp-file-include'),
     cleancss = require('gulp-clean-css'),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
@@ -17,32 +18,37 @@ var gulp = require('gulp'),
     minifyejs = require('gulp-minify-ejs'),
     reload = browserSync.reload;
 
-var path = {
+let path = {
     build: {
         html: 'build',
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
+        imgWhite: 'build/white-img/',
         fonts: 'build/fonts/'
     },
     src: {
-        ejs: 'src/templates/*.html.ejs',
+        ejs: 'src/templates/**/*.html.ejs',
         js: 'src/js/*.js',
         style: 'src/style/**/*.scss',
+        styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
+        imgWhite: 'src/white-img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         ejs: 'src/templates/*.ejs',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
+        styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
+        imgWhite: 'src/white-img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: 'build/'
 };
 
-var config = {
+let config = {
     server: {
         baseDir: "build"
     },
@@ -51,10 +57,10 @@ var config = {
 gulp.task('ejs:build', function(){
     return gulp.src(path.src.ejs)
         .pipe(ejs({}, {}, { ext: '' }))
-        .pipe(minifyejs())
+        // .pipe(minifyejs())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
-})
+});
 
 
 
@@ -67,7 +73,9 @@ gulp.task('ejs:build', function(){
 
 gulp.task('js:build', function () {
     return gulp.src(path.src.js)
-        .pipe(concat('main.js'))
+        .pipe(fileInclude({
+            prefix: '@@'
+        }))
         .pipe(babel({
             presets: ['@babel/env']
         }))
@@ -81,6 +89,18 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     return gulp.src(path.src.style)
         .pipe(concat('main.css'))
+        .pipe(sass())
+        .pipe(prefixer())
+        .pipe(cleancss())
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({
+            stream: true
+        }));
+});
+
+gulp.task('styleWhite:build', function () {
+    return gulp.src(path.src.styleWhite)
+        .pipe(concat('main-white.css'))
         .pipe(sass())
         .pipe(prefixer())
         .pipe(cleancss())
@@ -106,6 +126,22 @@ gulp.task('image:build', function () {
         }));
 });
 
+gulp.task('imageWhite:build', function () {
+    return gulp.src(path.src.imgWhite)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [pngquant()],
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.imgWhite))
+        .pipe(reload({
+            stream: true
+        }));
+});
+
 gulp.task('fonts:build', function () {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
@@ -114,9 +150,11 @@ gulp.task('fonts:build', function () {
 gulp.task('build', [
     'ejs:build',
     'style:build',
+    'styleWhite:build',
     'js:build',
     'fonts:build',
-    'image:build'
+    'image:build',
+    'imageWhite:build'
 ], function () {
     console.log('===ALL COMPRESSED===');
 });
@@ -128,11 +166,17 @@ gulp.task('watch', ['webserver'], function () {
     watch([path.watch.style], function (event, cb) {
         gulp.start('style:build');
     });
+    watch([path.watch.styleWhite], function (event, cb) {
+        gulp.start('styleWhite:build');
+    });
     watch([path.watch.js], function (event, cb) {
         gulp.start('js:build');
     });
     watch([path.watch.img], function (event, cb) {
         gulp.start('image:build');
+    });
+    watch([path.watch.imgWhite], function (event, cb) {
+        gulp.start('imageWhite:build');
     });
     watch([path.watch.fonts], function (event, cb) {
         gulp.start('fonts:build');
@@ -151,7 +195,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('default', function(){
-    runSequence('clean', ['build', 'watch']), function () {
-    console.log('===ALL DONE===')
+    runSequence('clean', 'build', 'watch'), function () {
+        console.log('===ALL DONE===')
     }
 });

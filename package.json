@@ -27,6 +27,7 @@
     "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-ejs": "^3.2.1",
+    "gulp-file-include": "^2.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-minify-ejs": "^1.0.3",
     "gulp-sass": "^4.0.1",
@@ -34,5 +35,6 @@
     "gulp-watch": "^5.0.1",
     "imagemin-pngquant": "^6.0.0",
     "run-sequence": "^2.2.1"
-  }
+  },
+  "dependencies": {}
 }
