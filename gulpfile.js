@@ -31,7 +31,6 @@ let path = {
         ejs: 'src/templates/**/*.html.ejs',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
-        styleWhite: 'src/style-white/**/*.scss',
         img: 'src/img/**/*.*',
         imgWhite: 'src/white-img/**/*.*',
         fonts: 'src/fonts/**/*.*'
