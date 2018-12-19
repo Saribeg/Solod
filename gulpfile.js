@@ -11,7 +11,7 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
+    // pngquant = require('imagemin-pngquant'),
     browserSync = require("browser-sync"),
     ejs = require("gulp-ejs"),
     runSequence = require('run-sequence'),
@@ -117,7 +117,7 @@ gulp.task('image:build', function () {
             svgoPlugins: [{
                 removeViewBox: false
             }],
-            use: [pngquant()],
+            // use: [pngquant()],
             interlaced: true
         }))
         .pipe(gulp.dest(path.build.img))
@@ -133,7 +133,7 @@ gulp.task('imageWhite:build', function () {
             svgoPlugins: [{
                 removeViewBox: false
             }],
-            use: [pngquant()],
+            // use: [pngquant()],
             interlaced: true
         }))
         .pipe(gulp.dest(path.build.imgWhite))

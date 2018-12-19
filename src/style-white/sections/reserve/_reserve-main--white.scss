@@ -34,7 +34,7 @@ input::-webkit-clear-button {
 
   &__title {
     font-family: Helvetica, sans-serif;
-    color: $color-bg-gray;
+    color: #FFFFFF;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 32px;
@@ -70,11 +70,13 @@ input::-webkit-clear-button {
   &__date-time {
     font-size: 17px;
     border: 2px solid #FFFFFF;
+    color: #FFFFFF;
     width: 49%;
     height: 50px;
     padding-left: 13px;
     margin-bottom: 22px;
     box-sizing: border-box;
+    background-color: $color-green;
 
     &::placeholder {
       font-size: 17px;
@@ -84,8 +86,8 @@ input::-webkit-clear-button {
 
   .btn-while {
     width: 49%;
-    background-color: $color-bg-gray;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: $color-green;
     padding: 15px 0;
     font-size: 22px;
     font-weight: 700;

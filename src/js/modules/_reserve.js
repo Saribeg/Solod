@@ -1,6 +1,9 @@
 function reserveBtn(isAction) {
     $('#reserve-date').datepicker();
     $('#reserve-date-action').datepicker();
+
+    $('#reserve-date-white').datepicker();
+
     // $('#reserve-time').customSelect({
     //     modifier: 'custom-select--dark'
     // });
