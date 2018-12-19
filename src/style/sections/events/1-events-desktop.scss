@@ -1,8 +1,8 @@
 .events-table {
-  max-width: 1115px;
-  min-width: 320px;
   padding-left: 300px;
   padding-right: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -19,7 +19,6 @@
 
     .event-info {
       margin: 0 5px;
-      max-width: 1115px;
       height: 130px;
       background-color: rgba(0, 0, 0, 0.8);
       position: absolute;
@@ -86,6 +85,7 @@
   cursor: pointer;
   margin-left: 300px;
   margin-top: 40px;
+  margin-bottom: 40px;
 
 
   div {
@@ -95,3 +95,4 @@
     color: $color-bg-gray;
   }
 }
+

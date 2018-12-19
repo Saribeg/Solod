@@ -12,26 +12,24 @@
       }
 
       .event-info {
-        height: 95px;
+        height: 100px;
 
 
         &__group {
-          font-size: 14px;
+          font-size: 12px;
           padding: 6px 0 3px 6px;
-          width: 55%;
 
         }
 
         &__style {
-          font-size: 12px;
           padding-left: 6px;
+          font-size: 12px;
 
         }
 
         &__description {
           font-size: 10px;
           padding: 3px 0 6px 6px;
-          width: 61%;
 
         }
 
@@ -39,17 +37,19 @@
           font-size: 12px;
           top: 4px;
           right: 4px;
+          width: 36%;
         }
 
         &__button {
-          width: 70px;
-          height: 30px;
+          width: 60px;
+          height: 25px;
           bottom: 10px;
+          right: 5px;
 
 
           div {
-            font-size: 14px;
-            line-height: 30px;
+            font-size: 12px;
+            line-height: 25px;
           }
         }
       }
