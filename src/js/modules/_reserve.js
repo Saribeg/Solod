@@ -22,7 +22,7 @@ function slowScroll(id) {
 $(document).ready(function () {
     slowScroll('#smoke-btn');
     slowScroll('#smoke-btn-tab');
-    slowScroll('#smoke-btn-tmob');
+    slowScroll('#smoke-btn-mob');
     slowScroll('#res-btn');
     slowScroll('#contacts-btn');
     slowScroll('#contacts-btn-tab');
