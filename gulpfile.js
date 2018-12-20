@@ -41,6 +41,7 @@ let path = {
     watch: {
         ejs: 'src/templates/**/*.ejs',
         js: 'src/js/*.js',
+        jsMod: 'src/js/modules/*.js',
         jsWhite: 'src/js/white/*.js',
         style: 'src/style/**/*.scss',
         styleWhite: 'src/style-white/**/*.scss',
@@ -181,6 +182,10 @@ gulp.task('watch', ['webserver'], function () {
     });
     watch([path.watch.js], function (event, cb) {
         gulp.start('js:build');
+    });
+    watch([path.watch.jsMod], function (event, cb) {
+        gulp.start('js:build');
+        gulp.start('jsWhite:build');
     });
     watch([path.watch.jsWhite], function (event, cb) {
         gulp.start('jsWhite:build');
