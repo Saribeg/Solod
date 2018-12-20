@@ -1,41 +1,35 @@
-.position-events-on-main {
-  position: relative;
-  margin-bottom: 20px;
+//styles for desktop version
 
-  .events-headline {
-    color: #ffffff;
-    font-size: 30px;
+.events-link {
+  position: absolute;
+  right: 50px;
+  bottom: 80px;
+
+  .events-link-color {
+    font-size: 22px;
     font-weight: 700;
-    margin-top: 50px;
-    margin-left: 300px;
-  }
-
-  .events-link {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-    a {
-      font-size: 22px;
-      font-weight: 700;
-      color: $color-yellow;
-      border-bottom: 1px solid $color-yellow;
-    }
+    color: $color-green;
+    border-bottom: 1px solid $color-green;
   }
 }
+
 .main-event {
-  margin-left: $header-title-margin;
-  margin-right: $section-head-margin;
+  padding-left: 300px;
+  padding-right: 25px;
+  padding-top: 40px;
   position: relative;
-  &-img {
+
+  .main-event-img {
     width: 100%;
   }
 
-  &-info {
+  .main-event-info {
     width: 40%;
     height: 150px;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    bottom: 55px;
+    bottom: 60px;
+    left: 310px;
 
     &__group {
       color: #fff;
@@ -72,18 +66,18 @@
     &__button {
       width: 130px;
       height: 50px;
-      background-color: $color-yellow;
+      background-color: $color-green;
       text-align: center;
       cursor: pointer;
       position: absolute;
       bottom: 30px;
       right: 12px;
 
-      div {
+      .main-event-info__button-text {
         font-size: 22px;
         font-weight: 700;
         line-height: 50px;
-        color: $color-bg-gray;
+        color: #fff;
       }
     }
   }
@@ -92,24 +86,18 @@
 //styles for tablet version
 @media screen and (max-width: $max-width-tablet) {
 
-  .position-events-on-main {
+  .events-link {
+    right: 40px;
 
-    .events-headline {
-      margin-left: 10px;
-      font-size: 24px;
-    }
-
-    .events-link {
-      right: 40px;
-      bottom: 40px;
-      a {
-        font-size: 18px;
-      }
+    .events-link-color {
+      font-size: 18px;
     }
   }
 
+
   .main-event {
-    margin: 0 $section-head-margin;
+    padding-left: 0;
+    padding-right: 0;
 
     .main-event-img {
       width: 100%;
@@ -118,7 +106,6 @@
     .main-event-info {
       width: 50%;
       height: 110px;
-      bottom: 10px;
       left: 10px;
 
       &__group {
@@ -150,7 +137,7 @@
         bottom: 20px;
         right: 6px;
 
-        div {
+        .main-event-info__button-text {
           font-size: 16px;
           line-height: 35px;
         }
@@ -163,20 +150,14 @@
 //styles for mobile version
 @media screen and (max-width: $max-width-mobile) {
 
-  .position-events-on-main {
+  .events-link {
+    right: 25px;
 
-    .events-headline {
-      font-size: 20px;
-    }
-
-    .events-link {
-      right: 25px;
-      bottom: 25px;
-      a {
-        font-size: 14px;
-      }
+    .events-link-color {
+      font-size: 14px;
     }
   }
+
 
   .main-event {
 
@@ -215,7 +196,7 @@
         bottom: 10px;
         right: 5px;
 
-        div {
+        .main-event-info__button-text {
           font-size: 12px;
           line-height: 25px;
         }

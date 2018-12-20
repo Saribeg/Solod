@@ -5,7 +5,7 @@
   right: 50px;
   bottom: 80px;
 
-  a {
+  .events-link-color {
     font-size: 22px;
     font-weight: 700;
     color: $color-yellow;
@@ -73,7 +73,7 @@
       bottom: 30px;
       right: 12px;
 
-      div {
+      .main-event-info__button-text {
         font-size: 22px;
         font-weight: 700;
         line-height: 50px;
@@ -89,7 +89,7 @@
   .events-link {
     right: 40px;
 
-    a {
+    .events-link-color {
       font-size: 18px;
     }
   }
@@ -137,7 +137,7 @@
         bottom: 20px;
         right: 6px;
 
-        div {
+        .main-event-info__button-text {
           font-size: 16px;
           line-height: 35px;
         }
@@ -153,7 +153,7 @@
     .events-link {
       right: 25px;
 
-      a {
+      .events-link-color {
         font-size: 14px;
       }
     }
@@ -196,7 +196,7 @@
         bottom: 10px;
         right: 5px;
 
-        div {
+        .main-event-info__button-text {
           font-size: 12px;
           line-height: 25px;
         }
