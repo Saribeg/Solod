@@ -1,3 +1,74 @@
+.header-event {
+  margin-left:$header-title-margin ;
+  margin-right: 40px;
+  padding-top: 40px;
+  position: relative;
+
+  &-img {
+    width: 100%;
+  }
+
+  &-info {
+    width: 50%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__group {
+      color: #fff;
+      font-size: 30px;
+      font-weight: 700;
+      flex-basis: 60%;
+      margin-top: 10px;
+    }
+
+    &__date {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      flex-basis: 40%;
+      margin-top: 10px;
+    }
+
+    &__more {
+      flex-basis: 60%;
+
+      .header-event-info__more-style {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .header-event-info__more-description {
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+
+    &__button {
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+      height: 50px;
+      width: 120px;
+      line-height: 50px;
+      background-color: $color-yellow;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+      color: $color-bg-gray;
+    }
+  }
+}
+
+
+
 .events-table {
   padding-left: 300px;
   padding-right: 25px;
@@ -78,21 +149,11 @@
 }
 
 .event-button-load-more {
-  width: 250px;
-  height: 50px;
+  margin-left: $header-title-margin;
+  padding: 5px 50px;
   background-color: $color-yellow;
-  text-align: center;
-  cursor: pointer;
-  margin-left: 300px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-
-
-  .event-button-load-more-text {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 50px;
-    color: $color-bg-gray;
-  }
+  font-size: 22px;
+  font-weight: 700;
+  color: $color-bg-gray;
 }
 

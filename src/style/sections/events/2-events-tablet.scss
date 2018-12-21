@@ -1,5 +1,45 @@
 @media screen and (max-width: $max-width-tablet) {
 
+  .header-event {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &-img {
+
+    }
+
+    &-info {
+      height: 110px;
+
+      &__group {
+        font-size: 16px;
+      }
+
+      &__date {
+        font-size: 12px;
+      }
+
+      &__more {
+
+        .header-event-info__more-style {
+          font-size: 12px;
+        }
+
+        .header-event-info__more-description {
+          font-size: 10px;
+        }
+      }
+
+      &__button {
+        width: 80px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+      }
+    }
+  }
+
+
   .events-table {
     padding-left: 0;
     padding-right: 0;
