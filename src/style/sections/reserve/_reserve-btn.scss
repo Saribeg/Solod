@@ -4,7 +4,7 @@
   height: 0;
   z-index: 999;
   text-align: right;
-  top: 50px;
+  top: 150px;
 
   .reserve-btn {
     display: inline-block;
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 980px) {
   .reserve-btn-wrapper {
-    top: 30px;
+    top: 120px;
     right: 25px;
   }
 }
