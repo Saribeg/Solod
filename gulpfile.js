@@ -213,7 +213,7 @@ gulp.task('clean', function () {
 
 
 gulp.task('default', function(){
-    runSequence('clean', 'build', 'watch'), function () {
+    runSequence('clean', 'build', 'watch', function () {
         console.log('===ALL DONE===')
-    }
+    });
 });

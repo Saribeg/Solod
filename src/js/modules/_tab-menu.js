@@ -111,7 +111,7 @@ function tabMenu() {
         $('.tab-menu__list_wrapper').attr('style', 'width: 185px;');
         $('.tab-menu__arrow_right_draw').attr('style', 'width:' + (widthItem) + 'px;');
         $('.tab-menu__item').attr('style', 'width: 185px;');
-        let heightMenu = $('.tab-menu__menu.tab-menu__menu_active').height;
+        let heightMenu = $('.tab-menu__menu.tab-menu__menu_active').height();
         $('.tab-menu__table').attr('style', 'max-height:' + (heightMenu + 100) + 'px;');
 
     }
