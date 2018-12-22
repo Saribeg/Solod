@@ -4,143 +4,133 @@
   position: absolute;
   right: 50px;
   bottom: 80px;
-
-  .events-link-color {
-    font-size: 22px;
-    font-weight: 700;
-    color: $color-yellow;
-    border-bottom: 1px solid $color-yellow;
-  }
+  font-size: 22px;
+  font-weight: 900;
+  color: $color-yellow;
+  border-bottom: 1px solid $color-yellow;
 }
 
 .main-event {
-  padding-left: 300px;
-  padding-right: 25px;
-  padding-top: 40px;
+  margin-left: $header-title-margin;
   position: relative;
 
-  .main-event-img {
+  &-img {
     width: 100%;
   }
 
-  .main-event-info {
-    width: 40%;
-    height: 150px;
+  &-info {
+    width: 50%;
+    height: 250px;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    bottom: 60px;
-    left: 310px;
+    bottom: 52px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
 
     &__group {
+      flex-basis: 60%;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-left: 20px;
       color: #fff;
       font-size: 30px;
       font-weight: 700;
-      padding: 12px 0 6px 12px;
-      width: 60%;
-    }
-
-    &__style {
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      padding-left: 12px;
-    }
-
-    &__description {
-      color: #fff;
-      font-weight: 400;
-      font-size: 14px;
-      width: 60%;
-      padding: 6px 0 12px 12px;
     }
 
     &__date {
+      flex-basis: 40%;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-right: 20px;
       color: #fff;
       font-size: 18px;
       font-weight: 400;
-      position: absolute;
-      top: 12px;
-      right: 12px;
     }
 
+    &__more {
+      flex-basis: 60%;
+      box-sizing: border-box;
+      padding-bottom: 20px;
+      padding-left: 20px;
+
+      .main-event-info__more-style {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .main-event-info__more-description {
+        color: #fff;
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+
     &__button {
-      width: 130px;
+      position: absolute;
+      right: 20px;
+      bottom: 30px;
       height: 50px;
+      width: 130px;
+      line-height: 50px;
       background-color: $color-yellow;
       text-align: center;
-      cursor: pointer;
-      position: absolute;
-      bottom: 30px;
-      right: 12px;
-
-      .main-event-info__button-text {
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 50px;
-        color: $color-bg-gray;
-      }
+      font-size: 22px;
+      font-weight: 900;
+      color: $color-bg-gray;
     }
   }
 }
+
 
 //styles for tablet version
 @media screen and (max-width: $max-width-tablet) {
 
   .events-link {
     right: 40px;
-
-    .events-link-color {
-      font-size: 18px;
-    }
+    font-size: 18px;
   }
 
 
   .main-event {
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 0;
 
-    .main-event-img {
-      width: 100%;
+    &-img {
+
     }
 
-    .main-event-info {
-      width: 50%;
-      height: 110px;
-      left: 10px;
+    &-info {
+      height: 170px;
 
       &__group {
-        font-size: 16px;
-        padding: 4px 0 3px 6px;
-        width: 60%;
-      }
-
-      &__style {
-        font-size: 12px;
-        padding-left: 4px;
-      }
-
-      &__description {
-        font-size: 10px;
-        padding: 3px 0 0px 6px;
-        width: 56%;
+        font-size: 18px;
       }
 
       &__date {
         font-size: 12px;
-        top: 4px;
-        right: 4px;
+      }
+
+      &__more {
+
+        .main-event-info__more-style {
+          font-size: 12px;
+        }
+
+        .main-event-info__more-description {
+          font-size: 10px;
+        }
       }
 
       &__button {
-        width: 80px;
+        width: 90px;
         height: 35px;
-        bottom: 20px;
-        right: 6px;
-
-        .main-event-info__button-text {
-          font-size: 16px;
-          line-height: 35px;
-        }
+        right: 15px;
+        bottom: 25px;
+        font-size: 16px;
+        line-height: 35px;
       }
     }
   }
@@ -150,58 +140,55 @@
 //styles for mobile version
 @media screen and (max-width: $max-width-mobile) {
 
-    .events-link {
-      right: 25px;
-
-      .events-link-color {
-        font-size: 14px;
-      }
-    }
+  .events-link {
+    right: 25px;
+    font-size: 14px;
+  }
 
 
   .main-event {
 
-    .main-event-img {
+    &-img {
 
     }
 
-    .main-event-info {
-      height: 100px;
+    &-info {
+      height: 150px;
 
       &__group {
         font-size: 12px;
-        padding: 6px 0 3px 6px;
-      }
-
-      &__style {
-        padding-left: 6px;
-        font-size: 12px;
-      }
-
-      &__description {
-        font-size: 10px;
-        padding: 3px 0 6px 6px;
+        padding-top: 10px;
+        padding-left: 10px;
       }
 
       &__date {
         font-size: 12px;
-        top: 4px;
-        right: 4px;
-        width: 36%;
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+
+      &__more {
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+        .main-event-info__more-style {
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+
+        .main-event-info__more-description {
+          font-size: 10px;
+        }
       }
 
       &__button {
-        width: 60px;
-        height: 25px;
-        bottom: 10px;
-        right: 5px;
-
-        .main-event-info__button-text {
-          font-size: 12px;
-          line-height: 25px;
-        }
+        width: 75px;
+        height: 30px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 12px;
+        line-height: 30px;
       }
     }
   }
-
 }
