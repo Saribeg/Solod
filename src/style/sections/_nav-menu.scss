@@ -96,6 +96,10 @@
     top: -71px;
     z-index: 10000;
 
+    &__item:first-of-type {
+      margin-top: 50px;
+    }
+
     &__top-line{
       display: flex;
       justify-content: space-around;
@@ -126,29 +130,26 @@
       height: calc(100vh - 170px);
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: flex-start;
       background-color: rgba(0, 0, 0, 0.95);
       color: $color-white;
-      transition: all 0.4s linear;
+      transition: all 0.3s linear;
     }
 
     &__list_show {
-      transition: all 0.4s linear;
+      transition: all 0.3s linear;
       left: 0;
     }
 
     &__link{
       display: block;
-      text-align: center;
-      width: 240px;
-      padding: 22px 0; //calc((80vh - 170px)/4);
+      padding: 30px 0 30px 50px; //calc((80vh - 170px)/4);
       font-size: 21px;
       font-weight: 700;
       text-transform: uppercase;
       text-decoration: none;
       color: $color-white;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
       &:hover, &:focus, &_active {
         color: $color-yellow;
       }
