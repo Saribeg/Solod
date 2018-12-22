@@ -1,14 +1,16 @@
 .footer {
     width: 100%;
-    background-color: $color-bg-black;
+    background-color: $color-white;
     overflow: hidden;
     min-width: 320px;
+    padding-bottom: 0;
 }
 
 .footer-wrapper {
     display: flex;
     flex-direction: row;
-    color: $color-white;
+    color: $color-black;
+    // overflow: hidden;
 }
 
 .footer-info {
@@ -24,6 +26,7 @@
     flex-basis: 28%;
 
     &__header {
+        color: $color-black;
         font-size: 21px;
         text-transform: uppercase;
         font-weight: bold;
@@ -34,7 +37,7 @@
         font-size: 22px;
         font-weight: bold;
         margin-bottom: 15px;
-        color: #ffffff;
+        color: $color-black;
         white-space: nowrap;
     }
 
@@ -42,8 +45,9 @@
         text-align: center;
         font-size: 20px;
         font-weight: bold;
-        color: $color-bg-black;
-        background-color: $color-yellow;
+        color: $color-white;
+        background-color: $color-green;
+        border: 1px solid $color-green;
         border-radius: 50%;
         width: 38px;
         height: 38px;
@@ -52,7 +56,9 @@
         margin-top: 20px;
 
         &:hover {
-            background-color: #ffffff;
+            background-color: $color-white;
+            color: $color-green;
+            border: 1px solid $color-green;
         }
     }
 }
@@ -74,19 +80,17 @@
         font-size: 18px;
         margin-bottom: 10px;
     }
-
 }
 
-
 .footer-info-form {
-    flex-basis: 47%;
+    flex-basis: 45%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     transition: all 0.5s ease;
 
-    &> form {
+    &__form {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -101,28 +105,32 @@
     }
 
     &__input {
-        flex-basis: 46%;
+        width: 48%;
         outline: none;
-        border: 2px solid #dddddd;
+        border: 2px solid $color-black;
         background-color: transparent;
         padding: 14px 0 26px 9px;
         transition: all 0.4s ease;
-        color: #fff;
+        color: $color-black;
         margin-bottom: 24px;
         font-size: 17px;
         box-sizing: border-box;
 
         &-msg {
+            width: 100%;
             padding-bottom: 70px;
-            flex-basis: 100%;
             font-family: Helvetica, sans-serif;
             overflow: hidden;
             resize: none;
         }
+
+        &-tel {
+            margin-left: 2%;
+        }
     }
 
     &__submit {
-        @include orange_button;
+        @include green_button;
         padding: 20px 36px;
 
     }
@@ -131,20 +139,20 @@
 //  styles for placeholders
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #dbdcdc;
+    color: $color-black;
     opacity: 0.7;
     /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #dbdcdc;
+    color: $color-black;
 
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: #dbdcdc;
+    color: $color-black;
 
 }
 
@@ -173,9 +181,17 @@
     color: transparent;
 }
 
-.map {
-    padding: 50px 40px 50px 40px;
-    margin-left: 240px;
+.mapboxgl-canvas {
+    margin-left: $section-margin;
+    width: calc(100% - $section-margin);
+    padding: 0px 40px 0px 40px;
+    height: 500px;
+
+}
+
+#map {
+    margin-right: 40px;
+    height: 500px;
 }
 
 
@@ -192,7 +208,6 @@ screen and (max-height: 515px) {
     }
 
     .footer-info {
-        width: 100%;
         margin: 0px;
         display: flex;
         justify-content: flex-start;
@@ -204,9 +219,9 @@ screen and (max-height: 515px) {
 
 
     .footer-info-contacts {
-        width: 35%;
+        flex-basis: 35%;
         margin-bottom: 30px;
-        margin-right: 30px;
+        margin-right: 50px;
         transition: all 0.4s ease;
 
         &__header {
@@ -222,42 +237,53 @@ screen and (max-height: 515px) {
         }
     }
 
-
-
     .footer-info-schedule {
-        width: 35%;
+        flex-basis: 35%;
         margin-bottom: 30px;
         transition: all 0.4s ease;
     }
 
     .footer-info-form {
-        width: 100%;
+        flex-basis: 80%;
         margin-top: 30px;
         transition: all 0.4s ease;
 
+        &__input-msg {
+            width: 99%;
+        }
 
     }
 
-    .map {
-        padding-left: 25px;
-        padding-right: 25px;
+    .mapboxgl-canvas {
         margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    #map {
+        margin-right: 25px;
+    ;
+        margin-left: 25px;
+        height: 400px;
+
     }
 }
 
 
 // Стили для mobile-версии
 @media screen and (max-width: $max-width-mobile) {
-    .footer-info {
-        display: flex;
-        flex-wrap: wrap;
+    .footer-wrapper {
         flex-direction: column;
-
+        flex-wrap: wrap;
     }
 
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+    }
 
     .footer-info-contacts {
-        width: 90%;
+        width: 100%;
         margin-bottom: 60px;
 
         &__header {
@@ -267,7 +293,7 @@ screen and (max-height: 515px) {
 
 
     .footer-info-schedule {
-        width: 90%;
+        width: 100%;
         margin-bottom: 30px;
 
         &__working-hours {
@@ -290,4 +316,13 @@ screen and (max-height: 515px) {
         }
     }
 
+    .mapboxgl-canvas {
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    #map {
+        height: 300px;
+    }
 }

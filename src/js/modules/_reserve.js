@@ -1,33 +1,6 @@
 function reserveBtn(isAction) {
     $('#reserve-date').datepicker();
-    // $('#reserve-time').customSelect({
-    //     modifier: 'custom-select--dark'
-    // });
-    // let formmain = $('#reserve-main-click');
-    // let form = $('#reserve-click');
-    // let time = {
-    //     hours: new Date().getHours() > 9 ? `${new Date().getHours() + 2}` : `0${new Date().getHours() + 2}`,
-    //     minutes: new Date().getMinutes() <= 9 ? `0${new Date().getMinutes()}` : new Date().getMinutes(),
-    // };
-    //
-    // console.log(`${time.hours}:${time.minutes}`);
-    //
-    // if(isAction){
-    //     $('#reserve-time-action')[0].defaultValue = `${time.hours}:${time.minutes}`;
-    //     $('#reserve-date-action')[0].valueAsDate = new Date();
-    // } else {
-    //     $('#reserve-time')[0].defaultValue = `${time.hours}:${time.minutes}`;
-    //     $('#reserve-date')[0].valueAsDate = new Date();
-    // }
-    // function hideReserveBtn(event) {
-    //     if (event.target.tagName === 'INPUT') {
-    //         $('#res-btn').addClass('display-none');
-    //     }
-    //     event.stopPropagation();
-    // }
-    //
-    // formmain.on('click', hideReserveBtn);
-    // form.on('click', hideReserveBtn);
+    $('#reserve-date-action').datepicker();
 
     function showbtn(event) {
         $('#res-btn').removeClass('display-none');
@@ -35,3 +8,23 @@ function reserveBtn(isAction) {
 
     $(document.body).on('click', showbtn);
 }
+
+function slowScroll(id) {
+    $(`${id}`).on("click", function (event) {
+        console.log(event.target);
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+}
+
+$(document).ready(function () {
+    slowScroll('#smoke-btn');
+    slowScroll('#smoke-btn-tab');
+    slowScroll('#smoke-btn-mob');
+    slowScroll('#res-btn');
+    slowScroll('#contacts-btn');
+    slowScroll('#contacts-btn-tab');
+    slowScroll('#contacts-btn-mob');
+});

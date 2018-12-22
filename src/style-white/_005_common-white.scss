@@ -1,7 +1,7 @@
 body {
   font-size: 14px;
   font-family: "Helvetica", sans-serif;
-  background-color: $color-bg-gray;
+  background-color: $color-white;
 }
 
 .container {
@@ -15,7 +15,7 @@ body {
   font-size: 30px;
   font-family: Helvetica, sans-serif;
   font-weight: 900;
-  color: #fff;
+  color: $color-bg-gray;
   margin-bottom: 30px;
 }
 
@@ -27,10 +27,4 @@ body {
 
 section, footer {
   padding: 50px 0;
-}
-
-@media screen and (max-width: $max-width-mobile){
-  .container {
-    overflow-y: hidden;
-  }
 }

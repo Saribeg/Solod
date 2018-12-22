@@ -28,9 +28,3 @@ body {
 section, footer {
   padding: 50px 0;
 }
-
-@media screen and (max-width: $max-width-mobile){
-  .container {
-    overflow-y: hidden;
-  }
-}

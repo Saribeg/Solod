@@ -76,6 +76,10 @@ input::-webkit-clear-button {
     margin-bottom: 22px;
     box-sizing: border-box;
 
+    &> option {
+      background-color: $color-yellow;
+    }
+
     &::placeholder {
       font-size: 17px;
       color: $color-black;
