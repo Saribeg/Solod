@@ -11,14 +11,11 @@ function _navMenu(){
 		$(".tablet-nav-menu__list").toggleClass("tablet-nav-menu__list_show");
 	});
 
-	//Контроль активного пункта меню
 	$(".nav-list li a").click(function(){
 		$(".nav-list li a").each(function(){
 			$(".nav-list li a").toggleClass("active");
 		})
 	});
-
-	//При больших разрешениях (>1440px) смещаем меню так, чтобы был в котейнере не смотря на position: fixed
 
 	function windowSize(){
     if ($(window).width() >= '1440'){

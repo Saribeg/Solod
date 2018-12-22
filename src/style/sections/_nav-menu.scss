@@ -171,7 +171,7 @@
       height: 3px;
       background-color: $color-white;
       border-radius: 10px;
-      // transition: all 0.4s linear;
+      transition: all 0.3s ease-in-out;
       &:hover, &:focus {
         color: $color-yellow;
       }
@@ -180,15 +180,13 @@
 
   .burger_toggle{
     .burger__line:first-child{
-      transform: rotate(45deg);
-      top: 9px;
+      transform: rotate(45deg) translate(5px,5px);
     }
     .burger__line:nth-child(2){
       opacity: 0;
     }
     .burger__line:last-child{
-      transform: rotate(-45deg);
-      bottom: 9px;
+      transform: rotate(-45deg) translate(7px,-8px);
     }
   }
 
@@ -202,7 +200,7 @@
     height: 70px;
 
     &__logo{
-      transform: scale(1.5);
+      transform: scale(2);
     }
 
     &__switcher{
@@ -309,13 +307,13 @@
     justify-content: space-between;
     width: 26px;
     height: 21px;
-    transition: all 0.4s linear;
+    transition: all 0.2s ease-in-out;
     &__line {
       position: relative;
       height: 3px;
       background-color: $color-white;
       border-radius: 10px;
-      transition: all 0.4s linear;
+      transition: all 0.2s linear;
       &:hover, &:focus {
         color: $color-yellow;
       }
@@ -324,15 +322,13 @@
 
   .burger_toggle{
     .burger__line:first-child{
-      transform: rotate(45deg);
-      top: 9px;
+      transform: rotate(45deg) translate(5px,5px);
     }
     .burger__line:nth-child(2){
       opacity: 0;
     }
     .burger__line:last-child{
-      transform: rotate(-45deg);
-      bottom: 9px;
+      transform: rotate(-45deg) translate(7px,-8px);
     }
   }
 
