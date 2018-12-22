@@ -41,76 +41,59 @@
 
 
   .events-table {
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     flex-direction: column;
 
     .event {
       flex-basis: auto;
-      margin-top: 40px;
+      margin-bottom: 20px;
 
 
       .event-img {
         width: 100%;
-        height: auto;
+        height: 100%;
       }
 
-      .event-info {
-        margin: 0;
-        width: 50%;
+      &-info {
         height: 110px;
+        margin: 0 10px;
+        width: 50%;
         bottom: 10px;
-        left: 10px;
 
         &__group {
           font-size: 16px;
-          padding: 4px 0 3px 6px;
-          width: 60%;
-        }
-
-        &__style {
-          font-size: 12px;
-          padding-left: 4px;
-        }
-
-        &__description {
-          font-size: 10px;
-          padding: 3px 0 0px 6px;
-          width: 56%;
         }
 
         &__date {
           font-size: 12px;
-          top: 4px;
-          right: 4px;
+        }
+
+        &__more {
+
+          .event-info__more-style {
+            font-size: 12px;
+          }
+
+          .event-info__more-description {
+            font-size: 10px;
+          }
         }
 
         &__button {
           width: 80px;
           height: 35px;
-          bottom: 20px;
-          right: 6px;
-
-
-          .event-info__button-text {
-            font-size: 16px;
-            line-height: 35px;
-          }
+          line-height: 35px;
+          font-size: 18px;
         }
       }
     }
   }
 
   .event-button-load-more {
-    width: 210px;
-    height: 40px;
-    margin: 40px auto;
-
-    .event-button-load-more-text {
-      font-size: 20px;
-      line-height: 40px;
-
-    }
+    margin-left: 20px;
+    padding: 5px 40px;
+    font-size: 20px;
   }
 
 }

@@ -21,10 +21,12 @@
 
     &__group {
       color: #fff;
-      font-size: 30px;
+      font-size: 28px;
       font-weight: 700;
       flex-basis: 60%;
-      margin-top: 10px;
+      box-sizing: border-box;
+      padding-top: 10px;
+      padding-left: 10px;
     }
 
     &__date {
@@ -32,16 +34,22 @@
       font-size: 18px;
       font-weight: 400;
       flex-basis: 40%;
-      margin-top: 10px;
+      box-sizing: border-box;
+      padding-top: 10px;
+      padding-right: 10px;
     }
 
     &__more {
       flex-basis: 60%;
+      box-sizing: border-box;
+      padding-bottom: 10px;
+      padding-left: 10px;
 
       .header-event-info__more-style {
         color: #fff;
         font-size: 14px;
         font-weight: 700;
+        margin-bottom: 5px;
       }
 
       .header-event-info__more-description {
@@ -68,12 +76,9 @@
 }
 
 
-
 .events-table {
-  padding-left: 300px;
-  padding-right: 25px;
-  padding-top: 0;
-  padding-bottom: 0;
+  margin-left: $header-title-margin;
+  margin-right: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -81,50 +86,60 @@
   .event {
     position: relative;
     flex-basis: 48%;
-    margin-top: 40px;
+    margin-bottom: 20px;
 
-    .event-img {
+    &-img {
       width: 100%;
       height: 100%;
     }
 
-    .event-info {
+    &-info {
       margin: 0 5px;
       height: 130px;
       background-color: rgba(0, 0, 0, 0.8);
       position: absolute;
       bottom: 5px;
+      display: flex;
+      flex-wrap: wrap;
 
       &__group {
+        flex-basis: 60%;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-top: 10px;
         color: #fff;
         font-size: 24px;
         font-weight: 700;
-        padding: 12px 0 6px 12px;
-        width: 60%;
-      }
-
-      &__style {
-        color: #fff;
-        font-size: 14px;
-        font-weight: 700;
-        padding-left: 12px;
-      }
-
-      &__description {
-        color: #fff;
-        font-weight: 400;
-        font-size: 12px;
-        width: 55%;
-        padding: 6px 0 12px 12px;
       }
 
       &__date {
+        flex-basis: 40%;
+        box-sizing: border-box;
+        padding-top: 10px;
+        padding-right: 10px;
         color: #fff;
         font-size: 14px;
         font-weight: 400;
-        position: absolute;
-        top: 12px;
-        right: 12px;
+      }
+
+      &__more {
+        flex-basis: 60%;
+        box-sizing: border-box;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+        .event-info__more-style {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 700;
+          margin-bottom: 5px;
+        }
+
+        .event-info__more-description {
+          color: #fff;
+          font-weight: 400;
+          font-size: 12px;
+        }
       }
 
       &__button {
@@ -132,17 +147,13 @@
         height: 35px;
         background-color: $color-yellow;
         text-align: center;
-        cursor: pointer;
         position: absolute;
         bottom: 15px;
         right: 6px;
-
-        .event-info__button-text {
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 35px;
-          color: $color-bg-gray;
-        }
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 35px;
+        color: $color-bg-gray;
       }
     }
   }
@@ -153,7 +164,7 @@
   padding: 5px 50px;
   background-color: $color-yellow;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 900;
   color: $color-bg-gray;
 }
 
