@@ -1,7 +1,7 @@
 
 .gallery_all {
   width: 100%;
-  background-color: $color-bg-gray;
+  background-color: $color-white;
   .container {
     padding-top: 150px;
     @include flexColon-style;
@@ -73,7 +73,7 @@
         font-size: 21.91px;
         font-weight: 900;
         line-height: 57px;
-        background-color: $color-yellow;
+        background-color: $color-green;
         margin: 20px 0 50px;
         border: none;
         cursor: pointer;
