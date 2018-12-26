@@ -17,28 +17,13 @@
 	font-family: Helvetica, sans-serif;
 	color:  #ffffff;
 	font-size: 30px;
-	font-weight: 500;
 	font-weight: 900;
 }
 
 .all-photo {
 	display: flex;
 	flex-wrap: wrap;
-	width: 560px;
-}
-
-.start__photo1 {
-	background-size: cover;
-	background-image: url("../img/gallery/all_events/startPhoto1.png");
-	width: 360px;
-	margin-right: 9px;
-}
-
-.start__photo2 {
-	background-size: cover;
-	background-image: url("../img/gallery/all_events/startPhoto2.png");
-	width: 360px;
-	margin-right: 9px;
+	width: 545px;
 }
 
 .block-photo {
@@ -50,6 +35,7 @@
 	&__elem {
 		margin-left: 6px;
 		margin-bottom: 6px;
+		width: 80px;
 	}
 
 	&__elem:nth-child(5n) {
@@ -57,13 +43,19 @@
 	}
 
 	&__button {
+		width: 75px;
 	}
 }
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
 .overground {
   font-family: Helvetica, sans-serif;
   color: #ffffff;
   font-size: 21px;
-  font-weight: 400;
   line-height: 30px;
 }
 
@@ -86,5 +78,115 @@
 
 @media screen and (max-width: 1440px) {
 
+	.inner {
+		justify-content: space-between;
+	}
+
+	.all-photo {
+		width: 32vw;
+	}
+
+
+	.start__photo {
+		width: 22vw;
+		margin-right: 0px;
+	}
+
+	.block-photo {
+		width: 10vw;
+		height: auto;
+
+		&__elem {
+			margin-left: 0.4vw;
+			width: 4.5vw;
+			height: 4.5vw;
+		}
+
+		&__button {
+			width: 4.5vw;
+			height: 4.5vw;
+		}
+	}
+
 }
 
+@media screen and (max-width: $max-width-tablet) {
+	.photo-report {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 40px;
+	}
+
+	.inner {
+		justify-content: flex-start;
+	}
+
+	.all-photo {
+		width: 44vw;
+	}
+
+	.all-photo:first-child {
+		margin-right: 2vw;
+	}
+
+	.start__photo {
+		width: 30vw;
+		margin-right: 0px;
+	}
+
+	.block-photo {
+		width: 13vw;
+		height: auto;
+
+		&__elem {
+			margin-left: 0.4vw;
+			width: 6vw;
+			height: 6.5vw;
+		}
+
+		&__button {
+			width: 6vw;
+			height: 6vw;
+		}
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	.photo-report {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 50px;
+	}
+
+	.all-photo {
+		width: 85vw;
+	}
+
+	.all-photo:first-child {
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
+	.start__photo {
+		width: 57vw;
+		margin-right: 9px;
+	}
+
+	.block-photo {
+		width: 26vw;
+		height: auto;
+
+		&__elem {
+			margin-left: 0.2vw;
+			margin-bottom: 0.2vw;
+			width: 12vw;
+			height: 12vw;
+		}
+
+		&__button {
+			width: 12vw;
+			height: 12vw;
+		}
+	}
+}
