@@ -14,7 +14,8 @@ function _navMenu(){
 	$(".nav-list li a").click(function(){
 		$(".nav-list li a").each(function(){
 			$(".nav-list li a").toggleClass("active");
-		})
+		});
+		$(".mobile-nav-menu__list").slideToggle("slow");
 	});
 
 	function windowSize(){
