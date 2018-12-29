@@ -34,7 +34,7 @@
 @media screen and (max-width: 480px) {
   .reserve-btn-wrapper {
     position: fixed;
-    top: calc(100vh - 150px);
+    top: calc(100% - 150px);
     right: 5px;
     padding: 10px 15px;
   }
