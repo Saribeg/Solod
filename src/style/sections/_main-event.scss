@@ -141,6 +141,7 @@
 @media screen and (max-width: $max-width-mobile) {
 
   .events-link {
+    bottom: 65px;
     right: 25px;
     font-size: 14px;
   }
@@ -153,41 +154,43 @@
     }
 
     &-info {
+      width: 60%;
       height: 150px;
 
       &__group {
         font-size: 12px;
-        padding-top: 10px;
-        padding-left: 10px;
+        padding-top: 5px;
+        padding-left: 5px;
       }
 
       &__date {
         font-size: 12px;
-        padding-top: 10px;
-        padding-right: 10px;
+        padding-top: 5px;
+        padding-right: 5px;
       }
 
       &__more {
-        padding-bottom: 10px;
-        padding-left: 10px;
+        flex-basis: 100%;
+        padding-bottom: 5px;
+        padding-left: 5px;
 
-        .main-event-info__more-style {
+        &-style {
           font-size: 12px;
           margin-bottom: 5px;
         }
 
-        .main-event-info__more-description {
+        &-description {
           font-size: 10px;
         }
       }
 
       &__button {
-        width: 75px;
-        height: 30px;
-        bottom: 20px;
+        width: 50px;
+        height: 25px;
+        bottom: 10px;
         right: 10px;
         font-size: 12px;
-        line-height: 30px;
+        line-height: 22px;
       }
     }
   }
