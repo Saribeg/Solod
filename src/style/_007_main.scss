@@ -143,13 +143,17 @@
     .header {
       height: 80vh;
       h1 {
-        margin-left: 10%;
+        margin-left: 20px;
       }
     }
     .smoke {
       margin-left: 0;
       width: 100%;
       background: url("../img/index/main_smoke_bg.png") center;
+
+      h2 {
+        margin-left: 20px;
+      }
     }
   }
 }

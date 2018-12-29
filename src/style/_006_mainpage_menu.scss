@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 980px) {
   .main-menu {
-    margin: 0 $section-head-margin;
+    margin: 0 20px;
     padding-top: 50px;
     &__block {
       margin: 0 40px 0 40px;
@@ -95,7 +95,7 @@
 
 @media screen and (max-width: 480px) {
   .main-menu {
-    margin: 0 $section-head-margin;
+    margin: 0 20px;
     padding-top: 0;
     &__title {
       text-align: center;
