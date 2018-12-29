@@ -1,4 +1,4 @@
-!doctype html>
+<!Doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,10 +17,12 @@
     <%- include('_nav-menu'); %>
     <%- include('_reserve-btn')%>
     <div class="content">
-        <a class="button-section" href="gallary-all.html">
-            <img class="back__butt"  src="img/gallery/one_event/Back-button.png">
-        </a>
-        <div class="overground">OVERGROUND 11/18</div>
+       	<div class="content__header">
+       		<a class="button-section" href="gallery-all.html">
+				<img class="back__butt"  src="img/gallery/one_event/Back-button.png">
+			</a>
+			<p class="overground">OVERGROUND 11/18</p>
+       	</div>
         <div class="all-event-photo">
             <img  class="photo" src="img/gallery/one_event/event1.png">
             <img  class="photo" src="img/gallery/one_event/event2.png">
@@ -38,13 +40,37 @@
             <img  class="photo" src="img/gallery/one_event/event14.png">
             <img  class="photo" src="img/gallery/one_event/event15.png">
             <img  class="photo" src="img/gallery/one_event/event16.png">
-
-
         </div>
 
-        <div class="button-section">
-            <button class="gallery__button">ЩЕ ФОТОЗВІТИ</button>
+        <div id="myModal" class="modal">
+        	<div class="modal-wrapper">
+				<span class="close">&times;</span>
+				<div class="modal-content">
+					<button class="modal-content__item"><img src="img/gallery/one_event/arrowprev.png"></button>
+					<div><img class="modal-content__main" id="img01"></div>
+					<button class="modal-content__item"><img src="img/gallery/one_event/arrownext.png"></button>
+				</div>
+				<div id="caption" class="caption">
+					<a href="#" class="caption__item">
+						<img class="caption__item-icon" src="img/gallery/one_event/share.png">
+						<p class="caption__item-text">поділитися на сторінці</p>
+					</a>
+					<a href="#" class="caption__item">
+						<img class="caption__item-icon" src="img/gallery/one_event/messenger.png">
+						<p class="caption__item-text">відправити в messager</p>
+					</a>
+					<a href="#" class="caption__item">
+						<img class="caption__item-icon" src="img/gallery/one_event/copy.png">
+						<p class="caption__item-text">скопіювати посилання</p>
+					</a>
+					<a href="#" class="caption__square">
+						<img class="caption__item-icon" src="img/gallery/one_event/square.png">
+					</a>
+				</div>
+        	</div>
         </div>
+
+        <a class="gallery__button">ЩЕ ФОТО</a>
     </div>
     <%- include('_reserve-main')%>
     <%- include('_footer'); %>
@@ -54,7 +80,8 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
-<script src="js/events.js"></script>
+<script src="js/oneEventReport.js"></script>
 </body>
 </html>
