@@ -1,71 +1,103 @@
 @media screen and (max-width: $max-width-mobile) {
 
-  .events-table {
+  .header-event {
+    margin-left: 10px;
+    margin-right: 10px;
 
+    &-img {
+
+    }
+
+    &-info {
+      height: 100px;
+
+      &__group {
+        font-size: 12px;
+        padding-top: 4%;
+        padding-left: 4%;
+      }
+
+      &__date {
+        font-size: 10px;
+        padding-top: 4%;
+        padding-right: 4%;
+      }
+
+      &__more {
+        padding-bottom: 4%;
+        padding-left: 4%;
+
+        .header-event-info__more-style {
+          font-size: 10px;
+        }
+
+        .header-event-info__more-description {
+          font-size: 8px;
+        }
+      }
+
+      &__button {
+        width: 50px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  .events-table {
+    margin-left: 10px;
+    margin-right: 10px;
 
     .event {
 
 
-
-      .event-img {
+      &-img {
 
       }
 
-      .event-info {
-        height: 95px;
-
+      &-info {
+        height: 100px;
 
         &__group {
-          font-size: 14px;
-          padding: 6px 0 3px 6px;
-          width: 55%;
-
-        }
-
-        &__style {
           font-size: 12px;
-          padding-left: 6px;
-
-        }
-
-        &__description {
-          font-size: 10px;
-          padding: 3px 0 6px 6px;
-          width: 61%;
-
+          padding-top: 4%;
+          padding-left: 4%;
         }
 
         &__date {
-          font-size: 12px;
-          top: 4px;
-          right: 4px;
+          font-size: 14%;
+          padding-top: 4%;
+          padding-right: 4%;
+        }
+
+        &__more {
+          padding-bottom: 4%;
+          padding-left: 4%;
+
+          .event-info__more-style {
+            font-size: 10px;
+          }
+
+          .event-info__more-description {
+            font-size: 7px;
+          }
         }
 
         &__button {
-          width: 70px;
-          height: 30px;
-          bottom: 10px;
-
-
-          div {
-            font-size: 14px;
-            line-height: 30px;
-          }
+          width: 50px;
+          height: 25px;
+          line-height: 25px;
+          font-size: 12px;
         }
       }
     }
   }
 
   .event-button-load-more {
-    width: 180px;
-    height: 30px;
-
-    div {
-      font-size: 16px;
-      line-height: 30px;
-
-    }
+    margin-left: 10px;
+    padding: 5px 30px;
+    font-size: 16px;
   }
-
-
 }

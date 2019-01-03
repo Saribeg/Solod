@@ -1,76 +1,102 @@
 @media screen and (max-width: $max-width-tablet) {
+.main-event {
+  margin: 0 20px;
+}
+  .header-event {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &-img {
+
+    }
+
+    &-info {
+      height: 110px;
+
+      &__group {
+        font-size: 16px;
+      }
+
+      &__date {
+        font-size: 12px;
+      }
+
+      &__more {
+
+        .header-event-info__more-style {
+          font-size: 12px;
+        }
+
+        .header-event-info__more-description {
+          font-size: 10px;
+        }
+      }
+
+      &__button {
+        width: 80px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+      }
+    }
+  }
 
   .events-table {
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
     flex-direction: column;
-    align-content: space-between;
+    align-items: center;
 
     .event {
+      width: 90%;
       flex-basis: auto;
-      text-align: center;
+      margin-bottom: 20px;
 
 
       .event-img {
-        width: 75%;
-
+        width: 100%;
+        height: 100%;
       }
 
-      .event-info {
-        width: 75%;
-        margin: 0 auto;
+      &-info {
         height: 110px;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        margin: 0 10px;
+        width: 50%;
+        bottom: 10px;
 
         &__group {
-          font-size: 20px;
-          text-align: left;
-          width: 62%;
-        }
-
-        &__style {
-          font-size: 14px;
-          text-align: left;
-        }
-
-        &__description {
-          font-size: 12px;
-          text-align: left;
+          font-size: 16px;
         }
 
         &__date {
-          font-size: 14px;
-          top: 8px;
-          right: 8px;
+          font-size: 12px;
+        }
+
+        &__more {
+
+          .event-info__more-style {
+            font-size: 12px;
+          }
+
+          .event-info__more-description {
+            font-size: 10px;
+          }
         }
 
         &__button {
-          width: 100px;
-          height: 30px;
-          bottom: 15px;
-
-
-          div {
-            font-size: 16px;
-            line-height: 30px;
-          }
+          width: 80px;
+          height: 35px;
+          line-height: 35px;
+          font-size: 18px;
         }
       }
     }
   }
 
   .event-button-load-more {
-    width: 210px;
-    height: 40px;
-    margin: 40px auto 0;
-
-    div {
-      font-size: 20px;
-      line-height: 40px;
-
-    }
+    margin: 50px 0 50px 5%;
+    padding: 8px 60px;
+    font-size: 20px;
   }
 
 }

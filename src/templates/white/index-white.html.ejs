@@ -7,59 +7,15 @@
     <title>Main</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https:///cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="../css/main-white.css">
 </head>
 <body>
 <div class="container">
     <%- include('_nav-menu-white'); %>
     <%- include('_reserve-btn-white'); %>
-    <header class="header">
-        <h1>Smoked </br>food</h1>
-    </header>
-    <a name="smoke"></a>
-    <section class="smoke">
-        <h2 class="section-head">Коптильня</h2>
-        <div class="smokeList">
-            <div class="steps">
-                <div class="steps__discription">
-                    <h3>Спеції</h3>
-                    <p>м’ясо маринуеться <br>в ароматних <br>ізраїльських спеціях<br> протягом 8 годин</p>
-                </div>
-                <div id='image' class="steps__circle steps__circle-arrow-right steps__circle-border-topRight">
-                    <div class="circle"><p>1</p></div>
-                </div>
-            </div>
-            <div class="steps steps-end">
-                <div class="steps__circle steps__circle-arrow-left steps__circle-border-bottomRight">
-                    <div class="circle"><p>2</p></div>
-                </div>
-                <div class="steps__discription steps__discription-start">
-                    <h3>Органічні продукти</h3>
-                    <p>м’ясо, риба та птиця закуповується <br>виключно на українських <br>фермах під контролем <br>нашого
-                        шеф-повору</p>
-                </div>
-            </div>
-            <div class="steps">
-                <div class="steps__discription">
-                    <h3>Тирса</h3>
-                    <p>використовуємо тільки <br>опилки з фруктових дерев<br> -  вільха, яблуня, черешня</p>
-                </div>
-                <div class="steps__circle steps__circle-arrow-right steps__circle-border-bottomleft">
-                    <div class="circle"><p>3</p></div>
-                </div>
-            </div>
-            <div class="steps steps-end">
-                <div class="steps__circle steps__circle-border-topleft">
-                    <div class="circle"><p>4</p></div>
-                </div>
-                <div class="steps__discription steps__discription-start">
-                    <h3>Копчення</h3>
-                    <p>процес копчення займає <br>від 2 до 10 годин при<br> температурі 60-80 градусів</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <header class="header"></header>
     <%- include('_mainpage-menu-white'); %>
     <%- include('_reserve-main-white'); %>
     <!--<%- include('_reserve-action-white'); %>-->
@@ -69,14 +25,13 @@
 </div>
 <%- include('_footer-white'); %>
 
-	<script
+<script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="module" src="js/main-page.js"></script>
-    <script type="text/javascript" src="../js/reserve-btn.js"></script>
-
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+<script type="module" src="../js/white/main-page-white.js"></script>
 </body>
 </html>

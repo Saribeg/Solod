@@ -4,7 +4,7 @@
 	.slick {
 		&-section {
 			max-width: calc(1440px - 280px);
-			min-width: 320px;
+			min-width: 250px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -13,7 +13,7 @@
 
 		&-carousel {
 			max-width: 1200px;
-			min-width: 320px;
+			min-width: 250px;
 		}
 
 		&-item {
@@ -96,6 +96,6 @@
 
 @media screen and (max-width: $max-width-tablet){
 	.slider-section {
-		margin: 0 $section-head-margin;
+		margin: 0 20px;
 	}
 }
