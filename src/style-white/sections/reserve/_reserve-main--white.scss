@@ -46,7 +46,7 @@ input::-webkit-clear-button {
   border: none;
   background-color: transparent;
 }
-.reserve-form-while {
+.reserve-form-white {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -86,7 +86,7 @@ input::-webkit-clear-button {
 }
 
 
-.btn-while {
+.btn-white {
   width: 49%;
   background-color: #FFFFFF;
   color: $color-green;
@@ -98,8 +98,8 @@ input::-webkit-clear-button {
 
 
 @media screen and (max-width: 1150px){
-  .reserve-form-while {
-    .btn-while {
+  .reserve-form-white {
+    .btn-white {
       width: 47%;
     }
   }
@@ -110,7 +110,7 @@ input::-webkit-clear-button {
     width: 100%;
     margin-left: 0;
   }
-  .reserve-form-while {
+  .reserve-form-white {
     &__date-time {
       font-size: 15px;
 
@@ -118,7 +118,7 @@ input::-webkit-clear-button {
         padding-right: 10px;
       }
     }
-    .btn-while {
+    .btn-white {
       width: 100%;
     }
   }
@@ -161,7 +161,7 @@ input::-webkit-clear-button {
 
   }
 
-  .reserve-form-while {
+  .reserve-form-white {
     &__date-time {
       font-size: 14px;
 
