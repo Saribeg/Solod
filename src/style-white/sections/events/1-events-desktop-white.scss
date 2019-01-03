@@ -1,5 +1,5 @@
 .header-event {
-  margin-left:$header-title-margin ;
+  margin: 0 40px 0 $header-title-margin;
   position: relative;
 
   &-img {
@@ -44,14 +44,14 @@
       padding-bottom: 10px;
       padding-left: 10px;
 
-      .header-event-info__more-style {
+      &-style {
         color: #fff;
         font-size: 14px;
         font-weight: 700;
         margin-bottom: 5px;
       }
 
-      .header-event-info__more-description {
+      &-description {
         color: #fff;
         font-weight: 400;
         font-size: 14px;
@@ -65,7 +65,7 @@
       height: 50px;
       width: 120px;
       line-height: 50px;
-      background-color: $color-yellow;
+      background-color: $color-green;
       text-align: center;
       font-size: 22px;
       font-weight: 900;
@@ -87,11 +87,8 @@
     flex-basis: 48%;
     margin-bottom: 20px;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
     &-img {
+      object-fit: cover;
       width: 100%;
       height: 100%;
     }
@@ -131,14 +128,14 @@
         padding-bottom: 10px;
         padding-left: 10px;
 
-        .event-info__more-style {
+        &-style {
           color: #fff;
           font-size: 14px;
           font-weight: 700;
           margin-bottom: 5px;
         }
 
-        .event-info__more-description {
+        &-description {
           color: #fff;
           font-weight: 400;
           font-size: 12px;
@@ -148,7 +145,7 @@
       &__button {
         width: 100px;
         height: 35px;
-        background-color: $color-yellow;
+        background-color: $color-green;
         text-align: center;
         position: absolute;
         bottom: 15px;
@@ -165,7 +162,7 @@
 .event-button-load-more {
   margin-left: $header-title-margin;
   padding: 7px 65px;
-  background-color: $color-yellow;
+  background-color: $color-green;
   font-size: 22px;
   font-weight: 900;
   color: $color-bg-gray;

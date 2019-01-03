@@ -2,44 +2,44 @@
   .main-event {
     margin: 0 20px;
   }
-    .header-event {
-      margin-left: 20px;
-      margin-right: 20px;
+  .header-event {
+    margin-left: 20px;
+    margin-right: 20px;
 
-      &-img {
+    &-img {
 
+    }
+
+    &-info {
+      height: 110px;
+
+      &__group {
+        font-size: 16px;
       }
 
-      &-info {
-        height: 110px;
+      &__date {
+        font-size: 12px;
+      }
 
-        &__group {
-          font-size: 16px;
-        }
+      &__more {
 
-        &__date {
+        .header-event-info__more-style {
           font-size: 12px;
         }
 
-        &__more {
-
-          .header-event-info__more-style {
-            font-size: 12px;
-          }
-
-          .header-event-info__more-description {
-            font-size: 10px;
-          }
-        }
-
-        &__button {
-          width: 80px;
-          height: 35px;
-          line-height: 35px;
-          font-size: 18px;
+        .header-event-info__more-description {
+          font-size: 10px;
         }
       }
+
+      &__button {
+        width: 80px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px;
+      }
     }
+  }
 
   .events-table {
     margin-left: 0;

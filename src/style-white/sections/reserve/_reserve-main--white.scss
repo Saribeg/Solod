@@ -19,9 +19,9 @@ input::-webkit-clear-button {
 .reserve-img {
   width: 100%;
 }
-.reserve-main {
+.reserve-main-white {
   width: 70%;
-  background-color: $color-yellow;
+  background-color: $color-green;
   display: flex;
   justify-content: flex-end;
   padding: 85px 40px;
@@ -34,7 +34,7 @@ input::-webkit-clear-button {
 
   &__title {
     font-family: Helvetica, sans-serif;
-    color: $color-bg-gray;
+    color: #FFFFFF;
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 32px;
@@ -46,13 +46,13 @@ input::-webkit-clear-button {
   border: none;
   background-color: transparent;
 }
-.reserve-form {
+.reserve-form-while {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
   &__name-phone {
-    border: 2px solid $color-bg-gray;
+    border: 2px solid #FFFFFF;
     width: 100%;
     margin-bottom: 30px;
     font-size: 17px;
@@ -61,7 +61,7 @@ input::-webkit-clear-button {
     box-sizing: border-box;
 
     &::placeholder {
-      color: #000000;
+      color: #FFFFFF;
       font-size: 17px;
       font-weight: 300;
     }
@@ -69,35 +69,38 @@ input::-webkit-clear-button {
 
   &__date-time {
     font-size: 17px;
-    border: 2px solid $color-bg-gray;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
     width: 49%;
     height: 50px;
     padding-left: 13px;
     margin-bottom: 22px;
     box-sizing: border-box;
+    background-color: $color-green;
 
     &::placeholder {
       font-size: 17px;
-      color: $color-black;
+      color: #FFFFFF;
     }
-  }
-
-  .btn {
-    width: 49%;
-    background-color: $color-bg-gray;
-    color: $color-yellow;
-    padding: 15px 0;
-    font-size: 22px;
-    font-weight: 700;
   }
 }
 
 
+.btn-while {
+  cursor: pointer;
+  width: 49%;
+  background-color: #FFFFFF;
+  color: $color-green;
+  padding: 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
 
 
 @media screen and (max-width: 1150px){
-  .reserve-form {
-    .btn {
+  .reserve-form-while {
+    .btn-while {
       width: 47%;
     }
   }
@@ -108,7 +111,7 @@ input::-webkit-clear-button {
     width: 100%;
     margin-left: 0;
   }
-  .reserve-form {
+  .reserve-form-while {
     &__date-time {
       font-size: 15px;
 
@@ -116,11 +119,11 @@ input::-webkit-clear-button {
         padding-right: 10px;
       }
     }
-    .btn {
+    .btn-while {
       width: 100%;
     }
   }
-  .reserve-main {
+  .reserve-main-white {
     padding: 40px 20px;
 
     &__title {
@@ -130,7 +133,7 @@ input::-webkit-clear-button {
   .reserve-block-img {
     right: 50%;
   }
-  .reserve-main {
+  .reserve-main-white {
     width: 80%;
   }
 }
@@ -149,7 +152,7 @@ input::-webkit-clear-button {
   .reserve-block-img {
     display: none;
   }
-  .reserve-main {
+  .reserve-main-white {
     width: 90%;
 
     &__form {
@@ -159,7 +162,7 @@ input::-webkit-clear-button {
 
   }
 
-  .reserve-form {
+  .reserve-form-while {
     &__date-time {
       font-size: 14px;
 
