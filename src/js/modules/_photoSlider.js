@@ -18,7 +18,10 @@ $('.photo').each(function(i, elem){	//кешируем картинки
 });
 
 function replaceItem(src) {		//ф-я замены аттрибута
-	$main.attr('src', src);
+	$main.fadeOut(500, function() {
+       $main.attr('src', src);
+   }).fadeIn(500);
+//	$main.attr('src', src);
 }
 
 function getSrc(index){			//ф-я получения аттрибута

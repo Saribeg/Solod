@@ -1,219 +1,115 @@
 .photo-report {
-  @include flexColon-style;
-  align-items: center;
-  margin-left: $header-title-margin;
-  margin-right: $section-head-margin;
-
-  .photoReport {
-    @include flexRow-style;
-    justify-content: space-between;
-    .headline-section {
-      width: 100%;
-      .gallery__headline {
-        font-family: Helvetica, sans-serif;
-        color:  #ffffff;
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 30px;
-        margin: 20px 0;
-      }
-    }
-    &-block {
-      @include flexColon-style;
-      align-items: flex-start;
-      .all-photo {
-        @include flexRow-style;
-        justify-content: space-between;
-        .Start__photo {
-          margin-right: 10px;
-        }
-        .Start__photo img {
-          width: 23vw;
-        }
-        .block-small {
-          width: 11vw;
-          @include flexRow-style;
-          justify-content: space-between;
-          align-items: flex-end;
-
-          .next__photo {
-            position: relative;
-          }
-          .next__photo img {
-            margin: 0 0.3vw 0.3vw 0;
-            width: 5vw;
-          }
-          .next__button img {
-            width: 5vw;
-          }
-          .next__photo::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            width: 5vw;
-          }
-        }
-      }
-    }
-    .overground {
-      font-family: Helvetica, sans-serif;
-      color: #ffffff;
-      font-size: 21px;
-      font-weight: 400;
-      line-height: 30px;
-    }
-  }
-  .button-section {
-    width: 100%;
-    .gallery__button {
-      display: inline-block;
-      text-align: center;
-      width: 249px;
-      height: 57px;
-      font-family: Helvetica, sans-serif;
-      color: #292a2e;
-      font-size: 21.91px;
-      font-weight: 900;
-      line-height: 57px;
-      background-color: $color-green;
-      margin: 20px 0;
-      border: none;
-      cursor: pointer;
-    }
-  }
+	margin-left: $header-title-margin;
+	margin-right: $section-head-margin;
 }
 
-
-@media screen and (max-width: 1200px) {
-.photo-report {
-    .photoReport {
-      @include flexRow-style;
-      justify-content: space-between;
-      &-block {
-        @include flexColon-style;
-        align-items: flex-start;
-        .all-photo {
-          @include flexRow-style;
-          justify-content: space-between;
-          .Start__photo {
-            margin-right: 10px;
-          }
-          .Start__photo img {
-            width: 21vw;
-          }
-          .block-small {
-            width: 10vw;
-
-            .next__photo {
-            }
-            .next__photo img {
-              margin: 0 0.3vw 0.3vw 0;
-              width: 4.5vw;
-            }
-            .next__button img {
-              width: 4.5vw;
-            }
-            .next__photo::before {
-              width: 4.5vw;
-            }
-          }
-        }
-      }
-
-    }
-  }
+.inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
+
+.title {
+	flex-basis: 100%;
+}
+
+.section-head {
+	font-family: Helvetica, sans-serif;
+	color:  #ffffff;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.event {
+	width: 49%;
+}
+
+.all-photo {
+	display: flex;
+}
+
+.start-photo {
+	width: 70%;
+	margin-right: 6px;
+	overflow: hidden;
+}
+
+.start-photo img {
+	max-width: 100%;
+}
+
+.block-photo {
+	width: 33%;
+
+	&__elem {
+		margin-bottom: 5px;
+		max-width: 46%;
+	}
+
+	&__elem:nth-child(2n+1){
+		margin-right: 3%;
+	}
+
+	&__elem:nth-child(5n) {
+		margin-bottom: 0px;
+	}
+
+	&__button {
+		width: 46%;
+	}
+}
+
+.overground {
+  font-family: Helvetica, sans-serif;
+  color: #000000;
+  font-size: 21px;
+}
+
+.photo-load-more {
+	display: flex;
+	justify-content: center;
+	background-color: #95bd3a;
+	border: none;
+	margin-top: 20px;
+	padding: 20px 0px 19px 0px;
+	width: 249px;
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 900;
+	font-family: 'Helvetica', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+}
+
 
 @media screen and (max-width: $max-width-tablet) {
-  .photo-report {
-      margin-left: 0;
-      .photoReport {
-        &-block {
-          .all-photo {
-            .Start__photo {
-            }
-            .Start__photo img {
-              width: 28vw;
-            }
-            .block-small {
-              width: 13vw;
-              .next__photo {
-              }
-              .next__photo img {
-                margin: 0 0.3vw 0.3vw 0;
-                width: 6vw;
-              }
-              .next__button img {
-                width: 6vw;
-              }
-              .next__photo::before {
-                width: 6vw;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 
-@media screen and (max-width: $max-width-mobile) {
-  .photo-report {
-      .photoReport {
-        justify-content: center;
-        .headline-section {
-          width: 100%;
-          .gallery__headline {
-            font-family: Helvetica, sans-serif;
-            color: #ffffff;
-            font-size: 21px;
-            font-weight: 500;
-            margin-left: 8vw;
-          }
-        }
+	.event{
+		width: 100%;
+	}
 
-        &-block {
-          width: auto;
-          .all-photo {
-            @include flexRow-style;
-            .Start__photo img {
-              width: 50vw;
-              margin-bottom: 1px;
-            }
+	.photo-report {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0 40px;
+	}
 
-            .block-small {
-              width: 24vw;
-              .next__photo {
-              }
-              .next__photo img {
-                width: 11.5vw;
-              }
-              .next__photo::before {
-                width: 11.5vw;
-              }
-              .next__button img {
-                width: 11.5vw;
-              }
-            }
-          }
-        }
-        .overground {
-          font-size: 17px;
-        }
-      }
-      .button-section {
-        .gallery__button {
-          width: 150px;
-          height: 40px;
-          color: #292a2e;
-          font-size: 14px;
-          line-height: 40px;
-          margin-left: 7vw;
-        }
-      }
-    }
+	.start-photo {
+		width: auto;
+	}
+
+	.block-photo {
+		width: 173px;
+
+		&__button {
+			margin-left: 2px;
+		}
+	}
+
+	.overground {
+		display: block;
+		margin: 10px 0;
+	}
 }
+
