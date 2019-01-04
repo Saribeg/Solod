@@ -18,7 +18,7 @@
 		margin-top: 30px;
 	}
 	&__tel-number {
-		color: $color-yellow;
+		color: $color-green;
 	}
 
 	&__link {
@@ -114,7 +114,7 @@
 		}
 
 		&__tel-number{
-			color: $color-yellow;
+			color: $color-green;
 		}
 
 		&__list{
@@ -207,11 +207,6 @@
 		}
 	}
 
-	.tel-number{
-		font-family: Helvetica, sans-serif;
-		font-size: 24px;
-		font-weight: 700;
-	}
 }
 
 @media screen and (max-width: $max-width-mobile){
