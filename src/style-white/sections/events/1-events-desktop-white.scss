@@ -1,5 +1,5 @@
 .header-event {
-  margin: 0 40px 0 $header-title-margin;
+  margin-left: $header-title-margin;
   position: relative;
 
   &-img {
@@ -77,7 +77,6 @@
 
 .events-table {
   margin-left: $header-title-margin;
-  margin-right: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
