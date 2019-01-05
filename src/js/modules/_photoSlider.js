@@ -18,10 +18,9 @@ $('.photo').each(function(i, elem){	//кешируем картинки
 });
 
 function replaceItem(src) {		//ф-я замены аттрибута
-	$main.fadeOut(500, function() {
+	$main.fadeOut(225, function() {
        $main.attr('src', src);
-   }).fadeIn(500);
-//	$main.attr('src', src);
+	}).fadeIn(225);
 }
 
 function getSrc(index){			//ф-я получения аттрибута
@@ -31,7 +30,7 @@ function getSrc(index){			//ф-я получения аттрибута
 $img.click(function(){					//открытие вспл окна
 	targetImg = $(this).attr('src');
 	elemIndex = $(this).index();		//сохраняем индекс
-	replaceItem(targetImg);
+	$main.attr('src', targetImg);
 	$modal.show();
 });
 

@@ -61,7 +61,7 @@ let config = {
 gulp.task('ejs:build', function(){
     return gulp.src(path.src.ejs)
         .pipe(ejs({}, {}, { ext: '' }))
-        // .pipe(minifyejs())
+        .pipe(minifyejs())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
@@ -170,39 +170,20 @@ gulp.task('build', [
     console.log('===ALL COMPRESSED===');
 });
 
-gulp.task('watch', ['webserver'], function () {
-    watch([path.watch.ejs], function (event, cb) {
-        gulp.start('ejs:build');
-    });
-    watch([path.watch.style], function (event, cb) {
-        gulp.start('style:build');
-    });
-    watch([path.watch.styleWhite], function (event, cb) {
-        gulp.start('styleWhite:build');
-    });
-    watch([path.watch.js], function (event, cb) {
-        gulp.start('js:build');
-    });
-    watch([path.watch.jsMod], function (event, cb) {
-        gulp.start('js:build');
-        gulp.start('jsWhite:build');
-    });
-    watch([path.watch.jsWhite], function (event, cb) {
-        gulp.start('jsWhite:build');
-    });
-    watch([path.watch.img], function (event, cb) {
-        gulp.start('image:build');
-    });
-    watch([path.watch.imgWhite], function (event, cb) {
-        gulp.start('imageWhite:build');
-    });
-    watch([path.watch.fonts], function (event, cb) {
-        gulp.start('fonts:build');
-    });
-});
-
 gulp.task('webserver', function () {
     browserSync(config);
+});
+
+gulp.task('watch', ['webserver'], function () {
+    gulp.watch(path.watch.ejs, ['ejs:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.style, ['style:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.styleWhite, ['styleWhite:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.js, ['js:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.jsMod, ['js:build', 'jsWhite:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.jsWhite, ['jsWhite:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.img, ['image:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.imgWhite, ['imageWhite:build']).on('change', browserSync.reload);
+    gulp.watch(path.watch.fonts, ['fonts:build']).on('change', browserSync.reload);
 });
 
 gulp.task('clean', function () {
