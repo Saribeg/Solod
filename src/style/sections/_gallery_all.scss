@@ -29,6 +29,7 @@
 	width: 33%;
 
 	&__elem {
+		filter: brightness(50%);
 		margin-bottom: 5px;
 		max-width: 46%;
 	}
