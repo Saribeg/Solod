@@ -75,6 +75,7 @@ input::-webkit-clear-button {
     padding-left: 13px;
     margin-bottom: 22px;
     box-sizing: border-box;
+    background-color: $color-yellow;
 
     &> option {
       background-color: $color-yellow;

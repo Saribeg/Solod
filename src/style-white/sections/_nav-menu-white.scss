@@ -1,4 +1,3 @@
-// Стили для desktop-версии
 .nav-menu{
 	width: 240px;
 	height: 100vh;
@@ -7,38 +6,38 @@
 	justify-content: space-between;
 	position: fixed;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.75);
+	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 999;
 
 	&-info {
-      flex-basis: 70%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: space-around;
-      margin-top: 30px;
-    }
-    &__tel-number {
-      color: $color-green;
-    }
+		flex-basis: 70%;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: space-around;
+		margin-top: 30px;
+	}
+	&__tel-number {
+		color: $color-green;
+	}
 
-    &__link {
-      display: block;
-      text-align: center;
-      width: 240px;
-      padding: 22px 0;
-      font-size: 21px;
-      font-weight: 900;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: $color-white;
-      transition: all 0.4s linear;
-      &:hover, &:focus, &_active {
-        color: $color-green;
-      }
-    }
+	&__link {
+		display: block;
+		text-align: center;
+		width: 240px;
+		padding: 22px 0;
+		font-size: 21px;
+		font-weight: 900;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $color-white;
+		transition: all 0.4s ease;
+		&:hover, &:focus, &_active {
+			color: $color-yellow;
+		}
+	}
 	&__switch{
-		background-color: $color-yellow;
+		background-color: $color-green;
 	}
 
 }
@@ -51,7 +50,6 @@
 	z-index: 999;
 	width: 240px;
 	height: 116px;
-	// margin-bottom: 27px;
 	&__logo {
 		width: 183px;
 	}
@@ -94,7 +92,7 @@
 		width: 100%;
 		background-color: $color-black;
 		top: -71px;
-		z-index: 10000;
+		z-index: 999;
 
 		&__item:first-of-type {
 			margin-top: 50px;
@@ -104,8 +102,7 @@
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
-			width: 100%;
-			height: 100px;
+			padding: 25px 0;
 		}
 
 		&__logo{
@@ -117,13 +114,13 @@
 		}
 
 		&__tel-number{
-			color: $color-yellow;
+			color: $color-green;
 		}
 
 		&__list{
 			position: absolute;
 			left: -240px;
-			top: 170px;
+			top: 159px;
 			z-index: 999;
 			width: 240px;
 			height: 100vh;
@@ -166,13 +163,12 @@
 		width: 26px;
 		height: 21px;
 		transition: all 0.4s linear;
-		cursor: pointer;
 		&__line {
 			position: relative;
 			height: 3px;
 			background-color: $color-white;
 			border-radius: 10px;
-			 transition: all 0.2s linear;
+			transition: all 0.3s ease-in-out;
 			&:hover, &:focus {
 				color: $color-yellow;
 			}
@@ -199,10 +195,9 @@
 		z-index: 999;
 		width: 100%;
 		height: 70px;
-		cursor: pointer;
 
 		&__logo{
-			transform: scale(1.3);
+			transform: scale(1.5);
 		}
 
 		&__switcher{
@@ -212,11 +207,6 @@
 		}
 	}
 
-	.tel-number{
-		font-family: Helvetica, sans-serif;
-		font-size: 24px;
-		font-weight: 700;
-	}
 }
 
 @media screen and (max-width: $max-width-mobile){
@@ -233,17 +223,17 @@
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-		background-color: rgba(0, 0, 0, 0.75);
 		position: sticky;
-		top: -71px;
-		z-index: 1000;
+		top: -50px;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 999;
 
-		&__top-line {
+		&__top-line{
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
 			width: 100%;
-			height: 100px;
+			padding: 20px 0;
 		}
 
 		&__logo{
@@ -251,7 +241,7 @@
 		}
 
 		.logo__image{
-			width: 100px;
+			height: 30px;
 		}
 
 		&__tel-number{
@@ -262,16 +252,15 @@
 			display: none;
 			width: 100%;
 			position: absolute;
-			top: 170px;
-			background-color: rgba(0, 0, 0, 0.75);
+			top: 120px;
+			background-color: rgba(0, 0, 0, 0.9);
 		}
 
 		&__link{
 			display: block;
 			position: relative;
 			width: calc(100% - 30px);
-			height: 75px;
-			line-height: 75px;
+			line-height: 45px;
 			text-align: left;
 			padding-left: 30px;
 			font-size: 18px;
@@ -282,22 +271,20 @@
 			border-bottom: 2px solid #3b3b3b;
 			transition: all 0.4s ease;
 			&:hover {
-				color: $color-green;
+				color: $color-yellow;
 				transition: all 0.4s ease;
 				&::before {
 					content: '';
 					position: absolute;
 					left: 0;
-					top: 20px;
-					width: 4px;
-					height: 35px;
-					background-color: $color-green;
+					height: 100%;
+					border-left: 4px solid $color-yellow;
 				}
 			}
 		}
 
 		&__switch{
-			background-color: $color-green;
+			background-color: $color-yellow;
 		}
 
 	}
@@ -308,13 +295,13 @@
 		justify-content: space-between;
 		width: 26px;
 		height: 21px;
-		transition: all 0.4s linear;
+		transition: all 0.2s ease-in-out;
 		&__line {
 			position: relative;
 			height: 3px;
 			background-color: $color-white;
 			border-radius: 10px;
-			 transition: all 0.2s linear;
+			transition: all 0.2s linear;
 			&:hover, &:focus {
 				color: $color-yellow;
 			}
@@ -340,7 +327,11 @@
 		align-items: center;
 		z-index: 999;
 		width: 100%;
-		height: 70px;
+		height: 50px;
+
+		&__logo {
+			transform: scale(1.2);
+		}
 
 		&__switcher{
 			width: 53px;

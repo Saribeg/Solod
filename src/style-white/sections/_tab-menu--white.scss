@@ -1,5 +1,5 @@
 .tab-menu__content {
-  width: calc(100% - 280px);
+  width: calc(100% - 320px);
   padding-top: 0;
   margin-top: 150px;
   margin-left: $header-title-margin;
@@ -218,6 +218,10 @@
   .tab-menu__content {
     margin-left: 0px;
     width: 100%;
+  }
+
+  .tab-menu__bg_strawberry {
+    display: none;
   }
 
 }

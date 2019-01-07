@@ -102,7 +102,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 100px;
+      padding: 25px 0;
     }
 
     &__logo{
@@ -120,7 +120,7 @@
     &__list{
       position: absolute;
       left: -240px;
-      top: 170px;
+      top: 159px;
       z-index: 999;
       width: 240px;
       height: 100vh;

@@ -4,11 +4,12 @@
     </div>
     <div class="reserve-main" id="reserve-main-click">
         <div class="reserve-main__form">
-            <h2 class="form-head">РЕЗЕРВ СТОЛУ</h2>
+            <h2 class="reserve-main__title">РЕЗЕРВ СТОЛУ</h2>
             <form action="#" class="reserve-form">
                 <input class="clean-property reserve-form__name-phone" required type="text" placeholder="Ім'я*">
                 <input class="clean-property reserve-form__name-phone" required type="tel" placeholder="Телефон*">
                 <input class="clean-property reserve-form__date-time" required type="text" id="reserve-date" placeholder="Дата">
+                <!--<input class="clean-property reserve-form__date-time" required type="time" id="reserve-time">-->
                 <label for="reserve-time"></label><select class="clean-property reserve-form__date-time" required id="reserve-time">
                     <option value="00:00">00:00</option>
                     <option value="00:30">00:30</option>
@@ -40,7 +41,7 @@
                     <option value="03:00">23:00</option>
                     <option value="03:00">23:30</option>
                 </select>
-                <input class="clean-property btn" type="submit" value="РЕЗЕРВ">
+                <input class="clean-property btn btn-main-reserve" type="submit" value="РЕЗЕРВ">
             </form>
         </div>
     </div>
