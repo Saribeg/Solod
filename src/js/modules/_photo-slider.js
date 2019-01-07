@@ -31,7 +31,7 @@ $img.click(function(){					//открытие вспл окна
 	targetImg = $(this).attr('src');
 	elemIndex = $(this).index();		//сохраняем индекс
 	$main.attr('src', targetImg);
-	$modal.show();
+	$modal.css({"display":"flex"});
 });
 
 $close.click(function(){				//закрытие вспл окна

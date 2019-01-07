@@ -21,3 +21,13 @@
   align-items: center;
   flex-direction: column;
 }
+
+@mixin modalSliderButton {
+  margin: 0 20px;
+  background-color:#292a2e;
+  width: 25px;
+  height: 25px;
+  border: none;
+  outline: none;
+  transform: rotate(45deg);
+}

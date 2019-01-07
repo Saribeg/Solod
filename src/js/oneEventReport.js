@@ -2,7 +2,7 @@
 @@include('modules/_slow-scroll.js');
 @@include('modules/_reserve.js');
 @@include('modules/_map-dark.js');
-@@include('modules/_photoSlider.js');
+@@include('modules/_photo-slider.js');
 
 _navMenu();
 slowScroll('#res-btn');

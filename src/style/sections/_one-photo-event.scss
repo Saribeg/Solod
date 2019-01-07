@@ -1,211 +1,216 @@
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-left: $header-title-margin;
-	margin-right: $section-head-margin;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: $header-title-margin;
+  margin-right: $section-head-margin;
 
-	&__header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .event-name {
-	color: #ffffff;
-	font-size: 20px;
-	font-weight: 900;
-	margin: 40px 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  margin: 40px 0;
 }
 
 .all-event-photo {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .photo {
-	flex: 1 0 20%;
-	object-fit: cover;
-	margin-bottom: 20px;
-	margin-right: 20px;
-	width: 250px;
-	height: 250px;
-	cursor: pointer;
-	transition: 0.3s;
+  flex: 1 0 20%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .photo:hover {
-	opacity: 0.7;
+  opacity: 0.7;
 }
 
 .gallery__button {
-	padding: 19px 45px;
-	font-family: 'Helvetica', sans-serif;
-	color: #292a2e;
-	font-size: 22px;
-	font-weight: 900;
-	background-color: #ebb91f;
-	cursor: pointer;
+  padding: 19px 45px;
+  font-family: 'Helvetica', sans-serif;
+  color: #292a2e;
+  font-size: 22px;
+  font-weight: 900;
+  background-color: #ebb91f;
+  cursor: pointer;
 }
 
 // 		M O D A L      S T Y L E S
 
 .modal {
-	display: none;
-	align-items: center;
-	overflow: auto;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 10001;
-	background-color:#292a2e;
+  display: none;
+  align-items: center;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10001;
+  background-color:#292a2e;
 }
 
 .modal-wrapper {
-	margin: 0 auto;
-	padding: 75px 40px 0px;
-	position: relative;
+  padding-top: 45px;
+  position: relative;
 }
 
 .modal-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	&__main {
-		object-fit: cover;
-		max-width: 100%;
-		max-height: 70vh;
-	}
+  &__main {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 65vh;
+  }
 
-	&__item-left {
-		margin-right: 35px;
-		background-color:#292a2e;
-		width: 25px;
-		height: 25px;
-		border: none;
-		outline: none;
-		border-bottom: 2px solid #e4b324;
-		border-left: 2px solid #e4b324;
-		transform: rotate(45deg);
-	}
+  &__item-left {
+    @include modalSliderButton;
+    border-bottom: 2px solid #e4b324;
+    border-left: 2px solid #e4b324;
+  }
 
-	&__item-right {
-		margin-left: 35px;
-		background-color:#292a2e;
-		width: 25px;
-		height: 25px;
-		border: none;
-		outline: none;
-		border-top: 2px solid #e4b324;
-		border-right: 2px solid #e4b324;
-		transform: rotate(45deg);
-	}
+  &__item-right {
+    @include modalSliderButton;
+    border-top: 2px solid #e4b324;
+    border-right: 2px solid #e4b324;
+  }
 }
 
 .caption {
-	display: flex;
-	margin: 10px;
-	padding: 27px 55px;
-	color: #ccc;
+  display: flex;
+  margin: 15px 55px;
+  color: #ccc;
 
-	&__item {
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-		flex-basis: 25%;
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-basis: 25%;
 
-		&-text {
-			margin-left: 10px;
-			font-size: 12px;
-			font-weight: 300;
-			color: #ffffff;
-		}
-	}
+    &-text {
+      margin-left: 10px;
+      font-size: 12px;
+      font-weight: 300;
+      color: #ffffff;
+    }
+  }
 
-	&__square {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		flex-basis: 40%;
-	}
+  &__square {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 40%;
+  }
 }
 
 .close {
-	position: absolute;
-	top: 40px;
-	right: 40px;
-	font-size: 50px;
-	line-height: 0;
-	color: #f1f1f1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  line-height: 0;
+  color: #f1f1f1;
 }
 
 .close:hover, .close:focus {
-	color:#bbb;
-	text-decoration: none;
-	cursor: pointer;
+  color:#bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-content, .caption {
-	-webkit-animation-name: zoom;
-	-webkit-animation-duration: 0.6s;
-	animation-name: zoom;
-	animation-duration: 0.6s;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-	from{
-		-webkit-transform: scale(0)
-	}
-	to{
-		-webkit-transform: scale(1)
-	}
+  from{
+    -webkit-transform: scale(0)
+  }
+  to{
+    -webkit-transform: scale(1)
+  }
 }
 
 @keyframes zoom {
-	from{
-		transform: scale(0);
-	}
-	to{
-		transform: scale(1);
-	}
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
 }
 
 
 //      M E D I A      Q U A R I E S
 
 @media screen and (max-width: $max-width-tablet) {
-	.content {
-		margin-left: 0;
-		margin-right: 0;
-		padding: 0 40px;
+  .content {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 40px;
 
-		&__header {
-			flex-direction: row;
-			align-items: center;
-		}
-	}
+    &__header {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 
-	.event-name {
-		margin-left: 20px;
-	}
+  .event-name {
+    margin-left: 20px;
+  }
 
-	.photo {
-		margin-bottom: 20px;
-		width: 175px;
-		height: 175px;
-		flex-basis: 20%;
-	}
+  .photo {
+    margin-bottom: 20px;
+    width: 175px;
+    height: 175px;
+    flex-basis: 20%;
+  }
 
-	// 		M O D A L      S T Y L E S
+  .caption {
 
-	.modal-content{
-		width: 100%;
-	}
+    &__item {
+
+      &-text {
+        font-size: 10px;
+        margin-left: 5px;
+      }
+
+      &-icon {
+        transform: scale(0.6);
+      }
+    }
+
+    &__square {
+      flex-basis: 40%;
+    }
+  }
+
+  .close {
+    top: 25px;
+    right: 15px;
+    font-size: 40px;
+  }
+
 }
 
 @media screen and (max-width: $max-width-mobile) {
