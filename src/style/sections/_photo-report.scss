@@ -14,7 +14,6 @@
 }
 
 .section-head {
-	font-family: Helvetica, sans-serif;
 	color:  #ffffff;
 	font-size: 30px;
 	font-weight: 900;
@@ -52,7 +51,7 @@
 	}
 
 	&__elem:nth-child(5n) {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 
 	&__button {
@@ -60,10 +59,10 @@
 	}
 }
 
-.overground {
-  font-family: Helvetica, sans-serif;
+.report-title {
   color: #ffffff;
   font-size: 21px;
+  margin: 15px 0 40px;
 }
 
 .photo-load-more {
@@ -71,13 +70,11 @@
 	justify-content: center;
 	background-color: #ebb91f;
 	border: none;
-	margin-top: 20px;
-	padding: 20px 0px 19px 0px;
+	padding: 20px 0;
 	width: 249px;
 	color: #292a2e;
 	font-size: 22px;
 	font-weight: 900;
-	font-family: 'Helvetica', sans-serif;
 	text-transform: uppercase;
 	text-align: center;
 	cursor: pointer;
