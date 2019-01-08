@@ -51,7 +51,7 @@
   width: 240px;
   height: 116px;
   &__logo {
-    width: 183px;
+    transform: scale(0.95);
   }
 
   &__switcher{
@@ -197,7 +197,7 @@
     height: 70px;
 
     &__logo{
-      transform: scale(2);
+      transform: scale(0.5);
     }
 
     &__switcher{
