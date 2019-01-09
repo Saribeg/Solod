@@ -137,6 +137,10 @@
 }
 
 .tab-menu__link {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.tab-menu__link {
   display: flex;
   flex-direction: column;
   justify-content: center;
