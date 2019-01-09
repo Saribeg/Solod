@@ -84,15 +84,15 @@
 
 .modal-content__item-left {
 	@include modalSliderButton;
-	border-bottom: 2px solid #e4b324;
-	border-left: 2px solid #e4b324;
+	border-bottom: 2px solid #95bd3a;
+	border-left: 2px solid #95bd3a;
 	-webkit-tap-highlight-color: transparent;
 }
 
 .modal-content__item-right {
 	@include modalSliderButton;
-	border-top: 2px solid #e4b324;
-	border-right: 2px solid #e4b324;
+	border-top: 2px solid #95bd3a;
+	border-right: 2px solid #95bd3a;
 	-webkit-tap-highlight-color: transparent;
 }
 

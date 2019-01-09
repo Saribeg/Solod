@@ -8,4 +8,4 @@ _navMenu();
 slowScroll('#res-btn');
 slowScroll('#contacts-btn');
 reserveBtn(true);
-initMap();
+initWhiteMap();
