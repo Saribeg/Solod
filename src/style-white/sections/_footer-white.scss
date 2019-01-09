@@ -116,7 +116,7 @@
         box-sizing: border-box;
 
         &-msg {
-            width: 100%;
+            width: 98%;
             padding-bottom: 70px;
             font-family: Helvetica, sans-serif;
             overflow: hidden;
@@ -130,7 +130,7 @@
 
     &__submit {
         @include green_button;
-        padding: 20px 36px;
+        padding: 15px 36px;
 
     }
 }

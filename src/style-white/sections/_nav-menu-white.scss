@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	position: fixed;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 999;
 
 	&-info {
@@ -33,7 +33,7 @@
 		color: $color-white;
 		transition: all 0.4s ease;
 		&:hover, &:focus, &_active {
-			color: $color-yellow;
+			color: $color-green;
 		}
 	}
 	&__switch{
@@ -51,11 +51,12 @@
 	width: 240px;
 	height: 116px;
 	&__logo {
-		width: 183px;
+		transform: scale(1.1);
+		margin-bottom: 10px;
 	}
 
 	&__switcher{
-		margin: 0 auto;
+		margin: 10px auto 0;
 		width: 53px;
 		height: 19px;
 	}

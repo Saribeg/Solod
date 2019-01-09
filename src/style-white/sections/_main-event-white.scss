@@ -1,5 +1,3 @@
-//styles for desktop version
-
 .events-link {
   position: absolute;
   right: 50px;
@@ -19,7 +17,7 @@
   }
 
   &-info {
-    width: 50%;
+    width: 45%;
     height: 250px;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -30,12 +28,13 @@
 
     &__group {
       flex-basis: 60%;
+      height: 15%;
       box-sizing: border-box;
       padding-top: 20px;
       padding-left: 20px;
       color: #fff;
       font-size: 30px;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     &__date {
@@ -46,6 +45,7 @@
       color: #fff;
       font-size: 18px;
       font-weight: 400;
+      text-align: right;
     }
 
     &__more {
@@ -58,7 +58,7 @@
         color: #fff;
         font-size: 18px;
         font-weight: 700;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
       }
 
       .main-event-info__more-description {

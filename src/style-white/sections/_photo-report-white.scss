@@ -60,10 +60,11 @@
 	}
 }
 
-.overground {
-  font-family: Helvetica, sans-serif;
-  color: #000000;
-  font-size: 21px;
+.report-title {
+	color: $color-bg-gray;
+	font-size: 22px;
+	font-weight: 600;
+	margin: 15px 0 40px;
 }
 
 .photo-load-more {
@@ -71,8 +72,7 @@
 	justify-content: center;
 	background-color: #95bd3a;
 	border: none;
-	margin-top: 20px;
-	padding: 20px 0px 19px 0px;
+	padding: 20px 0;
 	width: 249px;
 	color: #ffffff;
 	font-size: 22px;

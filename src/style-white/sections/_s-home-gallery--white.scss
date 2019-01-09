@@ -1,6 +1,7 @@
 .slider-section {
 	margin-left: $header-title-margin;
 	margin-right: $section-head-margin;
+
 	.slick {
 		&-section {
 			max-width: calc(1440px - 280px);
@@ -24,11 +25,11 @@
 		}
 
 		&-slide {
-			opacity: 0.3;
+			opacity: 0.5;
 		}
 
 		&-carousel .slick-item:hover {
-			opacity: 0.2;
+			opacity: 0.3;
 		}
 
 		&-current {
@@ -41,8 +42,8 @@
 		}
 
 		&-arrow {
-			width: 50px;
-			height: 50px;
+			width: 40px;
+			height: 40px;
 			z-index: 5;
 			border-top: 5px solid $color-green;
 			border-right: 5px solid $color-green;
@@ -51,7 +52,7 @@
 
 		&-prev {
 			left: 14%;
-			top: 42%;
+			top: 45%;
 			transform: rotate(225deg);
 		}
 
@@ -61,7 +62,7 @@
 
 		&-next {
 			right: 14%;
-			top: 42%;
+			top: 45%;
 			transform: rotate(45deg);
 		}
 
