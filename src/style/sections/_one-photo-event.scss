@@ -99,17 +99,24 @@
 .caption {
   display: flex;
   justify-content: space-between;
-  padding: 15px 55px;
+  margin: 15px 55px;
   color: #ccc;
 
-  &__item {
+  &-links {
     display: flex;
-	justify-content: flex-start;
-    align-items: center;
+    flex-direction: row;
+  }
 
-	&-icon {
-		margin-left: 10px;
-	}
+  &__item {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $color-white;
+
+    &-icon {
+      margin: 0 10px;
+    }
   }
 }
 
@@ -180,8 +187,9 @@
   }
 
   .caption {
-
+    margin: 10px 55px;
     &__item {
+      font-size: 0;
 
       &-text {
         font-size: 10px;
@@ -189,12 +197,8 @@
       }
 
       &-icon {
-        transform: scale(0.6);
+        transform: scale(0.9);
       }
-    }
-
-    &__square {
-      flex-basis: 40%;
     }
   }
 
