@@ -1,21 +1,14 @@
 {
-  "name": "step_project_forkio_local",
+  "name": "solod-landing",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/feroxes/step_project_forkio.git"
-  },
-  "author": "Yaroslav Harmash & Denis Kanivets",
+  "author": "Nik Yamnyk, Dmytro Levchuk, Saribeg Krahanyan, Anna Bereza, Valentina Pechonchyk, Yaroslav Harmash, Denis Kanivets Saribeg ",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/feroxes/step_project_forkio/issues"
-  },
-  "homepage": "https://github.com/feroxes/step_project_forkio#readme",
+
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
