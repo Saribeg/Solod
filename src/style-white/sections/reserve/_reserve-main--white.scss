@@ -1,7 +1,99 @@
-input::-webkit-clear-button {
-  display: none;
+/**********DATEPICKER STYLES***********/
+
+.ui-datepicker {
+  width: 270px;
+  height: auto;
+  margin: 5px auto 0;
+  font: 9pt Arial, sans-serif;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+  background-color: #fff;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & table {
+    width: 100%;
+  }
+
+  &-header {
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $color-green;
+    line-height: 30px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #111;
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 16px;
+    color: $color-green;
+    text-shadow: 0 0 white;
+  }
+
+  & thead {
+    font-family: Helvetica, sans-serif;
+    border: none;
+  }
+
+  & th {
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 5px 0;
+    color: $color-bg-gray;
+  }
+
+  & tbody td {
+    padding: 0;
+    text-align: center;
+  }
+
+  & td a {
+    display: inline-block;
+    width: 100%;
+    line-height: 30px;
+    color: rgba(0,0,0,0.9);
+    background-color: #fff;
+    transition: 0.4s background-color ease-in-out;
+  }
+
+  &-calendar {
+    & .ui-state-hover, .ui-state-active  {
+      color: #fff;
+      background-color: $color-green;
+    }
+  }
 }
 
+.ui-datepicker-prev, .ui-datepicker-next {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 600%;
+  overflow: hidden;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  border-left: 3px solid $color-green;
+  border-bottom: 3px solid $color-green;
+  transform: scale(0.3) rotate(45deg);
+}
+.ui-datepicker-next {
+  float: right;
+  border-right: 3px solid $color-green;
+  border-top: 3px solid $color-green;
+  transform: scale(0.3) rotate(45deg);
+}
+
+
+
+/**********FORM STYLES***********/
 .section-reserve {
   width: calc(100% - 250px);
   position: relative;
