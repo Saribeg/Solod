@@ -9,7 +9,7 @@
     }
 
     &-info {
-      height: 100px;
+      width: 65%;
 
       &__group {
         font-size: 12px;
@@ -27,12 +27,12 @@
         padding-bottom: 4%;
         padding-left: 4%;
 
-        .header-event-info__more-style {
-          font-size: 10px;
+        &-style {
+          font-size: 12px;
         }
 
-        .header-event-info__more-description {
-          font-size: 8px;
+        &-description {
+          font-size: 10px;
         }
       }
 
@@ -41,63 +41,31 @@
         height: 25px;
         line-height: 25px;
         font-size: 12px;
+        padding: 4px 8px;
       }
     }
   }
-
 
   .events-table {
-    margin-left: 10px;
-    margin-right: 10px;
 
     .event {
+      object-fit: cover;
+      height: 250px;
 
-
-      &-img {
-
+      &:last-child {
+        margin-bottom: 0;
       }
+    }
 
-      &-info {
-        height: 100px;
-
-        &__group {
-          font-size: 12px;
-          padding-top: 4%;
-          padding-left: 4%;
-        }
-
-        &__date {
-          font-size: 14%;
-          padding-top: 4%;
-          padding-right: 4%;
-        }
-
-        &__more {
-          padding-bottom: 4%;
-          padding-left: 4%;
-
-          .event-info__more-style {
-            font-size: 10px;
-          }
-
-          .event-info__more-description {
-            font-size: 7px;
-          }
-        }
-
-        &__button {
-          width: 50px;
-          height: 25px;
-          line-height: 25px;
-          font-size: 12px;
-        }
-      }
+    .header-event-info {
+      height: 40%;
     }
   }
 
+
   .event-button-load-more {
-    margin-left: 10px;
-    padding: 5px 30px;
+    margin-left: 20px;
+    padding: 10px 30px;
     font-size: 16px;
   }
 

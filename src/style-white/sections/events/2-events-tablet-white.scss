@@ -11,24 +11,26 @@
     }
 
     &-info {
-      height: 110px;
+      width: 55%;
 
       &__group {
-        font-size: 16px;
+        flex-basis: 65%;
+        font-size: 20px;
       }
 
       &__date {
-        font-size: 12px;
+        flex-basis: 33%;
+        font-size: 16px;
       }
 
       &__more {
 
-        .header-event-info__more-style {
-          font-size: 12px;
+        &-style {
+          font-size: 16px;
         }
 
-        .header-event-info__more-description {
-          font-size: 10px;
+        &-description {
+          font-size: 14px;
         }
       }
 
@@ -37,6 +39,7 @@
         height: 35px;
         line-height: 35px;
         font-size: 18px;
+        padding: 5px 10px;
       }
     }
   }
@@ -58,44 +61,11 @@
         height: 100%;
       }
 
-      &-info {
-        height: 110px;
-        margin: 0 10px;
-        width: 50%;
-        bottom: 10px;
-
-        &__group {
-          font-size: 16px;
-        }
-
-        &__date {
-          font-size: 12px;
-        }
-
-        &__more {
-
-          .event-info__more-style {
-            font-size: 12px;
-          }
-
-          .event-info__more-description {
-            font-size: 10px;
-          }
-        }
-
-        &__button {
-          width: 80px;
-          height: 35px;
-          line-height: 35px;
-          font-size: 18px;
-        }
-      }
     }
   }
 
   .event-button-load-more {
     margin: 50px 0 50px 5%;
-    padding: 8px 60px;
     font-size: 20px;
   }
 
