@@ -8,6 +8,8 @@
 _navMenu();
 slowScroll('#res-btn');
 slowScroll('#contacts-btn');
+slowScroll('#contacts-btn-tab');
+slowScroll('#contacts-btn-mob');
 reserveBtn(false);
 mainPageMenu();
 $(slickSlider());
