@@ -159,6 +159,20 @@
     }
   }
 
+  .date-time__arrow {
+    position: relative;
+  }
+
+  .date-time__arrow:before {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    border: 3px solid transparent;
+    border-top: 3px solid white;
+    transform: scaleY(2);
+  }
+
   &__date-time {
     font-size: 17px;
     border: 2px solid #FFFFFF;
