@@ -24,7 +24,7 @@ input::-webkit-clear-button {
 .reserve-action {
   position: absolute;
   bottom: 100px;
-  width: 60%;
+  width: 50%;
 
   @media screen and (max-width: 680px) {
     position: static;
@@ -58,7 +58,6 @@ input::-webkit-clear-button {
     position: absolute;
     bottom: 122px;
     left: 160px;
-    right: 120px;
 
     @media screen and (max-width: 1300px) {
       font-size: 1.5rem;
