@@ -17,51 +17,68 @@
     <%- include('_nav-menu'); %>
     <%- include('_reserve-btn'); %>
 
+    <div class="tab-menu">
+        <section class="tab-menu__content-block">
 
-    <section class="tab-menu__content">
-        <div class="tab-menu__content-block">
-            <div class="tab-menu__tabs">
-
-                <div class="tab-menu__arrow_left_draw" id="tab-menu__btn_left_draw">
-                    <img class="tab-menu__arrow_left_img" src="img/menu/btn_left.png" alt="">
-                    <img class="tab-menu__arrow_left_img_r" src="img/menu/btn_right.png" alt="">
-                </div>
-
-                <!--<i class="tab-menu__arrow tab-menu__arrow_left fas fa-angle-left" id="tab-menu__btn_left"></i>-->
-
-                <div class="tab-menu__list_wrapper">
-
-                    <ul class="tab-menu__list">
-                        <li class="tab-menu__item tab-menu__item_active tab-menu__item_active0"><a href="#" class="tab-menu__link">Сніданок</a></li>
-                        <li class="tab-menu__item tab-menu__item_active1"><a href="#" class="tab-menu__link">Основне меню</a></li>
-                        <li class="tab-menu__item tab-menu__item_active2"><a href="#" class="tab-menu__link">Барна карта</a></li>
-                        <li class="tab-menu__item tab-menu__item_active3"><a href="#" class="tab-menu__link">Барна карта</a></li>
-                        <li class="tab-menu__item tab-menu__item_active4"><a href="#" class="tab-menu__link">Суші</a></li>
+            <div id="my-tabs" class="jtabs">
+                <div class="jtabs-nav" data-iphone-menu="Виберiть меню">
+                    <ul class="jtabs-nav__list">
+                        <li data-name="tab-1" class="tab-head jtabs-current">
+                            Сніданок
+                        </li>
+                        <li data-name="tab-2" class="tab-head">
+                           Основне меню
+                        </li>
+                        <li data-name="tab-3" class="tab-head">
+                            Барна карта
+                        </li>
+                        <li data-name="tab-4" class="tab-head">
+                            Барна карта
+                        </li>
+                        <li data-name="tab-5" class="tab-head">
+                            Суші
+                        </li>
                     </ul>
                 </div>
 
+                <div class="jtabs-content">
+                    <img src="img/menu/avokado.png" alt="content-absolute-img NOT FOUND" class="jtabs-content__img jtabs-content__avocado">
+                    <img src="img/menu/spices.png" alt="content-absolute-img NOT FOUND" class="jtabs-content__img jtabs-content__spices">
+                    <img src="img/menu/pepper.png" alt="content-absolute-img NOT FOUND" class="jtabs-content__img jtabs-content__pepper">
+                    <img src="img/menu/leaves.png" alt="content-absolute-img NOT FOUND" class="jtabs-content__img jtabs-content__leaves">
+                    <div class="jtab" data-name="tab-1">
+                        <div class="jtab-inner">
+                            <img class="" src="img/menu/menu_0.png" alt="Tab content NOT FOUND">
+                        </div>
+                    </div>
 
-                <!--<i class="tab-menu__arrow tab-menu__arrow_right fas fa-angle-right" id="tab-menu__btn_right"></i>-->
+                    <div class="jtab" data-name="tab-2">
+                        <div class="jtab-inner">
+                            <img class="" src="img/menu/menu_1.png" alt="Tab content NOT FOUND">
+                        </div>
+                    </div>
 
-                <div class="tab-menu__arrow_right_draw" id="tab-menu__btn_right_draw">
-                    <img class="tab-menu__arrow_right_img" src="img/menu/btn_right.png" alt="">
+                    <div class="jtab" data-name="tab-3">
+                        <div class="jtab-inner">
+                            <img class="" src="img/menu/menu_2.png" alt="Tab content NOT FOUND">
+                        </div>
+                    </div>
+
+                    <div class="jtab" data-name="tab-4">
+                        <div class="jtab-inner">
+                            <img class="" src="img/menu/menu_3.png" alt="Tab content NOT FOUND">
+                        </div>
+                    </div>
+
+                    <div class="jtab" data-name="tab-5">
+                        <div class="jtab-inner">
+                            <img class="" src="img/menu/menu_4.png" alt="Tab content NOT FOUND">
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
-            <div class="tab-menu__table">
-                <img src="img/menu/avokado.png" alt="" class="tab-menu__bg_avokado">
-                <img src="img/menu/spices.png" alt="" class="tab-menu__bg_spices">
-                <img src="img/menu/pepper.png" alt="" class="tab-menu__bg_pepper">
-                <img src="img/menu/leaves.png" alt="" class="tab-menu__bg_leaves">
-                <img src="img/menu/menu_0.png" alt="" class="tab-menu__menu tab-menu__menu_active">
-                <img src="img/menu/menu_1.png" alt="" class="tab-menu__menu">
-                <img src="img/menu/menu_2.png" alt="" class="tab-menu__menu">
-                <img src="img/menu/menu_3.png" alt="" class="tab-menu__menu">
-                <img src="img/menu/menu_4.png" alt="" class="tab-menu__menu">
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <%- include('_reserve-action'); %>
 
