@@ -276,17 +276,17 @@
       color: $color-white;
       border-bottom: 2px solid #3b3b3b;
       transition: all 0.4s ease;
-      &:hover {
-        color: $color-yellow;
-        transition: all 0.4s ease;
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          height: 100%;
-          border-left: 4px solid $color-yellow;
-        }
-      }
+      //&:hover {
+      //  color: $color-yellow;
+      //  transition: all 0.4s ease;
+      //  &::before {
+      //    content: '';
+      //    position: absolute;
+      //    left: 0;
+      //    height: 100%;
+      //    border-left: 4px solid $color-yellow;
+      //  }
+      //}
     }
 
     &__switch{

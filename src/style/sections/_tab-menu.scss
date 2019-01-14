@@ -8,35 +8,37 @@
 }
 
 .tab-head {
-    width: 185px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 40px 0 20px;
-    color: #d6d6d6;
-    font-size: 19px;
-    font-weight: 900;
     text-transform: uppercase;
     background: url('../img/menu/notab.png') no-repeat;
     cursor: pointer;
     transition: all .25s ease-in-out;
     -webkit-tap-highlight-color: transparent;
 
-    &:nth-child(1).jtabs-current {
+    &-text {
+      display: flex;
+      align-items: center;
+      width: 185px;
+      height: 60px;
+      box-sizing: border-box;
+      padding: 0 40px 0 20px;
+      color: #fff;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    &:nth-child(5n+1).jtabs-current {
       background: url('../img/menu/tab_menu_00.png');
     }
-    &:nth-child(2).jtabs-current {
+    &:nth-child(5n+2).jtabs-current {
       background: url('../img/menu/tab_menu_01.png');
     }
-    &:nth-child(3).jtabs-current {
+    &:nth-child(5n+3).jtabs-current {
       background: url('../img/menu/tab_menu_02.png');
     }
-    &:nth-child(4).jtabs-current {
+    &:nth-child(5n+4).jtabs-current {
       background: url('../img/menu/tab_menu_03.png');
     }
-    &:nth-child(5).jtabs-current {
+    &:nth-child(5n).jtabs-current {
       background: url('../img/menu/tab_menu_04.png');
     }
   }
@@ -52,14 +54,28 @@
 }
 
 .jtabs-nav__list{
+  position: relative;
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 7px;
+    background-color: #5d523f;
+    background-size: cover;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-yellow;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    outline: none;
+  }
 }
 
 .jtabs .jtabs-nav li:hover{
-  filter: brightness(1.2);
+  filter: brightness(1.1);
 }
 
 .jtabs-current {
@@ -106,6 +122,7 @@
   background-size: cover;
   border-radius: 3px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

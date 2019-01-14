@@ -8,11 +8,12 @@ $('#my-tabs').jtabs({
     storage: 'localstorage'
 });
 
+
 _navMenu();
 slowScroll('#res-btn');
 slowScroll('#contacts-btn');
 slowScroll('#contacts-btn-tab');
 slowScroll('#contacts-btn-mob');
 reserveBtn(true);
-tabMenu();
+tabs();
 initMap();
