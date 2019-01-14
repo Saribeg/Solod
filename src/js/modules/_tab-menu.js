@@ -307,6 +307,8 @@ function tabMenu() {
         else{
             context.$liList.removeClass('jtabs-current');
         }
+        $('.jtabs-iphone-menu-title')[0].innerHTML = $('.jtabs-current')[0].innerText;
+
     };
 
     /**
@@ -417,9 +419,9 @@ function tabMenu() {
      * @param {Object} context
      * @param {jQueryObject} $tabsNav
      */
-    var initIphone = function(context, $tabsNav){
+    var initIphone = function(context, $tabsNav, currentActive){
 
-        context.$tabsNav.prepend('<div class="jtabs-iphone-menu"><div class="jtabs-iphone-menu-title">' + $tabsNav.attr('data-iphone-menu') + '</div><ul class="jtabs-iphone-menu-ul">' + context.$ul.html() + '</ul></div>');
+        context.$tabsNav.prepend('<div class="jtabs-iphone-menu"><div class="jtabs-iphone-menu-title">' + currentActive + '</div><ul class="jtabs-iphone-menu-ul">' + context.$ul.html() + '</ul></div>');
         context.$ulIphone = context.$tabsNav.find('.jtabs-iphone-menu-ul');
         context.$liListIphone = context.$ulIphone.children('li');
     };
@@ -441,7 +443,7 @@ function tabMenu() {
         context.$tabs = $box.children('.jtabs-content').children('.jtab');
 
         //init iphone
-        initIphone(context, context.$tabsNav);
+        initIphone(context, context.$tabsNav, $('.jtabs-current')[0].innerHTML);
 
         //init events
         initEvents(context, $box);

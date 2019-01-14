@@ -162,6 +162,8 @@
   }
 
   &__date-time {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
     position: relative;
     font-size: 17px;
     border: 2px solid $color-bg-gray;
@@ -198,6 +200,8 @@
   }
 
   .btn {
+    -webkit-border-radius: 1px;
+    -webkit-appearance: none;
     width: 49%;
     background-color: $color-bg-gray;
     color: $color-yellow;

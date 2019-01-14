@@ -51,7 +51,7 @@
   width: 100%;
 }
 
-.jtabs .jtabs-nav ul{
+.jtabs-nav__list{
   display: flex;
   list-style: none;
   padding: 0;
@@ -145,7 +145,7 @@
   &-ul {
     &> .tab-head:nth-child(n) {
       width: 100%;
-      text-align: left;
+      justify-content: flex-start;
       background-color: rgba(41, 42, 46, 0.5);
       background-image: none;
       color: $color-yellow;
@@ -159,11 +159,44 @@
 }
 
 .jtabs .jtabs-nav ul.jtabs-show{
-  display: flex;
+  opacity: 1;
+  z-index: 1000;
+  transition: 0.25s opacity ease-in-out;
 }
 
 .jtabs .jtabs-nav .jtabs-iphone-menu{
   display: none;
+}
+
+@media (max-width: 765px) {
+
+  .jtabs .jtabs-nav .jtabs-iphone-menu{
+    display: block;
+  }
+
+  .jtabs .jtabs-nav{
+    position: relative;
+  }
+
+  .jtabs .jtabs-nav .jtabs-iphone-menu-ul{
+    opacity: 0;
+    flex-direction: column;
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    background: #333;
+    left: 0;
+    top: 40px;
+    transition: 0.25s opacity ease-in-out;
+  }
+
+  .jtabs-nav__list {
+    display: none;
+  }
+
+  .jtabs .jtab{
+    border-radius: 0 0 3px 3px;
+  }
 }
 
 @media (max-width: 980px) {
@@ -195,41 +228,5 @@
     &__leaves {
       display: none;
     }
-  }
-}
-
-@media (max-width: 765px) {
-
-  .jtabs .jtabs-nav .jtabs-iphone-menu{
-    display: block;
-  }
-
-  .jtabs .jtabs-nav{
-    position: relative;
-  }
-
-  .jtabs .jtabs-nav ul{
-    display: none;
-  }
-
-  .jtabs .jtabs-nav .jtabs-iphone-menu-ul{
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1000;
-    width: 100%;
-    background: #333;
-    left: 0;
-    top: 40px;
-  }
-
-  .jtabs .jtabs-nav li{
-    margin: 0 0 1px 0;
-    border-radius: 0;
-    color: #333;
-  }
-
-  .jtabs .jtab{
-    border-radius: 0 0 3px 3px;
   }
 }
