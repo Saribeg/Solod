@@ -7,6 +7,7 @@
 
 _navMenu();
 slowScroll('#res-btn');
+slowScroll('#main-ev-btn');
 slowScroll('#smoke-btn');
 slowScroll('#smoke-btn-tab');
 slowScroll('#smoke-btn-mob');
