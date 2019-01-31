@@ -6,9 +6,6 @@
 _navMenu();
 slowScroll('#res-btn');
 slowScroll('#ev-res-btn');
-slowScroll('#smoke-btn');
-slowScroll('#smoke-btn-tab');
-slowScroll('#smoke-btn-mob');
 slowScroll('#contacts-btn');
 slowScroll('#contacts-btn-tab');
 slowScroll('#contacts-btn-mob');
