@@ -85,6 +85,8 @@
   }
 
   &__input {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
     width: 48%;
     outline: none;
     border: 2px solid #dddddd;
@@ -110,6 +112,8 @@
   }
 
   &__submit {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
     @include orange_button;
     padding: 15px 36px;
 
