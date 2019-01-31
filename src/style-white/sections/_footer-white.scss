@@ -131,7 +131,7 @@
     }
 
     &__submit {
-        -webkit-border-radius: 0;
+        -webkit-border-radius: 1px;
         -webkit-appearance: none;
         @include green_button;
         padding: 15px 36px;
