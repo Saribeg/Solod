@@ -193,8 +193,23 @@
   }
 }
 
+.date-time__arrow {
+  position: relative;
+}
+
+.date-time__arrow:before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  border: 3px solid transparent;
+  border-top: 3px solid white;
+  transform: scaleY(2);
+}
 
 .btn-white {
+  -webkit-border-radius: 1px;
+  -webkit-appearance: none;
   width: 49%;
   background-color: #FFFFFF;
   color: $color-green;
