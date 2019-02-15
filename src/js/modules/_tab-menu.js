@@ -177,12 +177,6 @@
 /**********************************************************/
 /**********************************************************/
 
-if($(".tab-head").length < 5) {
-    $(".jtabs-nav__list").css("overflow", "hidden")
-} else {
-    $(".jtabs-nav__list").css("overflow", "scroll")
-}
-
 /**
  * @license
  * htemplates.com

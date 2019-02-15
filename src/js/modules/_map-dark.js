@@ -7,7 +7,7 @@ function initMap() {
         zoom: 14
     });
     map.on("load", function () {
-        map.loadImage('img/index/map-marker.png', function (error, image) {
+        map.loadImage('assets/img/index/map-marker.png', function (error, image) {
             if (error) throw error;
             map.addImage("custom-marker", image);
             map.addLayer({

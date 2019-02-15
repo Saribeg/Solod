@@ -61,7 +61,7 @@ let config = {
 gulp.task('ejs:build', function(){
     return gulp.src(path.src.ejs)
         .pipe(ejs({}, {}, { ext: '' }))
-        .pipe(minifyejs())
+        // .pipe(minifyejs())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
@@ -74,7 +74,7 @@ gulp.task('js:build', function () {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
             stream: true
@@ -89,7 +89,7 @@ gulp.task('jsWhite:build', function () {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(path.build.jsWhite))
         .pipe(reload({
             stream: true
@@ -101,7 +101,7 @@ gulp.task('style:build', function () {
         .pipe(concat('main.css'))
         .pipe(sass())
         .pipe(prefixer())
-        .pipe(cleancss())
+        // .pipe(cleancss())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true
@@ -113,7 +113,7 @@ gulp.task('styleWhite:build', function () {
         .pipe(concat('main-white.css'))
         .pipe(sass())
         .pipe(prefixer())
-        .pipe(cleancss())
+        // .pipe(cleancss())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true

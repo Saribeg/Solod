@@ -1,6 +1,5 @@
 function slowScroll(id) {
-    $(id.toString()).on("click", function (event) {
-        console.log('click');
+    $(`${id.split("")[0] === "." ? "" : "#"}${id.toString()}`).on("click", function (event) {
         event.preventDefault();
 
         if($('.burger_toggle').length > 0) {

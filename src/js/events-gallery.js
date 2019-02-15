@@ -4,9 +4,9 @@
 @@include('modules/_map-dark.js');
 
 _navMenu();
-slowScroll('#res-btn');
-slowScroll('#contacts-btn');
-slowScroll('#contacts-btn-tab');
-slowScroll('#contacts-btn-mob');
+slowScroll('res-btn');
+slowScroll('contacts-btn');
+slowScroll('contacts-btn-tab');
+slowScroll('contacts-btn-mob');
 reserveBtn(true);
 initMap();
