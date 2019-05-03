@@ -10,6 +10,7 @@ slowScroll('res-btn');
 slowScroll('contacts-btn');
 slowScroll('contacts-btn-tab');
 slowScroll('contacts-btn-mob');
+slowScroll('event-reserve');
 reserveBtn(false);
 mainPageMenu();
 $(slickSlider());

@@ -34,9 +34,9 @@ $(function() {
 	$("#contact").submit(function(e) {
 		
 		let data = {
-			name: $("#form_name").val(),
+			subject: `SOLOD Enjoy Bar - Бронь столика - ${$('#reserve-date').val()}`,
 			message: `
-   		 Бронь столика на сайте solod.bar
+   		 Имя: ${$("#form_name").val()}
    		 Телефон: ${$('#form_phone').val()}
    		 Дата: ${$('#reserve-date').val()}
    		 Время: ${$('#reserve-time').val()}
@@ -51,6 +51,27 @@ $(function() {
 			}
 		});
 		
+		return false;
+	});
+});
+$(function() {
+	$("#feedback").submit(function(e) {
+		let data = {
+			subject: 'SOLOD Enjoy Bar - Заполнение формы обратной связи',
+			message: `
+			Имя: ${$("#feedback_name").val()}
+   		Телефон: ${$('#feedback_phone').val()}
+   		Текст сообщения: ${$('#feedback_msg').val()}
+   		`
+		};
+		$.ajax({
+			type: "POST",
+			url: "assets/js/email.php",
+			data: {...data},
+			success: function(){
+				alert(`Данные успешно отправлены`);
+			}
+		});
 		return false;
 	});
 });

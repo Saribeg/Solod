@@ -17,12 +17,10 @@
                 </div>
                 <div class="footer-info-form">
                     <p class="footer-info__title">Є побажання? Напиши нам</p>
-                    <form id="form" action="" method="POST">
-                        <input class="footer-info-form__input" name="name" type="text" placeholder="Ім'я*" autocomplete="off"
-                               required>
-                        <input class="footer-info-form__input footer-info-form__input-tel" name="phone" type="tel"
-                               placeholder="Телефон*" autocomplete="off" required>
-                        <textarea class="footer-info-form__input footer-info-form__input-msg" name="message" id="" rows="1"
+                    <form id="feedback" action="" method="POST">
+                        <input id="feedback_name" class="footer-info-form__input" name="name" type="text" placeholder="Ім'я*" autocomplete="off" required>
+                        <input id="feedback_phone" class="footer-info-form__input footer-info-form__input-tel" name="phone" type="tel" placeholder="Телефон*" autocomplete="off" required>
+                        <textarea id="feedback_msg" class="footer-info-form__input footer-info-form__input-msg" name="message" rows="1"
                                   placeholder="Повідомлення" autocomplete="off"></textarea>
                         <input class="footer-info-form__submit" type="submit" value="Надіслати">
                     </form>
