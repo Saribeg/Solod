@@ -28,3 +28,29 @@ function reserveBtn(isAction) {
 
     $(document.body).on('click', showbtn);
 }
+
+
+$(function() {
+	$("#contact").submit(function(e) {
+		
+		let data = {
+			name: $("#form_name").val(),
+			message: `
+   		 Бронь столика на сайте solod.bar
+   		 Телефон: ${$('#form_phone').val()}
+   		 Дата: ${$('#reserve-date').val()}
+   		 Время: ${$('#reserve-time').val()}
+   		 `
+		};
+		$.ajax({
+			type: "POST",
+			url: "assets/js/email.php",
+			data: {...data},
+			success: function(){
+				alert(`Столик на имя ${$("#form_name").val()} , ${$('#reserve-date').val()} в ${$('#reserve-time').val()} - успешно забронирован`);
+			}
+		});
+		
+		return false;
+	});
+});

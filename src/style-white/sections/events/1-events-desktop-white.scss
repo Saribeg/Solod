@@ -25,6 +25,7 @@
       box-sizing: border-box;
       padding-top: 10px;
       padding-left: 10px;
+      text-transform: uppercase;
     }
 
     &__date {
@@ -50,6 +51,7 @@
         font-size: 14px;
         font-weight: 700;
         margin-bottom: 10px;
+        text-transform: uppercase;
       }
 
       &-description {
@@ -70,6 +72,7 @@
       color: $color-bg-gray;
       cursor: pointer;
       padding: 14px 47px;
+      text-transform: uppercase;
     }
   }
 }

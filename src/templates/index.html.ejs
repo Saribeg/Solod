@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<!----------- F A C E B O O K  S D K  s t a r t ------------>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId            : '2295246787430824',
+			autoLogAppEvents : true,
+			xfbml            : true,
+			version          : 'v3.2'
+		});
+	};
+</script>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+<!----------- F A C E B O O K  S D K  e n d ------------>
 <div class="container">
     <%- include('_nav-menu'); %>
     <%- include('_reserve-btn'); %>

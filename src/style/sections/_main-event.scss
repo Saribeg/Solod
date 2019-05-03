@@ -13,7 +13,7 @@
 .main-event {
   margin-left: $header-title-margin;
   position: relative;
-
+  text-transform: uppercase;
   &-img {
     width: 100%;
   }
@@ -47,6 +47,7 @@
       font-size: 18px;
       font-weight: 400;
       text-align: right;
+      text-transform: lowercase;
     }
 
     &__more {
@@ -63,6 +64,7 @@
       }
 
       .main-event-info__more-description {
+        text-transform: lowercase;
         color: #fff;
         font-weight: 400;
         font-size: 16px;

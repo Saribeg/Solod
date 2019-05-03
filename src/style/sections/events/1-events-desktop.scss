@@ -21,17 +21,18 @@
       color: #fff;
       font-size: 24px;
       font-weight: 900;
-      flex-basis: 70%;
+      flex-basis: 65%;
       box-sizing: border-box;
       padding-top: 10px;
       padding-left: 10px;
+      text-transform: uppercase;
     }
 
     &__date {
       color: #fff;
       font-size: 18px;
       font-weight: 400;
-      flex-basis: 30%;
+      flex-basis: 35%;
       box-sizing: border-box;
       padding-top: 10px;
       padding-right: 10px;
@@ -50,6 +51,7 @@
         font-size: 14px;
         font-weight: 700;
         margin-bottom: 10px;
+        text-transform: uppercase;
       }
 
       &-description {
@@ -66,6 +68,7 @@
       background-color: $color-yellow;
       text-align: center;
       font-size: 22px;
+      text-transform: uppercase;
       font-weight: 900;
       color: $color-bg-gray;
       cursor: pointer;

@@ -2,7 +2,7 @@
 	JQuery Gallery
 */
 
-let $img = $('.photo'), //картинки
+let $img = $('.all-event-photo > img'), //картинки
 	$modal = $('.modal'),	// всплывающее окно по нажатию
 	$main = $('.modal-content__main'), //картинка в модалке
 	$prev = $('.modal-content__item-left'), // пред фото
@@ -12,7 +12,7 @@ let $img = $('.photo'), //картинки
 	targetImg,
 	arr = [];
 
-$('.photo').each(function(i, elem){	//кешируем картинки
+$('.all-event-photo > img').each(function(i, elem){	//кешируем картинки
 	arr[i] = new Image();
 	arr[i].src = $(this).attr('src');
 });
