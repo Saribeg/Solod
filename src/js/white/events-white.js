@@ -8,5 +8,6 @@ slowScroll('res-btn');
 slowScroll('contacts-btn');
 slowScroll('contacts-btn-tab');
 slowScroll('contacts-btn-mob');
+slowScroll('.header-event-info__button');
 reserveBtn(true);
 initWhiteMap();
